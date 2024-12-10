@@ -291,7 +291,7 @@ html {
 }
 
 .footer__text-column {
-  flex: 0 0 auto;
+  flex: auto;
   margin-right: 5rem;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
@@ -711,6 +711,7 @@ html {
 }
 
 .tours__cards {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
