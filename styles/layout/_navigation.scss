@@ -19,7 +19,7 @@
       float: inline-start;
 
       &--mobile-hidden {
-        @media (max-width: $breakpoint-sd) {
+        @media (max-width: $breakpoint-sm) {
           display: none;
         }
       }
@@ -125,7 +125,6 @@
     }
   }
 }
-
 
 .hidden {
   transform: translateX(-100%);

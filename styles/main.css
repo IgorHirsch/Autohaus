@@ -160,7 +160,7 @@ html {
   display: block;
   float: inline-start;
 }
-@media (max-width: 62em) {
+@media (max-width: 48em) {
   .navigation ul .navigation__list-item--mobile-hidden {
     display: none;
   }
@@ -215,7 +215,6 @@ html {
   z-index: 1000; /* Hohe Priorität in der Schichtreihenfolge */
 }
 .fixed ul {
-  list-style: circle; /* Keine Aufzählung */
   margin: 0;
   padding: 0;
   flex-direction: column; /* Vertikale Anordnung der Elemente */
@@ -223,7 +222,7 @@ html {
 .fixed ul .navigation__list-item {
   margin: 1rem 0; /* Abstände zwischen den Listenelementen */
   transform: translateX(-100%); /* Position außerhalb des Bildschirms */
-  animation: slideIn 0.5s ease-out forwards; /* Animation anwenden */
+  animation: slideIn 1s ease-out forwards; /* Animation anwenden */
   /* Verzögerung für jedes Listenelement */
   /* Weitere Verzögerungen nach Bedarf hinzufügen */
 }
@@ -254,6 +253,11 @@ html {
   border-bottom: 0.15rem solid rgb(30, 105, 116); /* Hover-Effekt */
 }
 
+.hidden {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
 /* Die Animation definieren */
 @keyframes slideIn {
   0% {
@@ -265,6 +269,177 @@ html {
     transform: translateX(0); /* In die endgültige Position verschieben */
   }
 }
+.footer {
+  background-color: #4fa5b8;
+  padding: 3rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2rem;
+  border-bottom: 0.175rem solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 48em) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
+
+.footer__text-column {
+  flex: 0 0 auto;
+  margin-right: 5rem;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 48em) {
+  .footer__text-column {
+    order: 2;
+    margin-right: 0rem;
+  }
+}
+
+.footer__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.3rem;
+  max-width: 120rem;
+  line-height: 1.1em;
+}
+@media (max-width: 48em) {
+  .footer__heading {
+    order: 2;
+    margin-right: 0rem;
+    font-size: 1.5rem;
+  }
+}
+
+.footer__paragraph {
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 48em) {
+  .footer__paragraph {
+    order: 2;
+    margin-right: 0rem;
+    font-size: 0.9rem;
+  }
+}
+
+.footer__contact-item {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.footer__contact-item-icon {
+  position: relative;
+  z-index: 2;
+  background-color: rgb(30, 105, 116);
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  border-radius: 100000px;
+  font-size: 2.5rem;
+  color: #4fa5b8;
+}
+.footer__contact-item-icon--phone {
+  line-height: 3.9rem;
+}
+
+.footer__contact-item-link {
+  position: absolute;
+  z-index: 1;
+  left: 2rem;
+  top: 0.25rem;
+  white-space: nowrap;
+  background-color: #7bbbca;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 16rem;
+  text-align: center;
+  overflow: hidden;
+}
+.footer__contact-item-link::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(-100% - 5rem);
+  width: calc(100% + 5rem);
+  bottom: 0;
+  background-image: linear-gradient(-45deg, transparent 2.82rem, #3a8090 2.82rem);
+  background-position: right center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+.footer__contact-item-link:hover::after {
+  transform: translate(100%, 0);
+}
+
+.footer__logo-container {
+  font-size: 18rem;
+  padding: 0.05em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgb(30, 105, 116) 0%, #3a8090 100%);
+  border-radius: 1000000px;
+}
+@media (max-width: 62em) {
+  .footer__logo-container {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 48em) {
+  .footer__logo-container {
+    font-size: 6rem;
+  }
+}
+
+.footer__logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1em;
+  border: 0.025em solid white;
+  border-radius: 1000000px;
+}
+
+.footer__footer-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__footer-link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  white-space: nowrap;
+  transition: color 0.25s ease-in-out;
+}
+.footer__footer-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+@media (max-width: 36em) {
+  .footer__footer-link {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
 .icon {
   fill: currentColor;
   height: 1em;

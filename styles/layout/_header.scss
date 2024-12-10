@@ -6,9 +6,9 @@
   position: relative;
   overflow: hidden;
   background-size: cover;
-  background-position: 0% 100%;  /* Beispiel: Bild 10% nach oben verschieben */
+  background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
   background-image: url("../images/modal/cupraHome3.jpg");
-  
+
   /** 1200px oder schmaler */
   @media (max-width: $breakpoint-lg) {
     height: calc(18rem + 32vw);
@@ -24,19 +24,19 @@
   z-index: 1;
 
   background-image: radial-gradient(
-    circle at center, /* Der Verlauf startet aus der Mitte */
-    rgba(24, 109, 113, 0) , /* Völlig transparent in der Mitte */
-    rgba(24, 109, 113, 0), /* Wenig transparent, je weiter zum Rand */
-    rgba(28, 90, 101, 0), 
-    rgba(34, 72, 85, 0), 
-    rgba(35, 55, 66, 0), /* Immer weniger transparent */
-    rgba(32, 39, 46, 1) /* Vollständig undurchsichtig am Rand */
+    circle at center,
+    /* Der Verlauf startet aus der Mitte */ rgba(24, 109, 113, 0),
+    /* Völlig transparent in der Mitte */ rgba(24, 109, 113, 0),
+    /* Wenig transparent, je weiter zum Rand */ rgba(28, 90, 101, 0),
+    rgba(34, 72, 85, 0),
+    rgba(35, 55, 66, 0),
+    /* Immer weniger transparent */ rgba(32, 39, 46, 1)
+      /* Vollständig undurchsichtig am Rand */
   );
   background-repeat: no-repeat;
   background-position: center center; /* Der Verlauf startet in der Mitte */
   background-size: cover; /* Der Verlauf wird auf das gesamte Element angewendet */
 }
-
 
 .header__container {
   position: relative;
@@ -72,7 +72,6 @@
   }
 
   @media (max-width: $breakpoint-sm) {
-
     font-size: 2rem;
   }
 }
@@ -86,9 +85,6 @@
     font-weight: 700;
   }
 }
-
-
-
 
 .header__heading-sub {
   margin-top: 33%;
