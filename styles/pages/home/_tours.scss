@@ -101,6 +101,8 @@ $-tours-animation-duration: 0.25s;
   @media (max-width: $breakpoint-sm) {
     transform: scale(1.5);
     margin: 7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 
