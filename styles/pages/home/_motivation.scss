@@ -1,0 +1,198 @@
+@use "../../abstracts" as *;
+
+$-motivation__image-hover-padding: 0.33rem;
+$-motivation__image-hover-border: 0.33rem;
+
+$-image-margin: 0.66rem;
+
+.motivation {
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  background-image: linear-gradient(to bottom, #20272e, #1a3b44);
+
+  @media (max-width: $breakpoint-sm) {
+    padding-bottom: 1rem;
+  }
+}
+
+.motivation__column-text {
+  float: top;
+  width: 65%;
+  margin: auto;
+  padding-bottom: 3rem;
+
+  @media (max-width: $breakpoint-lg) {
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 80%;
+    float: none;
+    padding-bottom: 3rem;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////// Animation
+
+.motivation__text-heading,
+.motivation__text {
+  opacity: 0; /* Anfangszustand: unsichtbar */
+  transform: translateY(10); /* Leicht nach unten verschoben */
+  transition: opacity 0.3s ease-out, transform 0.1s ease-in-out;
+}
+
+.motivation__text-heading.visible,
+.motivation__text.visible {
+  opacity: 1; /* Sichtbar */
+  transform: translateY(); /* Zurück zur ursprünglichen Position */
+  transition: opacity 2s ease-out, transform 2s ease-in-out;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// Große Uberschfift "Die Straße gehört dir. Wir geben dir das Auto dazu. "
+.motivation__text-heading {
+  color: $color-secondary;
+  font-size: 2rem;
+  padding-top: 0rem;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: $color-secondary-light;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1.4rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10.5rem;
+      height: 0.25rem;
+      background-color: $color-secondary-light;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+//Text klein
+.motivation__text {
+  color: $color-secondary;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+  text-align: justify;
+
+  @media (max-width: $breakpoint-lg) {
+  }
+
+  @media (max-width: $breakpoint-md) {
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+  }
+}
+
+.motivation-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+//Fotos
+.motivation__images-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 0.1;
+  }
+}
+
+/**
+ * @param $top: Position from top (in rem)
+ * @param $left: Position from left (in %)
+ */
+@mixin motivation__image-position($top, $left) {
+  top: $top;
+  left: $left;
+
+  $hover-offset: $-motivation__image-hover-padding +
+    $-motivation__image-hover-border;
+
+  &:hover {
+    top: $top - $hover-offset;
+    left: calc(#{$left} - #{$hover-offset});
+  }
+}
+
+.motivation__image {
+  box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
+  width: 20%;
+  height: 20%;
+  margin: 2rem;
+  position: static;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  filter: grayscale(50%);
+  transform: scale(1);
+  transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
+
+  &--first {
+     // Abgerundete Ecken hinzufügen
+  border-radius: 2rem; // Passt die Rundung der Ecken an
+  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+    z-index: 1;
+    width: 20%;
+  }
+
+  &--second {
+     // Abgerundete Ecken hinzufügen
+  border-radius: 2rem; // Passt die Rundung der Ecken an
+  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+    width: 20%;
+    z-index: 2;
+  }
+
+  &--third {
+    z-index: 3;
+    width: 20%;
+     // Abgerundete Ecken hinzufügen
+  border-radius: 2rem; // Passt die Rundung der Ecken an
+  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+  }
+
+  &:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border: $-motivation__image-hover-border solid $color-primary;
+    padding: $-motivation__image-hover-padding;
+    z-index: 10;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    $-width-md: (100% * 0.5);
+    width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    $-width-md: (100% * 0.5);
+    width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
+    margin: 0.5rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    $-width-md: (100% * 0.5);
+
+    width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
+  }
+}

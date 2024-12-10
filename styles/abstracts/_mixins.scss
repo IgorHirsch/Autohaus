@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin make-container() {
+  max-width: 90%;
+  margin: 0px auto;
+  @include clearfix;
+
+  @media (max-width: $breakpoint-xs) {
+      padding: 0 1rem;
+  }
+}

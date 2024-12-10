@@ -1,0 +1,145 @@
+@use "../abstracts" as *;
+
+.navigation {
+  padding: 0.5rem; // Innenabstand
+  display: flex; // Flexbox-Layout
+  justify-content: left; // Zentrierte Navigation
+  align-items: center; // Vertikale Zentrierung
+  position: absolute;
+
+  ul {
+    list-style: none; // Keine Aufzählung
+    display: flex; // Elemente horizontal anordnen
+    margin: 0;
+    padding: 0;
+
+    .navigation__list-item {
+      list-style-type: none;
+      display: block;
+      float: inline-start;
+
+      &--mobile-hidden {
+        @media (max-width: $breakpoint-sd) {
+          display: none;
+        }
+      }
+
+      &--menu {
+        float: right;
+        font-size: 3rem;
+      }
+
+      .navigation__list-item-link {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: block;
+        text-shadow: 0 0 0.5rem black;
+        z-index: 110;
+        position: relative;
+        &:hover {
+          border-bottom: 0.15rem solid $color-primary;
+        }
+      }
+    }
+  }
+
+  .navigation__list-item--menu & {
+    margin-top: 0.4rem;
+    margin-right: 0;
+    padding-right: 0;
+
+    &:hover {
+      border-bottom: none;
+      color: rgb(200, 200, 200);
+    }
+  }
+
+  &--logo {
+    margin-top: 0.9rem;
+    padding-left: 0;
+    margin-left: 0;
+
+    &:hover {
+      border-bottom: none;
+      color: rgb(200, 200, 200);
+    }
+  }
+}
+
+.fixed {
+  padding: 1rem;
+  display: flex; /* Flexbox-Layout */
+
+  align-items: flex-start; /* Links ausrichten */
+  position: fixed; /* Fixierung der Navigation */
+  top: 10%;
+  left: 0;
+  width: 15rem; /* Breite der Navigation */
+  height: 100%; /* Navigation nimmt die gesamte Höhe ein */
+  z-index: 1000; /* Hohe Priorität in der Schichtreihenfolge */
+
+  ul {
+    margin: 0;
+    padding: 0;
+    flex-direction: column; /* Vertikale Anordnung der Elemente */
+    .navigation__list-item {
+      margin: 1rem 0; /* Abstände zwischen den Listenelementen */
+      transform: translateX(-100%); /* Position außerhalb des Bildschirms */
+      animation: slideIn 1s ease-out forwards; /* Animation anwenden */
+
+      /* Verzögerung für jedes Listenelement */
+      &:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      /* Weitere Verzögerungen nach Bedarf hinzufügen */
+
+      .navigation__list-item-link {
+        color: rgb(86, 212, 244); /* Textfarbe */
+        text-decoration: none; /* Kein Unterstrich */
+        display: block; /* Block-Layout für die Links */
+        padding: 0.5rem;
+        text-shadow: 0 0 0.5rem black;
+
+        border-bottom: 0.15rem solid transparent;
+
+        &:hover {
+          border-bottom: 0.15rem solid $color-primary; /* Hover-Effekt */
+        }
+      }
+    }
+  }
+}
+
+
+.hidden {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+/* Die Animation definieren */
+@keyframes slideIn {
+  0% {
+    opacity: 0; /* Am Anfang unsichtbar */
+    transform: translateX(-100%); /* Start außerhalb des Bildschirms */
+  }
+  100% {
+    opacity: 1; /* Am Ende sichtbar */
+    transform: translateX(0); /* In die endgültige Position verschieben */
+  }
+}

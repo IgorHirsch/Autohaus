@@ -1,0 +1,108 @@
+@use "../abstracts" as *;
+
+.header {
+  height: 35rem;
+  min-height: calc(13rem + 42vw);
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 0% 100%;  /* Beispiel: Bild 10% nach oben verschieben */
+  background-image: url("../images/modal/cupraHome3.jpg");
+  
+  /** 1200px oder schmaler */
+  @media (max-width: $breakpoint-lg) {
+    height: calc(18rem + 32vw);
+  }
+}
+
+.header__slope {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500vw; /* Die Höhe des Elements */
+  z-index: 1;
+
+  background-image: radial-gradient(
+    circle at center, /* Der Verlauf startet aus der Mitte */
+    rgba(24, 109, 113, 0) , /* Völlig transparent in der Mitte */
+    rgba(24, 109, 113, 0), /* Wenig transparent, je weiter zum Rand */
+    rgba(28, 90, 101, 0), 
+    rgba(34, 72, 85, 0), 
+    rgba(35, 55, 66, 0), /* Immer weniger transparent */
+    rgba(32, 39, 46, 1) /* Vollständig undurchsichtig am Rand */
+  );
+  background-repeat: no-repeat;
+  background-position: center center; /* Der Verlauf startet in der Mitte */
+  background-size: cover; /* Der Verlauf wird auf das gesamte Element angewendet */
+}
+
+
+.header__container {
+  position: relative;
+
+  @include make-container();
+}
+
+.header__heading-container {
+  clear: both;
+}
+
+.header__heading-main {
+  font-weight: 150;
+  padding-top: 10%;
+  line-height: 92%;
+  font-size: 6rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+
+  animation-name: header__heading-main-font-weight;
+  animation-delay: 0.75s;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+  z-index: 1;
+  position: relative;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+
+    font-size: 2rem;
+  }
+}
+@keyframes header__heading-main-font-weight {
+  0% {
+    opacity: 0;
+    font-weight: 100;
+  }
+  100% {
+    opacity: 1;
+    font-weight: 700;
+  }
+}
+
+
+
+
+.header__heading-sub {
+  margin-top: 33%;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem black;
+  z-index: 1;
+  position: relative;
+  z-index: 100;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.9rem;
+  }
+}
