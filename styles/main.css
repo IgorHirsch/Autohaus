@@ -754,7 +754,6 @@ html {
 }
 @media (max-width: 48em) {
   .tours__card {
-    transform: scale(1.2);
     margin: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
