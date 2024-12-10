@@ -31,6 +31,7 @@ $-tours-animation-duration: 0.25s;
   padding-top: 5rem;
   padding-bottom: 10rem;
 
+  margin: 0px auto;
   @include make-container();
 }
 
@@ -60,12 +61,27 @@ $-tours-animation-duration: 0.25s;
   }
 }
 
+
+
+$-offers-card-margin: 0.66rem;
+
+// Konteiner für kards
 .tours__cards {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 1rem;
+
+  margin-left: -$-offers-card-margin;
+  margin-right: -$-offers-card-margin;
+  margin-top: ($-offers-card-margin * -2);
+
+
+  @media (max-width: $breakpoint-sm) {
+    padding-top:6rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .tours__card {
@@ -96,11 +112,19 @@ $-tours-animation-duration: 0.25s;
     z-index: 1000;
   }
 
+
+@media (max-width: $breakpoint-md) {
+    $-width-md: (100% * 0.5);
+    width: calc(#{$-width-md} - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+
+
   @media (max-width: $breakpoint-sm) {
     transform: scale(1.2);
     margin: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
   }
 }
 

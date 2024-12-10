@@ -670,6 +670,7 @@ html {
   z-index: 1;
   padding-top: 5rem;
   padding-bottom: 10rem;
+  margin: 0px auto;
   max-width: 90%;
   margin: 0px auto;
 }
@@ -714,8 +715,17 @@ html {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 1rem;
+  margin-left: -0.66rem;
+  margin-right: -0.66rem;
+  margin-top: -1.32rem;
+}
+@media (max-width: 48em) {
+  .tours__cards {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .tours__card {
@@ -737,12 +747,18 @@ html {
   transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0s linear;
   z-index: 1000;
 }
+@media (max-width: 62em) {
+  .tours__card {
+    width: calc(50% - 1.321rem);
+  }
+}
 @media (max-width: 48em) {
   .tours__card {
     transform: scale(1.2);
     margin: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    width: calc(100% - 1.321rem);
   }
 }
 
