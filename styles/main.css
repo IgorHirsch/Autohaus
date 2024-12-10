@@ -715,15 +715,14 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 10rem;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .tours__card {
   flex: 0 0 14.2rem;
   position: relative;
-  margin-top: 1rem;
-  height: 21rem;
+  margin: 0.2rem;
+  height: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
   overflow: hidden;
@@ -740,8 +739,8 @@ html {
 }
 @media (max-width: 48em) {
   .tours__card {
-    transform: scale(1.5);
-    margin: 7rem;
+    transform: scale(1.2);
+    margin: 4rem;
     margin-left: 3rem;
     margin-right: 3rem;
   }
