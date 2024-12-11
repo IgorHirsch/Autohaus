@@ -24,11 +24,11 @@ $breakpoint-xs: 36em !default;
 /** iPhone 12 Pro spezifischer Breakpoint */
 $breakpoint-iphone12: 24.375em !default;  // Entspricht 390px
 
-@media (max-width: $breakpoint-iphone12) {
-  /* Deine CSS-Regeln für das iPhone 12 Pro */
-}
+
 /** Breakpoints */
 @media (max-width: $breakpoint-lg) {
+}
+@media (max-width: $breakpoint-iphone12) {
 }
 @media (max-width: $breakpoint-md) {
 }

@@ -22,9 +22,6 @@ html {
 /** 768px oder schmaler */
 /** 576px oder schmaler */
 /** iPhone 12 Pro spezifischer Breakpoint */
-@media (max-width: 24.375em) {
-  /* Deine CSS-Regeln für das iPhone 12 Pro */
-}
 /** Breakpoints */
 .container {
   max-width: 90%;
@@ -601,6 +598,7 @@ html {
 @media (max-width: 24.375em) {
   .motivation__images-card {
     margin: 0.1;
+    display: none;
   }
 }
 
@@ -610,11 +608,34 @@ html {
  */
 .swiper-container {
   display: none; /* Swiper wird standardmäßig ausgeblendet */
+  position: relative; /* Damit absolute Positionierungen der Navigationselemente relativ zum Container sind */
+  width: 100%;
+  margin: auto;
+}
+
+/* Default (Desktop-Layout) */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .motivation__image {
   box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
-  width: 20%;
+  width: 100%;
   height: 20%;
   margin: 2rem;
   position: static;
@@ -666,14 +687,27 @@ html {
   .motivation__image .swiper-container {
     display: block;
     width: 100%;
-    max-width: 10px; /* Optional: Setze eine maximale Breite */
-    margin: auto;
   }
   .motivation__image .swiper-slide img {
     width: 100%;
     height: auto;
     -o-object-fit: cover;
        object-fit: cover; /* Optional: sorgt dafür, dass das Bild das Element ausfüllt, ohne verzerrt zu werden */
+  }
+  .motivation__image .swiper-pagination {
+    position: absolute; /* Position unter dem Swiper-Container */
+    bottom: 10px; /* Abstand vom unteren Rand */
+    left: 50%;
+    transform: translateX(-50%); /* Zentriert */
+  }
+  .motivation__image .swiper-button-next,
+  .motivation__image .swiper-button-prev {
+    position: absolute;
+    top: 50%; /* Buttons vertikal mittig */
+    transform: translateY(-50%); /* Vertikal zentrieren */
+    z-index: 10;
+    padding: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
