@@ -21,6 +21,10 @@ html {
 /** 992px oder schmaler */
 /** 768px oder schmaler */
 /** 576px oder schmaler */
+/** iPhone 12 Pro spezifischer Breakpoint */
+@media (max-width: 24.375em) {
+  /* Deine CSS-Regeln für das iPhone 12 Pro */
+}
 /** Breakpoints */
 .container {
   max-width: 90%;
@@ -498,7 +502,7 @@ html {
   padding-bottom: 15rem;
   background-image: linear-gradient(to bottom, #20272e, #1a3b44);
 }
-@media (max-width: 48em) {
+@media (max-width: 24.375em) {
   .motivation {
     padding-bottom: 1rem;
   }
@@ -510,9 +514,9 @@ html {
   margin: auto;
   padding-bottom: 3rem;
 }
-@media (max-width: 48em) {
+@media (max-width: 24.375em) {
   .motivation__column-text {
-    width: 95%;
+    width: 100%;
     /* Beispiel für $breakpoint-sm */
   }
   .motivation__column-text .motivation__column-text {

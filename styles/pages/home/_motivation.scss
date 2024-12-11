@@ -10,7 +10,7 @@ $-image-margin: 0.66rem;
   padding-bottom: 15rem;
   background-image: linear-gradient(to bottom, #20272e, #1a3b44);
 
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $breakpoint-iphone12) {
     padding-bottom: 1rem;
   }
 }
@@ -21,8 +21,8 @@ $-image-margin: 0.66rem;
   margin: auto;
   padding-bottom: 3rem;
 
-  @media (max-width: $breakpoint-sm) {
-    width: 95%;
+  @media (max-width: $breakpoint-iphone12) {
+    width: 100%;
 
     /* Beispiel für $breakpoint-sm */
     .motivation__column-text {
