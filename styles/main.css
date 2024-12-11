@@ -601,7 +601,6 @@ html {
 @media (max-width: 24.375em) {
   .motivation__images-card {
     margin: 0.1;
-    display: none;
   }
 }
 
