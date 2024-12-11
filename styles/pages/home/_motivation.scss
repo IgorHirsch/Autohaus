@@ -142,6 +142,12 @@ $-image-margin: 0.66rem;
   }
 }
 
+.swiper-container {
+  display: none; /* Swiper wird standardmäßig ausgeblendet */
+}
+
+
+
 .motivation__image {
   box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
   width: 20%;
@@ -196,9 +202,22 @@ $-image-margin: 0.66rem;
     margin: 0.5rem;
   }
 
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: $breakpoint-iphone12) {
     $-width-md: (100% * 0.5);
 
     width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
+
+    .swiper-container {
+      display: block; 
+      width: 100%;
+      max-width: 10px; /* Optional: Setze eine maximale Breite */
+      margin: auto;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Optional: sorgt dafür, dass das Bild das Element ausfüllt, ohne verzerrt zu werden */
+    }
   }
 }

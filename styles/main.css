@@ -608,6 +608,10 @@ html {
  * @param $top: Position from top (in rem)
  * @param $left: Position from left (in %)
  */
+.swiper-container {
+  display: none; /* Swiper wird standardmäßig ausgeblendet */
+}
+
 .motivation__image {
   box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
   width: 20%;
@@ -655,9 +659,21 @@ html {
     margin: 0.5rem;
   }
 }
-@media (max-width: 36em) {
+@media (max-width: 24.375em) {
   .motivation__image {
     width: calc(100% - 1.321rem);
+  }
+  .motivation__image .swiper-container {
+    display: block;
+    width: 100%;
+    max-width: 10px; /* Optional: Setze eine maximale Breite */
+    margin: auto;
+  }
+  .motivation__image .swiper-slide img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover; /* Optional: sorgt dafür, dass das Bild das Element ausfüllt, ohne verzerrt zu werden */
   }
 }
 
