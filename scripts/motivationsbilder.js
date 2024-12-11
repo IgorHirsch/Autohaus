@@ -17,7 +17,7 @@ window.addEventListener("resize", () => {
   const swiperContainer = document.querySelector(".swiper-container");
   const imagesCard = document.querySelector(".motivation__images-card");
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 300) {
     // Bei kleineren Bildschirmen nur Swiper anzeigen
     swiperContainer.style.display = "block";
     imagesCard.style.display = "none";
