@@ -6,7 +6,7 @@ $-motivation__image-hover-border: 0.33rem;
 $-image-margin: 0.66rem;
 
 .motivation {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 15rem;
   background-image: linear-gradient(to bottom, #20272e, #1a3b44);
 
@@ -21,18 +21,24 @@ $-image-margin: 0.66rem;
   margin: auto;
   padding-bottom: 3rem;
 
-  @media (max-width: $breakpoint-lg) {
-  }
-
-  @media (max-width: $breakpoint-md) {
-    padding-top: 0;
-    padding-right: 0;
-  }
-
   @media (max-width: $breakpoint-sm) {
-    width: 80%;
-    float: none;
-    padding-bottom: 3rem;
+    width: 95%;
+
+    /* Beispiel für $breakpoint-sm */
+    .motivation__column-text {
+      float: none;
+      padding-bottom: 3rem;
+      margin: auto;
+    }
+
+    .motivation__text--full {
+      display: none;
+    }
+
+    .motivation__text--short {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -148,17 +154,17 @@ $-image-margin: 0.66rem;
   transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
 
   &--first {
-     // Abgerundete Ecken hinzufügen
-  border-radius: 2rem; // Passt die Rundung der Ecken an
-  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+    // Abgerundete Ecken hinzufügen
+    border-radius: 2rem; // Passt die Rundung der Ecken an
+    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
     z-index: 1;
     width: 20%;
   }
 
   &--second {
-     // Abgerundete Ecken hinzufügen
-  border-radius: 2rem; // Passt die Rundung der Ecken an
-  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+    // Abgerundete Ecken hinzufügen
+    border-radius: 2rem; // Passt die Rundung der Ecken an
+    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
     width: 20%;
     z-index: 2;
   }
@@ -166,9 +172,9 @@ $-image-margin: 0.66rem;
   &--third {
     z-index: 3;
     width: 20%;
-     // Abgerundete Ecken hinzufügen
-  border-radius: 2rem; // Passt die Rundung der Ecken an
-  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+    // Abgerundete Ecken hinzufügen
+    border-radius: 2rem; // Passt die Rundung der Ecken an
+    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
   }
 
   &:hover {

@@ -494,7 +494,7 @@ html {
 }
 
 .motivation {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 15rem;
   background-image: linear-gradient(to bottom, #20272e, #1a3b44);
 }
@@ -510,17 +510,22 @@ html {
   margin: auto;
   padding-bottom: 3rem;
 }
-@media (max-width: 62em) {
-  .motivation__column-text {
-    padding-top: 0;
-    padding-right: 0;
-  }
-}
 @media (max-width: 48em) {
   .motivation__column-text {
-    width: 80%;
+    width: 95%;
+    /* Beispiel für $breakpoint-sm */
+  }
+  .motivation__column-text .motivation__column-text {
     float: none;
     padding-bottom: 3rem;
+    margin: auto;
+  }
+  .motivation__column-text .motivation__text--full {
+    display: none;
+  }
+  .motivation__column-text .motivation__text--short {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -723,7 +728,7 @@ html {
 }
 @media (max-width: 48em) {
   .tours__cards {
-    padding-top: 6rem;
+    padding-top: 0rem;
     padding-bottom: 2rem;
   }
 }
@@ -754,7 +759,7 @@ html {
 }
 @media (max-width: 48em) {
   .tours__card {
-    margin: 4rem;
+    margin: 1rem;
     margin-left: 3rem;
     margin-right: 3rem;
     width: calc(100% - 1.321rem);
@@ -999,7 +1004,7 @@ html {
 }
 @media (max-width: 48em) {
   .offers__container {
-    padding-top: 6rem;
+    padding-top: 0rem;
     padding-bottom: 2rem;
   }
 }

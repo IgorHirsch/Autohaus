@@ -104,7 +104,7 @@ $-half-pixel-width: math.div(1rem, 32);
   margin-top: ($-offers-card-margin * -2);
 
   @media (max-width: $breakpoint-sm) {
-    padding-top:6rem;
+    padding-top:0rem;
     padding-bottom: 2rem;
   }
 }
