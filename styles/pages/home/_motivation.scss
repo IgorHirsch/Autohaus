@@ -179,14 +179,16 @@ $-image-margin: 0.66rem;
 .swiper-container {
   display: flex;
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 1300px;
 
   
   overflow: hidden;
   border-radius: 20px;
-  height: 82vh;
+  height: auto;
   text-align: center;
   vertical-align: middle;
   background-color: antiquewhite;
+  padding: 0.6rem;
+  padding-bottom: 1.1rem;
 }
