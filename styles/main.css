@@ -599,6 +599,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: gray;
+  z-index: 1000;
 }
 @media (max-width: 24.375em) {
   .motivation__images-card {
@@ -611,45 +613,24 @@ html {
  * @param $top: Position from top (in rem)
  * @param $left: Position from left (in %)
  */
-.swiper-container {
-  display: none; /* Swiper wird standardmäßig ausgeblendet */
-  position: relative; /* Damit absolute Positionierungen der Navigationselemente relativ zum Container sind */
-  width: 100%;
-}
-
 .motivation__image {
-  box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
-  width: 100%;
-  height: 20%;
+  box-sizing: border-box;
+  width: 10%;
+  height: auto;
   margin: 2rem;
   position: static;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 20%;
   filter: grayscale(50%);
   transform: scale(1);
   transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
 }
-.motivation__image--first {
-  border-radius: 2rem;
-  overflow: hidden;
-  z-index: 1;
-  width: 20%;
-}
-.motivation__image--second {
-  border-radius: 2rem;
-  overflow: hidden;
-  width: 20%;
-  z-index: 2;
-}
-.motivation__image--third {
-  z-index: 3;
-  width: 20%;
-  border-radius: 2rem;
-  overflow: hidden;
-}
 .motivation__image:hover {
   filter: grayscale(0%);
-  transform: scale(1.05);
-  z-index: 10;
+  transform: scale(1.02);
+  z-index: 100;
 }
 @media (max-width: 62em) {
   .motivation__image {
@@ -666,6 +647,19 @@ html {
   .motivation__image {
     width: calc(100% - 1.321rem);
   }
+}
+
+.swiper-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 82vh;
+  text-align: center;
+  vertical-align: middle;
+  background-color: antiquewhite;
 }
 
 .tours {

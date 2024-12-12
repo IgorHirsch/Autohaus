@@ -43,21 +43,18 @@ $-image-margin: 0.66rem;
 }
 
 /////////////////////////////////////////////////////////////////////// Animation
-
 .motivation__text-heading,
 .motivation__text {
   opacity: 0; /* Anfangszustand: unsichtbar */
   transform: translateY(10); /* Leicht nach unten verschoben */
   transition: opacity 0.3s ease-out, transform 0.1s ease-in-out;
 }
-
 .motivation__text-heading.visible,
 .motivation__text.visible {
   opacity: 1; /* Sichtbar */
   transform: translateY(); /* Zurück zur ursprünglichen Position */
   transition: opacity 2s ease-out, transform 2s ease-in-out;
 }
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 // Große Uberschfift "Die Straße gehört dir. Wir geben dir das Auto dazu. "
@@ -112,6 +109,7 @@ $-image-margin: 0.66rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 //Fotos
@@ -119,7 +117,9 @@ $-image-margin: 0.66rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: gray;
 
+  z-index: 1000;
   @media (max-width: $breakpoint-iphone12) {
     margin: 0.1;
     display: none;
@@ -130,65 +130,29 @@ $-image-margin: 0.66rem;
  * @param $top: Position from top (in rem)
  * @param $left: Position from left (in %)
  */
-@mixin motivation__image-position($top, $left) {
-  top: $top;
-  left: $left;
 
-  $hover-offset: $-motivation__image-hover-padding +
-    $-motivation__image-hover-border;
 
-  &:hover {
-    top: $top - $hover-offset;
-    left: calc(#{$left} - #{$hover-offset});
-  }
-}
 
-.swiper-container {
-  display: none; /* Swiper wird standardmäßig ausgeblendet */
-  position: relative; /* Damit absolute Positionierungen der Navigationselemente relativ zum Container sind */
-  width: 100%;
-}
 
 .motivation__image {
-  
-  box-sizing: border-box; /* Stellt sicher, dass Border und Padding in die Größe einbezogen werden */
-  width: 100%;
-  height: 20%;
+  box-sizing: border-box;
+  width: 10%;
+  height: auto;
   margin: 2rem;
   position: static;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 20%;
+
   filter: grayscale(50%);
   transform: scale(1);
   transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
 
-  &--first {
-    // Abgerundete Ecken hinzufügen
-    border-radius: 2rem; // Passt die Rundung der Ecken an
-    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
-    z-index: 1;
-    width: 20%;
-  }
-
-  &--second {
-    // Abgerundete Ecken hinzufügen
-    border-radius: 2rem; // Passt die Rundung der Ecken an
-    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
-    width: 20%;
-    z-index: 2;
-  }
-
-  &--third {
-    z-index: 3;
-    width: 20%;
-    // Abgerundete Ecken hinzufügen
-    border-radius: 2rem; // Passt die Rundung der Ecken an
-    overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
-  }
-
   &:hover {
     filter: grayscale(0%);
-    transform: scale(1.05);
-    z-index: 10;
+    transform: scale(1.02);
+    z-index: 100;
   }
 
   @media (max-width: $breakpoint-md) {
@@ -207,4 +171,22 @@ $-image-margin: 0.66rem;
 
     width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
   }
+}
+
+
+
+
+.swiper-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+
+  
+  overflow: hidden;
+  border-radius: 20px;
+  height: 82vh;
+  text-align: center;
+  vertical-align: middle;
+  background-color: antiquewhite;
 }
