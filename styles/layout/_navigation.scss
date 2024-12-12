@@ -3,10 +3,11 @@
 .navigation {
   padding: 0.5rem; // Innenabstand
   display: flex; // Flexbox-Layout
-  justify-content: left; // Zentrierte Navigation
+  justify-content: center; // Zentrierte Navigation
   align-items: center; // Vertikale Zentrierung
   position: absolute;
 
+  
   ul {
     list-style: none; // Keine Aufzählung
     display: flex; // Elemente horizontal anordnen
@@ -80,7 +81,11 @@
   left: 0;
   width: 15rem; /* Breite der Navigation */
   height: 100%; /* Navigation nimmt die gesamte Höhe ein */
-  z-index: 1000; /* Hohe Priorität in der Schichtreihenfolge */
+  z-index: 100; /* Hohe Priorität in der Schichtreihenfolge */
+
+    @media (max-width: $breakpoint-sm) {
+          display: none;
+        }
 
   ul {
     margin: 0;

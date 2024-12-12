@@ -1,7 +1,6 @@
 const swiper = new Swiper(".swiper-container", {
-  loop: true, // Endlosschleife
-  slidesPerView: 1, // Nur ein Bild gleichzeitig anzeigen
-  spaceBetween: 10, // Abstand zwischen den Bildern (optional)
+  loop: false, // Endlosschleife
+  slidesPerView: 1, // Abstand zwischen den Bildern (optional)
   pagination: {
     el: ".swiper-pagination", // Pagination hinzufügen
     clickable: true, // Ermöglicht das Klicken auf die Seitenzahlen
@@ -21,6 +20,8 @@ window.addEventListener("resize", () => {
     // Bei kleineren Bildschirmen nur Swiper anzeigen
     swiperContainer.style.display = "block";
     imagesCard.style.display = "none";
+    
+    nav.classList.remove("navigation");
   } else {
     // Bei größeren Bildschirmen die Bilder nebeneinander anzeigen
     swiperContainer.style.display = "none";
