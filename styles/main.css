@@ -90,7 +90,7 @@ html {
 }
 @media (max-width: 391px) {
   .header__container {
-    height: 25rem;
+    height: 100%;
   }
 }
 
@@ -99,6 +99,7 @@ html {
   position: relative;
   margin: 0px auto;
   padding: 1.618rem;
+  padding-bottom: 14rem;
 }
 
 .header__heading-main {

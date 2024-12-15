@@ -12,6 +12,8 @@
 
   @media (max-width: 391px) {
     background-image: url("../images/modal/cuprahome4.jpg");
+
+    
   }
 }
 
@@ -39,7 +41,7 @@
 .header__container {
   @include make-container();
   @media (max-width: 391px) {
-    height: 25rem;
+    height: 100%;
   }
 }
 
@@ -48,6 +50,7 @@
   position: relative;
   margin: 0px auto;
   padding: 1.618rem;
+  padding-bottom: 14rem;
 }
 
 // Drive Dionamic
