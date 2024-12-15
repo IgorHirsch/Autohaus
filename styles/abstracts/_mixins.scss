@@ -9,11 +9,26 @@
 }
 
 @mixin make-container() {
-  max-width: 90%;
+  max-width:  61.8%;
+  max-width: 61.8%;
   margin: 0px auto;
+  border-radius: 1.618rem;
+
+  padding: 1.618rem;
+
+
   @include clearfix;
 
-  @media (max-width: $breakpoint-xs) {
-      padding: 0 1rem;
+  @media (max-width: 400px) {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+
+   @media (max-width: $breakpoint-lg) {
+
+    
+    
   }
 }

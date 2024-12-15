@@ -7,7 +7,7 @@
   align-items: center; // Vertikale Zentrierung
   position: absolute;
 
-  
+   // Menu 
   ul {
     list-style: none; // Keine Aufzählung
     display: flex; // Elemente horizontal anordnen
@@ -34,7 +34,7 @@
         color: white;
         text-decoration: none;
         padding: 0.5rem 0.25rem 0.25rem 0.25rem;
-        margin-top: 2rem;
+      
         margin-left: 2rem;
         margin-right: 2rem;
         display: block;
@@ -77,10 +77,6 @@
 
   align-items: flex-start; /* Links ausrichten */
   position: fixed; /* Fixierung der Navigation */
-  top: 10%;
-  left: 0;
-  width: 15rem; /* Breite der Navigation */
-  height: 100%; /* Navigation nimmt die gesamte Höhe ein */
   z-index: 100; /* Hohe Priorität in der Schichtreihenfolge */
 
     @media (max-width: $breakpoint-sm) {
@@ -120,6 +116,7 @@
         display: block; /* Block-Layout für die Links */
         padding: 0.5rem;
         text-shadow: 0 0 0.5rem black;
+         margin-top: 3rem;
 
         border-bottom: 0.15rem solid transparent;
 
@@ -141,6 +138,7 @@
   0% {
     opacity: 0; /* Am Anfang unsichtbar */
     transform: translateX(-100%); /* Start außerhalb des Bildschirms */
+    margin-top: 5rem;
   }
   100% {
     opacity: 1; /* Am Ende sichtbar */

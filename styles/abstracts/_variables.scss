@@ -1,8 +1,8 @@
 @use "sass:color";
 @use "sass:math";
 
-$color-primary: rgb(30, 105, 116) !default;
-$color-secondary: #3a8090 !default;
+$color-primary: rgb(52, 75, 86) !default;
+$color-secondary: #345a62 !default;
 
 $color-secondary-dark: #011820 !default;
 $color-secondary-light: color.scale($color-secondary, $lightness: 20%) !default;
@@ -10,7 +10,7 @@ $color-secondary-light: color.scale($color-secondary, $lightness: 20%) !default;
 $slope-incline: math.asin(0.1);
 
 /** 1200px oder schmaler */
-$breakpoint-lg: 75em !default;
+$breakpoint-lg: 1280px !default;
 
 /** 992px oder schmaler */
 $breakpoint-md: 62em !default;
@@ -22,7 +22,7 @@ $breakpoint-sm: 48em !default;
 $breakpoint-xs: 36em !default;
 
 /** iPhone 12 Pro spezifischer Breakpoint */
-$breakpoint-iphone12: 24.375em !default;  // Entspricht 390px
+$breakpoint-iphone12: 400px !default;  // Entspricht 390px
 
 
 /** Breakpoints */

@@ -33,6 +33,11 @@ $-tours-animation-duration: 0.25s;
 
   margin: 0px auto;
   @include make-container();
+
+  @media (max-width: $breakpoint-iphone12) {
+    margin: 0px auto;
+    z-index: 1;
+  }
 }
 
 .tours__heading {
@@ -79,6 +84,10 @@ $-offers-card-margin: 0.66rem;
     padding-top: 0rem;
     padding-bottom: 2rem;
   }
+
+  @media (max-width: $breakpoint-iphone12) {
+    display: none;
+  }
 }
 
 .tours__card {
@@ -90,8 +99,6 @@ $-offers-card-margin: 0.66rem;
   // Abgerundete Ecken hinzufügen
   border-radius: 0.5rem; // Passt die Rundung der Ecken an
   overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
-
-  overflow: hidden;
   box-shadow: 0 0 2rem;
 
   transform: scale(1);
@@ -119,6 +126,22 @@ $-offers-card-margin: 0.66rem;
     margin-left: 3rem;
     margin-right: 3rem;
     width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: $breakpoint-iphone12) {
+
+    margin: 0px auto;
+    height: 30rem;
+
+    margin-top: 3rem;
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 1rem black;
+      transition: transform $-tours-animation-duration ease-in-out,
+        box-shadow $-tours-animation-duration ease-in-out, z-index 0s linear;
+
+      z-index: 1000;
+    }
   }
 }
 

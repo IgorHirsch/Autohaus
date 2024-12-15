@@ -6,12 +6,22 @@ $-motivation__image-hover-border: 0.33rem;
 $-image-margin: 0.66rem;
 
 .motivation {
-  padding-top: 5rem;
-  padding-bottom: 15rem;
-  background-image: linear-gradient(to bottom, #20272e, #1a3b44);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+background-image: linear-gradient(
+    to top,
+    #1a3b44,
+    #1d363f,
+    #1f313a,
+    #202c34,
+    #20272e
+  );
+
 
   @media (max-width: $breakpoint-iphone12) {
     padding-bottom: 1rem;
+    padding: 0.2rem;
   }
 }
 
@@ -19,7 +29,20 @@ $-image-margin: 0.66rem;
   float: top;
   width: 65%;
   margin: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 1.618rem;
+  padding-top: 1rem;
+  border-radius: 1.618rem;
+  margin-bottom: 1.618rem;
+
+
+  @media (max-width: $breakpoint-lg) {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  @media (max-width: 1440) {
+    width: 95%;
+  }
 
   @media (max-width: $breakpoint-iphone12) {
     width: 100%;
@@ -27,6 +50,7 @@ $-image-margin: 0.66rem;
     /* Beispiel für $breakpoint-sm */
     .motivation__column-text {
       float: none;
+
       padding-bottom: 3rem;
       margin: auto;
     }
@@ -62,7 +86,8 @@ $-image-margin: 0.66rem;
   color: $color-secondary;
   font-size: 2rem;
   padding-top: 0rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.618rem;
+
 
   &::before {
     content: "";
@@ -73,9 +98,8 @@ $-image-margin: 0.66rem;
     margin-bottom: 0.5rem;
   }
 
-  @media (max-width: $breakpoint-sm) {
-    font-size: 1.4rem;
-
+  @media (max-width: $breakpoint-lg) {
+    font-size: 1.3rem;
     &::before {
       content: "";
       display: block;
@@ -90,11 +114,12 @@ $-image-margin: 0.66rem;
 //Text klein
 .motivation__text {
   color: $color-secondary;
-  margin-top: 0.2rem;
   font-size: 1.1rem;
   text-align: justify;
 
   @media (max-width: $breakpoint-lg) {
+    font-size: 1rem;
+    width: 39rem;
   }
 
   @media (max-width: $breakpoint-md) {
@@ -109,17 +134,23 @@ $-image-margin: 0.66rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
-//Fotos
+// Fotos Container
 .motivation__images-card {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: gray;
+  border-radius: 1.618rem;
+  width: 80%;
+  margin: 0px auto;
 
-  z-index: 1000;
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
+
+  @media (max-width: 1280px) {
+  }
+
   @media (max-width: $breakpoint-iphone12) {
     margin: 0.1;
     display: none;
@@ -131,39 +162,38 @@ $-image-margin: 0.66rem;
  * @param $left: Position from left (in %)
  */
 
-
-
-
+// Einzelne Fotos
 .motivation__image {
   box-sizing: border-box;
-  width: 10%;
   height: auto;
-  margin: 2rem;
+  margin: 0.5rem;
   position: static;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(05, 05, 05, 0.5);
+  border-radius: 1.618rem;
   overflow: hidden;
-  width: 20%;
+  width: 31%;
 
   filter: grayscale(50%);
   transform: scale(1);
-  transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
+  transition: filter ease-in-out 1.681s, transform ease-in-out 0.2s;
 
   &:hover {
     filter: grayscale(0%);
-    transform: scale(1.02);
+    transform: scale(1.03);
     z-index: 100;
   }
 
-  @media (max-width: $breakpoint-md) {
-    $-width-md: (100% * 0.5);
-    width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
+  // 1440 x 900
+  @media (max-width: 1440px) {
+    width: 30.5%;
+    margin: 0.5rem;
   }
 
-  @media (max-width: $breakpoint-sm) {
-    $-width-md: (100% * 0.5);
-    width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
-    margin: 0.5rem;
+  // 1280 x 800
+  @media (max-width: $breakpoint-lg) {
+    width: 31%;
+    margin: 0.7rem;
+    margin-bottom: 0.4rem;
   }
 
   @media (max-width: $breakpoint-iphone12) {
@@ -173,20 +203,27 @@ $-image-margin: 0.66rem;
   }
 }
 
-
-
-
+// Swiper
 .swiper-container {
+  display: none;
   display: flex;
   position: relative;
   width: auto;
-  max-width: 1300px;
 
-  
   overflow: hidden;
-  border-radius: 20px;
-  height: auto;
+  border-radius: 1rem;
   text-align: center;
-  vertical-align: middle;
-  padding-bottom: 1.1rem;
+  padding-bottom: 2.5rem;
+}
+
+.swiper-button-next {
+  color: $color-secondary-light !important;
+}
+
+.swiper-button-prev {
+  color: $color-secondary-light !important;
+}
+
+.swiper-pagination {
+  color: $color-secondary-light !important;
 }

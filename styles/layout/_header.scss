@@ -1,17 +1,17 @@
 @use "../abstracts" as *;
 
 .header {
-  height: 35rem;
-  min-height: calc(13rem + 42vw);
   position: relative;
+
+  padding: 5.5%;
+
   overflow: hidden;
   background-size: cover;
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
   background-image: url("../images/modal/cupraHome3.jpg");
 
-  /** 1200px oder schmaler */
-  @media (max-width: $breakpoint-lg) {
-    height: calc(18rem + 32vw);
+  @media (max-width: $breakpoint-iphone12) {
+    background-image: url("../images/modal/cuprahome4.jpg");
   }
 }
 
@@ -23,15 +23,13 @@
   height: 500vw; /* Die Höhe des Elements */
   z-index: 1;
 
-  background-image: radial-gradient(
-    circle at center,
-    /* Der Verlauf startet aus der Mitte */ rgba(24, 109, 113, 0),
-    /* Völlig transparent in der Mitte */ rgba(24, 109, 113, 0),
-    /* Wenig transparent, je weiter zum Rand */ rgba(28, 90, 101, 0),
+  background-image: linear-gradient(
+    rgba(22, 73, 75, 0),
+    rgba(24, 109, 113, 0),
+    rgba(28, 90, 101, 0),
     rgba(34, 72, 85, 0),
     rgba(35, 55, 66, 0),
-    /* Immer weniger transparent */ rgba(32, 39, 46, 1)
-      /* Vollständig undurchsichtig am Rand */
+    rgba(32, 39, 46, 1)
   );
   background-repeat: no-repeat;
   background-position: center center; /* Der Verlauf startet in der Mitte */
@@ -39,24 +37,33 @@
 }
 
 .header__container {
-  position: relative;
-
   @include make-container();
+  @media (max-width: $breakpoint-iphone12) {
+    height: 25rem;
+  }
 }
 
 .header__heading-container {
-  clear: both;
+  border-radius: 1.618rem;
+  position: relative;
+  margin: 0px auto;
+  padding: 1.618rem;
 }
 
+// Drive Dionamic
 .header__heading-main {
-  font-weight: 150;
-  padding-top: 10%;
-  line-height: 92%;
-  font-size: 6rem;
+  white-space: nowrap;
+  font-size: 5rem;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(174, 209, 216);
+  border-radius: 1.618rem;
   text-transform: uppercase;
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  
+  white-space: nowrap;
+  position: relative;
+  margin: 0px auto;
 
   animation-name: header__heading-main-font-weight;
   animation-delay: 0.75s;
@@ -64,11 +71,12 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 
-  z-index: 1;
-  position: relative;
-
   @media (max-width: $breakpoint-md) {
     font-size: 5rem;
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 2rem;
   }
 
   @media (max-width: $breakpoint-sm) {
@@ -87,18 +95,20 @@
 }
 
 .header__heading-sub {
-  margin-top: 33%;
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
-  text-align: center;
-  color: white;
+  color: rgb(89, 132, 139);
   text-transform: uppercase;
   text-shadow: 0 0 0.5rem black;
-  z-index: 1;
   position: relative;
   z-index: 100;
 
-  @media (max-width: $breakpoint-sm) {
-    font-size: 0.9rem;
+
+  margin-top: 35rem;
+
+  @media (max-width: $breakpoint-iphone12) {
+    font-size: 0.7rem;
+    margin-top: 15rem;
+    margin-left: 0rem;
   }
 }

@@ -72,7 +72,7 @@ $-half-pixel-width: math.div(1rem, 32);
   font-weight: 500;
   font-size: 2rem;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &::before {
     content: "";
@@ -87,7 +87,7 @@ $-half-pixel-width: math.div(1rem, 32);
     }
   }
 
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $breakpoint-lg) {
     font-size: 1.4rem;
   }
 }
@@ -97,22 +97,29 @@ $-half-pixel-width: math.div(1rem, 32);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  margin-left: -$-offers-card-margin;
-  margin-right: -$-offers-card-margin;
-  margin-top: ($-offers-card-margin * -2);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0px auto;
+
+  background-color: rgb(123, 97, 64);
+
+  border-radius: 1.618rem;
 
   @media (max-width: $breakpoint-sm) {
-    padding-top:0rem;
+    padding-top: 0rem;
     padding-bottom: 2rem;
+  }
+
+  @media (max-width: 760px) {
+    display: none; //// Standartkontaner soll ausgeblendet werden
   }
 }
 
 .offers__card {
-  $-width: math.div(100%, 4);
+  $-width: math.div(100%, 3);
 
-  width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.001rem)});
+  width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
+
   margin: ($-offers-card-margin * 2) $-offers-card-margin 0 $-offers-card-margin;
   padding: 0 0 2rem 0;
   box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
@@ -120,9 +127,9 @@ $-half-pixel-width: math.div(1rem, 32);
   border-right: $-offers-card-border-width solid $-offers-card-border-color;
   border-top: $-offers-card-border-width solid $-offers-card-border-color;
 
-   // Abgerundete Ecken hinzufügen
-  border-radius: 2rem; // Passt die Rundung der Ecken an
-  overflow:  hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+  // Abgerundete Ecken hinzufügen
+  border-radius: 1.618rem; // Passt die Rundung der Ecken an
+  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
 
   background-color: #1a3b44;
   position: relative;
@@ -135,9 +142,10 @@ $-half-pixel-width: math.div(1rem, 32);
   @media (max-width: $breakpoint-sm) {
     width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
   }
+  @media (max-width: $breakpoint-iphone12) {
+    margin-top: 1rem;
+  }
 }
-
-
 
 // Linie unten
 // .offers__card::after {
@@ -177,7 +185,6 @@ $-half-pixel-width: math.div(1rem, 32);
   border-top: $-offers-card-border-width solid $-offers-card-border-color;
   border-right: $-offers-card-border-width solid $-offers-card-border-color;
   border-left: $-offers-card-border-width solid $-offers-card-border-color;
-  
 }
 
 .offers__image-container::after {
@@ -300,7 +307,7 @@ $-half-pixel-width: math.div(1rem, 32);
   //     color.scale($color-primary, $lightness: -20%) 100%
   //   );
   ///////////////////////////////////////////////////////
-  
+
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
@@ -316,3 +323,5 @@ $-half-pixel-width: math.div(1rem, 32);
     opacity: 1;
   }
 }
+
+
