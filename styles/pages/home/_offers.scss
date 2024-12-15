@@ -142,7 +142,7 @@ $-half-pixel-width: math.div(1rem, 32);
   @media (max-width: $breakpoint-sm) {
     width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
   }
-  @media (max-width: $breakpoint-iphone12) {
+  @media (max-width: 391px) {
     margin-top: 1rem;
   }
 }
@@ -323,5 +323,3 @@ $-half-pixel-width: math.div(1rem, 32);
     opacity: 1;
   }
 }
-
-

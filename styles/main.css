@@ -50,7 +50,7 @@ html {
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
   background-image: url("../images/modal/cupraHome3.jpg");
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .header {
     background-image: url("../images/modal/cuprahome4.jpg");
   }
@@ -88,7 +88,7 @@ html {
     padding-bottom: 1rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .header__container {
     height: 25rem;
   }
@@ -155,7 +155,7 @@ html {
   z-index: 100;
   margin-top: 35rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .header__heading-sub {
     font-size: 0.7rem;
     margin-top: 15rem;
@@ -521,7 +521,7 @@ html {
   padding-bottom: 3rem;
   background-image: linear-gradient(to top, #1a3b44, #1d363f, #1f313a, #202c34, #20272e);
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .motivation {
     padding-bottom: 1rem;
     padding: 0.2rem;
@@ -548,7 +548,7 @@ html {
     width: 95%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .motivation__column-text {
     width: 100%;
     /* Beispiel für $breakpoint-sm */
@@ -644,7 +644,7 @@ html {
     width: 100%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .motivation__images-card {
     margin: 0.1;
     display: none;
@@ -686,7 +686,7 @@ html {
     margin-bottom: 0.4rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .motivation__image {
     width: calc(100% - 1.321rem);
   }
@@ -752,7 +752,7 @@ html {
     padding-bottom: 1rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .tours__container {
     margin: 0px auto;
     z-index: 1;
@@ -801,7 +801,7 @@ html {
     padding-bottom: 2rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .tours__cards {
     display: none;
   }
@@ -838,7 +838,7 @@ html {
     width: calc(100% - 1.321rem);
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .tours__card {
     margin: 0px auto;
     height: 30rem;
@@ -1127,7 +1127,7 @@ html {
     width: calc(100% - 1.321rem);
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 391px) {
   .offers__card {
     margin-top: 1rem;
   }

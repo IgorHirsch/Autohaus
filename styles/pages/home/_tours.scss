@@ -34,7 +34,7 @@ $-tours-animation-duration: 0.25s;
   margin: 0px auto;
   @include make-container();
 
-  @media (max-width: $breakpoint-iphone12) {
+  @media (max-width: 391px) {
     margin: 0px auto;
     z-index: 1;
   }
@@ -85,7 +85,7 @@ $-offers-card-margin: 0.66rem;
     padding-bottom: 2rem;
   }
 
-  @media (max-width: $breakpoint-iphone12) {
+  @media (max-width: 391px) {
     display: none;
   }
 }
@@ -128,7 +128,7 @@ $-offers-card-margin: 0.66rem;
     width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
   }
 
-  @media (max-width: $breakpoint-iphone12) {
+  @media (max-width: 391px) {
 
     margin: 0px auto;
     height: 30rem;
