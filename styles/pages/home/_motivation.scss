@@ -6,10 +6,10 @@ $-motivation__image-hover-border: 0.33rem;
 $-image-margin: 0.66rem;
 
 .motivation {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
+  
 
-background-image: linear-gradient(
+  background-image: linear-gradient(
     to top,
     #1a3b44,
     #1d363f,
@@ -17,7 +17,6 @@ background-image: linear-gradient(
     #202c34,
     #20272e
   );
-
 
   @media (max-width: 391px) {
     padding-bottom: 1rem;
@@ -27,18 +26,15 @@ background-image: linear-gradient(
 
 .motivation__column-text {
   float: top;
-  width: 65%;
-  margin: auto;
-  padding-bottom: 1.618rem;
   padding-top: 1rem;
   border-radius: 1.618rem;
-  margin-bottom: 1.618rem;
+  margin: 0px auto;
+  max-width: 90%;
+  
 
 
-  @media (max-width: $breakpoint-lg) {
-    width: 90%;
-    padding: 1rem;
-  }
+
+  
 
   @media (max-width: 1440) {
     width: 95%;
@@ -85,9 +81,7 @@ background-image: linear-gradient(
 .motivation__text-heading {
   color: $color-secondary;
   font-size: 2rem;
-  padding-top: 0rem;
-  margin-bottom: 1.618rem;
-
+  margin-bottom: 1rem;
 
   &::before {
     content: "";
@@ -103,9 +97,9 @@ background-image: linear-gradient(
     &::before {
       content: "";
       display: block;
-      width: 10.5rem;
+      width: 100%;
       height: 0.25rem;
-      background-color: $color-secondary-light;
+      background-color: rgb(105, 57, 57);
       margin-bottom: 0.5rem;
     }
   }
@@ -116,6 +110,8 @@ background-image: linear-gradient(
   color: $color-secondary;
   font-size: 1.1rem;
   text-align: justify;
+  margin: 0px auto;
+
 
   @media (max-width: $breakpoint-lg) {
     font-size: 1rem;
@@ -130,7 +126,7 @@ background-image: linear-gradient(
   }
 }
 
-.motivation-images-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -144,6 +140,7 @@ background-image: linear-gradient(
   width: 80%;
   margin: 0px auto;
 
+
   @media (max-width: $breakpoint-lg) {
     width: 100%;
   }
@@ -152,7 +149,7 @@ background-image: linear-gradient(
   }
 
   @media (max-width: 391px) {
-    margin: 0.1;
+    
     display: none;
   }
 }
@@ -196,7 +193,7 @@ background-image: linear-gradient(
     margin-bottom: 0.4rem;
   }
 
-  @media (max-width: 391px) {
+  @media (max-width: $breakpoint-iphone12) {
     $-width-md: (100% * 0.5);
 
     width: calc(100% - #{($-image-margin * 2 + 0.001rem)});
@@ -206,7 +203,6 @@ background-image: linear-gradient(
 // Swiper
 .swiper-container {
   display: none;
-  display: flex;
   position: relative;
   width: auto;
 
@@ -214,6 +210,10 @@ background-image: linear-gradient(
   border-radius: 1rem;
   text-align: center;
   padding-bottom: 2.5rem;
+
+  @media (max-width: 391px) {
+    display: flex;
+  }
 }
 
 .swiper-button-next {

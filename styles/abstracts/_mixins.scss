@@ -9,13 +9,12 @@
 }
 
 @mixin make-container() {
-  max-width:  61.8%;
-  max-width: 61.8%;
+  max-width:  68%;
   margin: 0px auto;
   border-radius: 1.618rem;
 
   padding: 1.618rem;
-
+background-color: transparentize($color: #000000, $amount: 0.8);
 
   @include clearfix;
 

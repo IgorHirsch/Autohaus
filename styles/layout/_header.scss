@@ -2,18 +2,16 @@
 
 .header {
   position: relative;
-
-  padding: 5.5%;
-
   overflow: hidden;
   background-size: cover;
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
   background-image: url("../images/modal/cupraHome3.jpg");
+  padding: 5%;
 
   @media (max-width: 391px) {
     background-image: url("../images/modal/cuprahome4.jpg");
 
-    
+    padding: 10% 5% 60% 5%;
   }
 }
 
@@ -26,7 +24,7 @@
   z-index: 1;
 
   background-image: linear-gradient(
-    rgba(22, 73, 75, 0),
+    rgba(30, 94, 96, 0),
     rgba(24, 109, 113, 0),
     rgba(28, 90, 101, 0),
     rgba(34, 72, 85, 0),
@@ -39,34 +37,27 @@
 }
 
 .header__container {
-  @include make-container();
+  height: 50rem;
+
+  margin: 0px auto;
+  
   @media (max-width: 391px) {
     height: 100%;
   }
 }
 
-.header__heading-container {
-  border-radius: 1.618rem;
-  position: relative;
-  margin: 0px auto;
-  padding: 1.618rem;
-  padding-bottom: 14rem;
-}
+
 
 // Drive Dionamic
 .header__heading-main {
   white-space: nowrap;
   font-size: 5rem;
   text-align: center;
-  color: rgb(174, 209, 216);
+  color: rgb(255, 255, 255);
   border-radius: 1.618rem;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  
-  white-space: nowrap;
-  position: relative;
-  margin: 0px auto;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  z-index: 1000;
 
   animation-name: header__heading-main-font-weight;
   animation-delay: 0.75s;
@@ -101,17 +92,22 @@
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
   color: rgb(89, 132, 139);
+
+  text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 0.5rem black;
   position: relative;
   z-index: 100;
+  background-color: antiquewhite;
 
-
-  margin-top: 35rem;
+  margin: 0px auto;
+  margin-top: 4rem;
+  width: 75%;
 
   @media (max-width: 391px) {
     font-size: 0.7rem;
     margin-top: 15rem;
-    margin-left: 0rem;
+    text-align: left;
+    background-color: transparent;
   }
 }

@@ -18,23 +18,28 @@ $-tours-animation-duration: 0.25s;
     #202c34,
     #20272e
   );
+padding: 3rem 0;
 
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: 391px) {
+    
+
     padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 }
 
 .tours__container {
-  position: relative;
-  z-index: 1;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
 
-  margin: 0px auto;
+
   @include make-container();
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  margin: 0px auto;
 
+  
   @media (max-width: 391px) {
+    max-width: 99%;
+
+    padding-top: 0rem;
     margin: 0px auto;
     z-index: 1;
   }
@@ -44,9 +49,8 @@ $-tours-animation-duration: 0.25s;
   color: $color-secondary;
   font-weight: 500;
   font-size: 2rem;
-  margin: auto;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &::before {
     content: "";
@@ -57,7 +61,8 @@ $-tours-animation-duration: 0.25s;
     margin-bottom: 0.5rem;
 
     @media (max-width: $breakpoint-sm) {
-      width: 9rem;
+      width: 100%;
+      background-color: #5f632c;
     }
   }
 
@@ -74,16 +79,10 @@ $-offers-card-margin: 0.66rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
+  border-radius: 1rem;
 
-  margin-left: -$-offers-card-margin;
-  margin-right: -$-offers-card-margin;
-  margin-top: ($-offers-card-margin * -2);
-
-  @media (max-width: $breakpoint-sm) {
-    padding-top: 0rem;
-    padding-bottom: 2rem;
-  }
+  margin: 0px auto;
+  max-width: 97%;
 
   @media (max-width: 391px) {
     display: none;
@@ -93,7 +92,7 @@ $-offers-card-margin: 0.66rem;
 .tours__card {
   flex: 0 0 (71rem * 0.2);
   position: relative;
-  margin: 0.2rem;
+  margin: 0.5rem;
   height: 20rem;
 
   // Abgerundete Ecken hinzufügen
@@ -129,7 +128,6 @@ $-offers-card-margin: 0.66rem;
   }
 
   @media (max-width: 391px) {
-
     margin: 0px auto;
     height: 30rem;
 

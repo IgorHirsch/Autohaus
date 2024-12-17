@@ -24,11 +24,11 @@ html {
 /** iPhone 12 Pro spezifischer Breakpoint */
 /** Breakpoints */
 .container {
-  max-width: 61.8%;
-  max-width: 61.8%;
+  max-width: 68%;
   margin: 0px auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .container::after {
   display: block;
@@ -44,15 +44,16 @@ html {
 }
 .header {
   position: relative;
-  padding: 5.5%;
   overflow: hidden;
   background-size: cover;
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
   background-image: url("../images/modal/cupraHome3.jpg");
+  padding: 5%;
 }
 @media (max-width: 391px) {
   .header {
     background-image: url("../images/modal/cuprahome4.jpg");
+    padding: 10% 5% 60% 5%;
   }
 }
 
@@ -63,30 +64,15 @@ html {
   bottom: 0;
   height: 500vw; /* Die Höhe des Elements */
   z-index: 1;
-  background-image: linear-gradient(rgba(22, 73, 75, 0), rgba(24, 109, 113, 0), rgba(28, 90, 101, 0), rgba(34, 72, 85, 0), rgba(35, 55, 66, 0), rgb(32, 39, 46));
+  background-image: linear-gradient(rgba(30, 94, 96, 0), rgba(24, 109, 113, 0), rgba(28, 90, 101, 0), rgba(34, 72, 85, 0), rgba(35, 55, 66, 0), rgb(32, 39, 46));
   background-repeat: no-repeat;
   background-position: center center; /* Der Verlauf startet in der Mitte */
   background-size: cover; /* Der Verlauf wird auf das gesamte Element angewendet */
 }
 
 .header__container {
-  max-width: 61.8%;
-  max-width: 61.8%;
+  height: 50rem;
   margin: 0px auto;
-  border-radius: 1.618rem;
-  padding: 1.618rem;
-}
-.header__container::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-@media (max-width: 400px) {
-  .header__container {
-    max-width: 100%;
-    padding: 0 0.5rem;
-    padding-bottom: 1rem;
-  }
 }
 @media (max-width: 391px) {
   .header__container {
@@ -94,26 +80,15 @@ html {
   }
 }
 
-.header__heading-container {
-  border-radius: 1.618rem;
-  position: relative;
-  margin: 0px auto;
-  padding: 1.618rem;
-  padding-bottom: 14rem;
-}
-
 .header__heading-main {
   white-space: nowrap;
   font-size: 5rem;
   text-align: center;
-  color: rgb(174, 209, 216);
+  color: rgb(255, 255, 255);
   border-radius: 1.618rem;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  white-space: nowrap;
-  position: relative;
-  margin: 0px auto;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  z-index: 1000;
   animation-name: header__heading-main-font-weight;
   animation-delay: 0.75s;
   animation-duration: 2s;
@@ -150,17 +125,22 @@ html {
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
   color: rgb(89, 132, 139);
+  text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 0.5rem black;
   position: relative;
   z-index: 100;
-  margin-top: 35rem;
+  background-color: antiquewhite;
+  margin: 0px auto;
+  margin-top: 4rem;
+  width: 75%;
 }
 @media (max-width: 391px) {
   .header__heading-sub {
     font-size: 0.7rem;
     margin-top: 15rem;
-    margin-left: 0rem;
+    text-align: left;
+    background-color: transparent;
   }
 }
 
@@ -518,8 +498,7 @@ html {
 }
 
 .motivation {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   background-image: linear-gradient(to top, #1a3b44, #1d363f, #1f313a, #202c34, #20272e);
 }
 @media (max-width: 391px) {
@@ -531,18 +510,10 @@ html {
 
 .motivation__column-text {
   float: top;
-  width: 65%;
-  margin: auto;
-  padding-bottom: 1.618rem;
   padding-top: 1rem;
   border-radius: 1.618rem;
-  margin-bottom: 1.618rem;
-}
-@media (max-width: 1280px) {
-  .motivation__column-text {
-    width: 90%;
-    padding: 1rem;
-  }
+  margin: 0px auto;
+  max-width: 90%;
 }
 @media (max-width: 1440) {
   .motivation__column-text {
@@ -585,8 +556,7 @@ html {
 .motivation__text-heading {
   color: #345a62;
   font-size: 2rem;
-  padding-top: 0rem;
-  margin-bottom: 1.618rem;
+  margin-bottom: 1rem;
 }
 .motivation__text-heading::before {
   content: "";
@@ -603,9 +573,9 @@ html {
   .motivation__text-heading::before {
     content: "";
     display: block;
-    width: 10.5rem;
+    width: 100%;
     height: 0.25rem;
-    background-color: #4d8591;
+    background-color: rgb(105, 57, 57);
     margin-bottom: 0.5rem;
   }
 }
@@ -614,6 +584,7 @@ html {
   color: #345a62;
   font-size: 1.1rem;
   text-align: justify;
+  margin: 0px auto;
 }
 @media (max-width: 1280px) {
   .motivation__text {
@@ -627,7 +598,7 @@ html {
   }
 }
 
-.motivation-images-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -647,7 +618,6 @@ html {
 }
 @media (max-width: 391px) {
   .motivation__images-card {
-    margin: 0.1;
     display: none;
   }
 }
@@ -695,13 +665,17 @@ html {
 
 .swiper-container {
   display: none;
-  display: flex;
   position: relative;
   width: auto;
   overflow: hidden;
   border-radius: 1rem;
   text-align: center;
   padding-bottom: 2.5rem;
+}
+@media (max-width: 391px) {
+  .swiper-container {
+    display: flex;
+  }
 }
 
 .swiper-button-next {
@@ -721,25 +695,23 @@ html {
   padding-top: 15rem;
   padding-bottom: 3rem;
   background-image: linear-gradient(to top, #1a3b44, #1d363f, #1f313a, #202c34, #20272e);
+  padding: 3rem 0;
 }
-@media (max-width: 36em) {
+@media (max-width: 391px) {
   .tours {
     padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 }
 
 .tours__container {
-  position: relative;
-  z-index: 1;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  margin: 0px auto;
-  max-width: 61.8%;
-  max-width: 61.8%;
+  max-width: 68%;
   margin: 0px auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  margin: 0px auto;
 }
 .tours__container::after {
   display: block;
@@ -755,6 +727,8 @@ html {
 }
 @media (max-width: 391px) {
   .tours__container {
+    max-width: 99%;
+    padding-top: 0rem;
     margin: 0px auto;
     z-index: 1;
   }
@@ -764,8 +738,7 @@ html {
   color: #345a62;
   font-weight: 500;
   font-size: 2rem;
-  margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .tours__heading::before {
   content: "";
@@ -777,7 +750,8 @@ html {
 }
 @media (max-width: 48em) {
   .tours__heading::before {
-    width: 9rem;
+    width: 100%;
+    background-color: #5f632c;
   }
 }
 @media (max-width: 48em) {
@@ -791,16 +765,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
-  margin-left: -0.66rem;
-  margin-right: -0.66rem;
-  margin-top: -1.32rem;
-}
-@media (max-width: 48em) {
-  .tours__cards {
-    padding-top: 0rem;
-    padding-bottom: 2rem;
-  }
+  border-radius: 1rem;
+  margin: 0px auto;
+  max-width: 97%;
 }
 @media (max-width: 391px) {
   .tours__cards {
@@ -811,7 +778,7 @@ html {
 .tours__card {
   flex: 0 0 14.2rem;
   position: relative;
-  margin: 0.2rem;
+  margin: 0.5rem;
   height: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -952,21 +919,18 @@ html {
   position: relative;
   overflow: hidden;
   position: relative;
-  padding-bottom: 5rem;
+  padding: 3rem 0;
   margin-top: 0rem;
-  padding-bottom: 5rem;
   background-image: linear-gradient(to bottom, #1a3b44, #1d363f, #1f313a, #202c34, #20272e);
 }
 
 .story__container {
-  position: relative;
-  z-index: 2;
-  margin: auto;
-  max-width: 61.8%;
-  max-width: 61.8%;
+  max-width: 68%;
   margin: 0px auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0px auto;
 }
 .story__container::after {
   display: block;
@@ -985,7 +949,6 @@ html {
   font-size: 2rem;
   margin: auto;
   margin-bottom: 2rem;
-  width: 65%;
 }
 .story__heading::before {
   content: "";
@@ -1002,26 +965,21 @@ html {
   .story__heading::before {
     content: "";
     display: block;
-    width: 10.5rem;
+    box-shadow: #a5b1b5;
+    width: 100%;
+    border-radius: 10rem;
     height: 0.25rem;
-    background-color: #4d8591;
+    background-color: rgb(117, 162, 143);
     margin-bottom: 0.5rem;
   }
 }
 
 .story__desc {
-  width: 65%;
-  margin: auto;
+  margin: 0px auto;
   text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  background-color: #1d363f;
   color: #345a62;
-  margin-top: 0.2rem;
   font-size: 1.1rem;
-  text-align: justify;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  -moz-column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
-       column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
-  text-align: justify;
 }
 @media (max-width: 1280px) {
   .story__desc {
@@ -1043,16 +1001,10 @@ html {
   }
 }
 
-.story__book {
-  text-align: center;
-  padding: 4rem 0 4rem 0;
-}
-
 .offers {
   position: relative;
   background-image: linear-gradient(to bottom, #1a3b44, #1d363f, #1f313a, #202c34, #20272e);
-  min-height: 10rem;
-  padding-top: 2rem;
+  padding: 3rem 0;
 }
 
 /*///////////////////////////////////////////////////////////Tame the wild*/
@@ -1074,12 +1026,14 @@ html {
 }
 @media (max-width: 48em) {
   .offers__text-heading::before {
-    width: 14rem;
+    width: 100%;
+    background-color: rgb(42, 131, 158);
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 391px) {
   .offers__text-heading {
     font-size: 1.4rem;
+    width: 100%;
   }
 }
 
@@ -1090,7 +1044,6 @@ html {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0px auto;
-  background-color: rgb(123, 97, 64);
   border-radius: 1.618rem;
 }
 @media (max-width: 48em) {

@@ -5,9 +5,9 @@
   position: relative;
   overflow: hidden;
   position: relative;
-  padding-bottom: 5rem;
+
+  padding: 3rem 0;
   margin-top: 0rem;
-  padding-bottom: 5rem;
   background-image: linear-gradient(
     to bottom,
     #1a3b44,
@@ -18,25 +18,19 @@
   );
 }
 
-
-
-
-
 .story__container {
-  position: relative;
-  z-index: 2;
-  margin: auto;
+  
   @include make-container();
+  margin: 0px auto;
 }
 
 .story__heading {
   color: $color-secondary;
   font-size: 2rem;
   margin: auto;
-  
+
   margin-bottom: 2rem;
-  
-    width: 65%;
+
   &::before {
     content: "";
     display: block;
@@ -52,27 +46,24 @@
     &::before {
       content: "";
       display: block;
-      width: 10.5rem;
+      box-shadow: #a5b1b5;
+      width: 100%;
+      border-radius: 10rem;
       height: 0.25rem;
-      background-color: $color-secondary-light;
+      background-color: rgb(117, 162, 143);
       margin-bottom: 0.5rem;
     }
   }
 }
 
 .story__desc {
-  width: 65%;
-  margin: auto;
+  margin: 0px auto;
   text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 
+  background-color: #1d363f;
   color: $color-secondary;
-  margin-top: 0.2rem;
   font-size: 1.1rem;
-  text-align: justify;
 
-  column-gap: 4rem;
-  column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
-  text-align: justify;
 
   @media (max-width: $breakpoint-lg) {
     padding-right: 3rem;
@@ -87,12 +78,7 @@
     width: 100%;
     float: none;
     padding-bottom: 3rem;
-
     font-size: 0.8rem;
   }
 }
 
-.story__book {
-  text-align: center;
-  padding: 4rem 0 4rem 0;
-}
