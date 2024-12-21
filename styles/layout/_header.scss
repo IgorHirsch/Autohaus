@@ -20,8 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 500vw; /* Die Höhe des Elements */
-  z-index: 1;
+  height: 200vw; /* Die Höhe des Elements */
 
   background-image: linear-gradient(
     rgba(30, 94, 96, 0),
@@ -50,14 +49,14 @@
 
 // Drive Dionamic
 .header__heading-main {
+
   white-space: nowrap;
   font-size: 5rem;
   text-align: center;
   color: rgb(255, 255, 255);
   border-radius: 1.618rem;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+  z-index: 100000;
 
   animation-name: header__heading-main-font-weight;
   animation-delay: 0.75s;
@@ -91,13 +90,13 @@
 .header__heading-sub {
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
-  color: rgb(89, 132, 139);
+  color: rgb(70, 104, 109);
 
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem black;
+  text-shadow: 0 0 0.4rem black;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   background-color: antiquewhite;
 
   margin: 0px auto;

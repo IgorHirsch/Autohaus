@@ -5,7 +5,6 @@
 }
 
 html {
-  
   font-size: 100%;
   font-family: "Century Gothic", sans-serif;
   background-image: linear-gradient(
@@ -16,4 +15,9 @@ html {
     #286064,
     #386b62
   );
+
+  input,
+  select {
+    font-family: inherit;
+  }
 }

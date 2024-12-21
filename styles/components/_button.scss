@@ -2,51 +2,65 @@
 @use "sass:color";
 
 .button {
-    display: inline-block;
-    border: 0.125rem solid currentColor;
-    border-radius: 10000rem;
-    color: $color-primary;
-    text-decoration: none;
-    padding: 1rem 6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.2rem;
+  display: inline-block;
+  border: 0.125rem solid currentColor;
+  border-radius: 10000rem;
+  color: $color-primary;
+  text-decoration: none;
+  padding: 1rem 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
 
-    &:hover {
-        color: color.scale($color-primary, $lightness: 20%);
-    }
+  &:hover {
+    color: color.scale($color-primary, $lightness: 20%);
+  }
 }
 
 .button--background-blur {
-    -webkit-backdrop-filter: blur(3rem);
-    backdrop-filter: blur(3rem);
+  -webkit-backdrop-filter: blur(3rem);
+  backdrop-filter: blur(3rem);
 }
 
 .button--white {
-    color: white;
+  color: white;
 
-    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 
-
-    &:hover {
-        color: rgb(230, 230, 230);
-    }
+  &:hover {
+    color: rgb(230, 230, 230);
+  }
 }
 
 .button--secondary {
-    color: white;
-    background-color: $color-secondary;
-    border: 0.125rem solid $color-secondary;
+  color: white;
+  background-color: $color-secondary;
+  border: 0.125rem solid $color-secondary;
 
-    &:hover {
-        color: white;
-        background-color: $color-secondary-dark;
-        border: 0.125rem solid $color-secondary-dark;
-    }
+  &:hover {
+    color: white;
+    background-color: $color-secondary-dark;
+    border: 0.125rem solid $color-secondary-dark;
+  }
 }
 
 .button--slim {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+// button für Modalfenster
+.button--form {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  color: rgb(87, 83, 83);
+  background-color: rgb(219, 189, 189);
+  border: 0.125rem solid $color-primary;
+  font-weight: normal;
+  text-transform: none;
+
+  &:hover {
+    color: rgb(0, 0, 0);
+  }
 }

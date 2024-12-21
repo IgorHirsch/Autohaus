@@ -32,10 +32,171 @@
           <a class="navigation__list-item-link" href="#">Karriere</a>
         </li>
         <li class="navigation__list-item navigation__list-item--mobile-hidden">
-          <a class="navigation__list-item-link" href="#">Kontakt</a>
+          <a class="navigation__list-item-link" href="#booking-modal"
+            >Kontakt</a
+          >
         </li>
       </ul>
     </nav>
+
+    <section class="booking-modal" id="booking-modal">
+      <div class="booking-modal__content">
+        <a class="booking-modal__close" href="#">x</a>
+        <h3 class="booking-modal__heading">Nehmen Sie Kontakt mit uns auf!</h3>
+        <p class="booking-modal__paragraph">Persönliche Daten</p>
+
+        <form class="form" action="#">
+          <div class="form__horizontal">
+            <!-- Vorname -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-name"
+                placeholder="Vorname"
+              />
+              <label class="form__label" for="booking-modal-name"
+                >Vorname</label
+              >
+            </div>
+
+            <!-- Nachname -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="Name"
+              />
+              <label class="form__label" for="booking-modal-email">Name</label>
+            </div>
+
+            <!-- E-mail -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email"
+                >E-Mail</label
+              >
+            </div>
+
+            <!-- Straße/Nr -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email"
+                >Straße / Nr</label
+              >
+            </div>
+
+            <!-- PLZ -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email">PLZ</label>
+            </div>
+
+            <!-- ORT -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email">Ort</label>
+            </div>
+
+            <!-- Telefon -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email"
+                >Festnetz</label
+              >
+            </div>
+
+            <!-- Mobil -->
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail"
+              />
+              <label class="form__label" for="booking-modal-email">Mobil</label>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <textarea
+              class="form__textarea form__input"
+              id="booking-modal-message"
+              placeholder=""
+            ></textarea>
+            <label class="form__label" for="booking-modal-message"
+              >Mitteilung</label
+            >
+          </div>
+
+          <div class="form__radio-group">
+            <div class="form__radio-item form__radio-item--white">
+              <input
+                class="form__radio-item-radio"
+                type="radio"
+                name="type"
+                value="private"
+                id="booking-modal-type-private"
+              />
+              <label
+                class="form__radio-item-label"
+                for="booking-modal-type-private"
+                >Private Tour buchen</label
+              >
+            </div>
+            <div class="form__radio-item form__radio-item--white">
+              <input
+                class="form__radio-item-radio"
+                type="radio"
+                name="type"
+                value="group"
+                id="booking-modal-type-group"
+              />
+              <label
+                class="form__radio-item-label"
+                for="booking-modal-type-group"
+                >Gruppentour buchen</label
+              >
+            </div>
+          </div>
+
+          <div class="booking-modal__submit-container">
+            <input
+              type="submit"
+              class="button button--form"
+              value="Anfrage abschicken!"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!--                                                                                                Header -->
     <header class="header">
       <div class="header__container">
@@ -1588,5 +1749,6 @@
     <script src="scripts/motivationsbilder.js"></script>
     <script src="scripts/offerscarousel.js"></script>
     <script src="scripts/servicecarousel.js"></script>
+    <script src="scripts/modal.js" async></script>
   </body>
 </html>
