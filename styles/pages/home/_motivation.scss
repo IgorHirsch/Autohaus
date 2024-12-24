@@ -7,9 +7,6 @@ $-image-margin: 0.66rem;
 
 .motivation {
   padding: 3rem 0;
-  
-
-  
 
   @media (max-width: 391px) {
     padding-bottom: 1rem;
@@ -24,11 +21,6 @@ $-image-margin: 0.66rem;
   border-radius: 1.618rem;
   margin: 0px auto;
   max-width: 90%;
-  
-
-
-
-  
 
   @media (max-width: 1440) {
     width: 95%;
@@ -69,6 +61,8 @@ $-image-margin: 0.66rem;
     height: 0.25rem;
     background-color: antiquewhite;
     margin-bottom: 0.5rem;
+    box-shadow: 
+   -8px -8px 16px  antiquewhite; /* Heller äußerer Schatten */
   }
 
   @media (max-width: $breakpoint-lg) {
@@ -92,7 +86,6 @@ $-image-margin: 0.66rem;
   margin: 0px auto;
   margin-bottom: 1rem;
 
-
   @media (max-width: $breakpoint-lg) {
     font-size: 1rem;
     width: 39rem;
@@ -106,16 +99,13 @@ $-image-margin: 0.66rem;
   }
 }
 
-
-
 // Fotos Container
 .motivation__images-card {
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 1.618rem;
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
-
 
   @media (max-width: $breakpoint-lg) {
     width: 100%;
@@ -125,7 +115,6 @@ $-image-margin: 0.66rem;
   }
 
   @media (max-width: 391px) {
-    
     display: none;
   }
 }
@@ -139,12 +128,15 @@ $-image-margin: 0.66rem;
 .motivation__image {
   box-sizing: border-box;
   height: auto;
-  margin: 0.7rem;
+  margin: 1.5rem;
   position: static;
   box-shadow: 0 0 1rem rgba(05, 05, 05, 0.5);
   border-radius: 1.618rem;
   overflow: hidden;
-  width: 31%;
+  width: 29%;
+  box-shadow: 
+  8px  8px 16px rgba(0, 0, 0, 0.5),
+ -8px -8px 16px rgba(255, 255, 255, 0.1);
 
   filter: grayscale(80%);
   transform: scale(1);
@@ -154,6 +146,9 @@ $-image-margin: 0.66rem;
     filter: grayscale(0%);
     transform: scale(1.04);
     z-index: 100;
+      box-shadow: 
+  16px  16px 24px rgba(0, 0, 0, 0.5),
+ -16px -16px 24px rgba(255, 255, 255, 0.1);
   }
 
   // 1440 x 900

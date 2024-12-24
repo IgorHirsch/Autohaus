@@ -142,10 +142,8 @@ $-half-pixel-width: math.div(1rem, 32);
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin: 0px auto;
 
-  border-radius: 1.618rem;
+  border-radius: 1rem;
 
   @media (max-width: $breakpoint-sm) {
     padding-top: 0rem;
@@ -158,23 +156,29 @@ $-half-pixel-width: math.div(1rem, 32);
 }
 
 .offers__card {
-  $-width: math.div(100%, 3.1);
+  $-width: math.div(100%, 3.5);
 
   width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
 
-  margin: ($-offers-card-margin * 2) $-offers-card-margin 0 $-offers-card-margin;
-  padding: 0 0 2rem 0;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
-  border-left: $-offers-card-border-width solid $-offers-card-border-color;
-  border-right: $-offers-card-border-width solid $-offers-card-border-color;
-  border-top: $-offers-card-border-width solid $-offers-card-border-color;
+  margin: ($-offers-card-margin ) $-offers-card-margin 0 $-offers-card-margin;
+  padding: 0 0 1rem 0;
+  margin: 2rem;
+  border-left: $-offers-card-border-width;
+  border-right: $-offers-card-border-width;
+  border-top: $-offers-card-border-width;
 
   // Abgerundete Ecken hinzufügen
-  border-radius: 1.618rem; // Passt die Rundung der Ecken an
+  border-radius: 1rem; // Passt die Rundung der Ecken an
   overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
 
   background-color: #1a3b44;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
   position: relative;
+  &:hover {
+    box-shadow: 9px 9px 17px rgba(0, 0, 0, 0.5),
+      -9px -9px 17px rgba(255, 255, 255, 0.1);
+  }
 
   @media (max-width: $breakpoint-md) {
     $-width-md: (100% * 0.5);

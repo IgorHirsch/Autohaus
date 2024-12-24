@@ -4,13 +4,17 @@
 .button {
   display: inline-block;
   border: 0.125rem solid currentColor;
-  border-radius: 10000rem;
+  border-radius: 1rem;
   color: $color-primary;
   text-decoration: none;
   padding: 1rem 6rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.2rem;
+
+  box-shadow: 
+  8px  8px 16px rgba(0, 0, 0, 0.5),
+ -8px -8px 16px rgba(255, 255, 255, 0.1);
 
   &:hover {
     color: color.scale($color-primary, $lightness: 20%);
@@ -35,13 +39,14 @@
 
 .button--secondary {
   color: white;
-  background-color: $color-secondary;
-  border: 0.125rem solid $color-secondary;
+  background-color: $color-primary;
+  border: 0.125rem solid $color-primary;
 
   &:hover {
     color: white;
-    background-color: $color-secondary-dark;
-    border: 0.125rem solid $color-secondary-dark;
+   box-shadow: 
+  16px  16px 24px rgba(0, 0, 0, 0.5),
+ -16px -16px 24px rgba(255, 255, 255, 0.1);
   }
 }
 

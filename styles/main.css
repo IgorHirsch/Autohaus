@@ -447,6 +447,16 @@ html .background {
 }
 
 /* Hamburger Button Animation */
+.sidenav__inhaltsverwaltung {
+  font-size: 1.25rem;
+  padding: 1.65rem 1.5rem;
+  display: block;
+  color: rgb(241, 241, 241);
+  font-weight: 350;
+  text-decoration: none;
+  background-image: linear-gradient(to left, #416f76, #3e626c, #3c5661, #394a55, #353f48);
+}
+
 #sidenav__opened:checked ~ .header .bar span.top {
   transform: rotate(45deg);
   transform-origin: top left;
@@ -513,13 +523,13 @@ html .background {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 20rem;
+  width: 28rem;
   max-width: 100vw;
   background-image: linear-gradient(to left, #416f76, #3e626c, #3c5661, #394a55, #353f48);
   box-shadow: 0 0 1rem black;
   transform: translate(calc(100% + 1rem), 0);
   will-change: transform;
-  transition: transform 1s ease-in-out;
+  transition: transform 0s ease-in-out;
 }
 
 #sidenav__opened:checked ~ .sidenav .sidenav__container {
@@ -600,13 +610,14 @@ html .background {
 .button {
   display: inline-block;
   border: 0.125rem solid currentColor;
-  border-radius: 10000rem;
+  border-radius: 1rem;
   color: rgb(52, 75, 86);
   text-decoration: none;
   padding: 1rem 6rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.2rem;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.1);
 }
 .button:hover {
   color: #507384;
@@ -628,13 +639,12 @@ html .background {
 
 .button--secondary {
   color: white;
-  background-color: #345a62;
-  border: 0.125rem solid #345a62;
+  background-color: rgb(52, 75, 86);
+  border: 0.125rem solid rgb(52, 75, 86);
 }
 .button--secondary:hover {
   color: white;
-  background-color: #011820;
-  border: 0.125rem solid #011820;
+  box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.5), -16px -16px 24px rgba(255, 255, 255, 0.1);
 }
 
 .button--slim {
@@ -828,6 +838,7 @@ html .background {
   height: 0.25rem;
   background-color: antiquewhite;
   margin-bottom: 0.5rem;
+  box-shadow: -8px -8px 16px antiquewhite; /* Heller äußerer Schatten */
 }
 @media (max-width: 1280px) {
   .motivation__text-heading {
@@ -866,7 +877,7 @@ html .background {
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 1.618rem;
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
 }
 @media (max-width: 1280px) {
@@ -887,12 +898,13 @@ html .background {
 .motivation__image {
   box-sizing: border-box;
   height: auto;
-  margin: 0.7rem;
+  margin: 1.5rem;
   position: static;
   box-shadow: 0 0 1rem rgba(5, 5, 5, 0.5);
   border-radius: 1.618rem;
   overflow: hidden;
-  width: 31%;
+  width: 29%;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.1);
   filter: grayscale(80%);
   transform: scale(1);
   transition: filter ease-in-out 0.1s, transform ease-in-out 0.1s;
@@ -901,6 +913,7 @@ html .background {
   filter: grayscale(0%);
   transform: scale(1.04);
   z-index: 100;
+  box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.5), -16px -16px 24px rgba(255, 255, 255, 0.1);
 }
 @media (max-width: 1440px) {
   .motivation__image {
@@ -1118,7 +1131,7 @@ html .background {
 .tours__card {
   flex: 0 0 14.2rem;
   position: relative;
-  margin: 0.5rem;
+  margin: 0.9rem;
   height: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -1126,11 +1139,12 @@ html .background {
   transform: scale(1);
   transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0.25s linear;
   z-index: 0;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.1);
 }
 .tours__card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 1rem black;
   transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0s linear;
+  box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.5), -10px -10px 18px rgba(255, 255, 255, 0.1);
   z-index: 1000;
 }
 @media (max-width: 62em) {
@@ -1431,9 +1445,7 @@ html .background {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin: 0px auto;
-  border-radius: 1.618rem;
+  border-radius: 1rem;
 }
 @media (max-width: 48em) {
   .offers__container {
@@ -1448,17 +1460,21 @@ html .background {
 }
 
 .offers__card {
-  width: calc(32.2580645161% - 1.322rem);
-  margin: 1.32rem 0.66rem 0 0.66rem;
-  padding: 0 0 2rem 0;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
-  border-left: 0.0625rem solid rgba(0, 0, 0, 0.038);
-  border-right: 0.0625rem solid rgba(0, 0, 0, 0.038);
-  border-top: 0.0625rem solid rgba(0, 0, 0, 0.038);
-  border-radius: 1.618rem;
+  width: calc(28.5714285714% - 1.322rem);
+  margin: 0.66rem 0.66rem 0 0.66rem;
+  padding: 0 0 1rem 0;
+  margin: 2rem;
+  border-left: 0.0625rem;
+  border-right: 0.0625rem;
+  border-top: 0.0625rem;
+  border-radius: 1rem;
   overflow: hidden;
   background-color: #1a3b44;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.1);
   position: relative;
+}
+.offers__card:hover {
+  box-shadow: 9px 9px 17px rgba(0, 0, 0, 0.5), -9px -9px 17px rgba(255, 255, 255, 0.1);
 }
 @media (max-width: 62em) {
   .offers__card {
