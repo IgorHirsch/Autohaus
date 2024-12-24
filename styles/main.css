@@ -1441,7 +1441,7 @@ html .background {
     padding-bottom: 2rem;
   }
 }
-@media (max-width: 381px) {
+@media (max-width: 391px) {
   .offers__container {
     display: none;
   }
