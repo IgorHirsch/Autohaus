@@ -9,12 +9,22 @@
 }
 
 @mixin make-container() {
-  max-width:  68%;
+  max-width: 68%;
   margin: 0px auto;
   border-radius: 1.618rem;
 
   padding: 1.618rem;
-background-color: transparentize($color: #000000, $amount: 0.8);
+  background-image: linear-gradient(
+    to bottom,
+    #2d4654,
+    #2a3e4a,
+    #273641,
+    #242e37,
+    #20272e
+  );
+  box-shadow: 
+  8px  8px 16px rgba(0, 0, 0, 0.5),/* Dunkler äußerer Schatten */ 
+ -8px -8px 16px rgba(255, 255, 255, 0.1); /* Heller äußerer Schatten */
 
   @include clearfix;
 
@@ -24,10 +34,6 @@ background-color: transparentize($color: #000000, $amount: 0.8);
     padding-bottom: 1rem;
   }
 
-
-   @media (max-width: $breakpoint-lg) {
-
-    
-    
+  @media (max-width: $breakpoint-lg) {
   }
 }

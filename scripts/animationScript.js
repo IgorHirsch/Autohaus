@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observerOptions = {
     root: null, // Das sichtbare Fenster
-    threshold: 0.5, // Auslösung, wenn 10% des Elements sichtbar sind
+    threshold: 0.1, // Auslösung, wenn 10% des Elements sichtbar sind
   };
 
   const observerCallback = (entries) => {

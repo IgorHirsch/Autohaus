@@ -2,7 +2,7 @@
 @use "sass:color";
 
 .footer {
-  background-color: $color-secondary-light;
+   background-image: linear-gradient(to right bottom, #416f76, #3e626c, #3c5661, #394a55, #353f48);
   padding: 3rem 0 0.5rem 0;
 
   display: flex;

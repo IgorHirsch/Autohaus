@@ -10,15 +10,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .offers {
   position: relative;
-  background-image: linear-gradient(
-    to bottom,
-    #1a3b44,
-    #1d363f,
-    #1f313a,
-    #202c34,
-    #20272e
-  );
- padding: 3rem 0;
+  padding: 3rem 0;
 }
 
 /*///////////////////////////////////////////////////////////Tame the wild*/
@@ -66,8 +58,39 @@ $-half-pixel-width: math.div(1rem, 32);
 // }
 /*/////////////////////////////////////////////////////////////Tame the wild*/
 
+.offers__column-text {
+  float: top;
+  border-radius: 1.618rem;
+  max-width: 90%;
+margin: 0px auto;
+
+  @media (max-width: 1440) {
+    width: 95%;
+  }
+
+  @media (max-width: 391px) {
+    width: 100%;
+
+    /* Beispiel für $breakpoint-sm */
+    .offers__column-text {
+      float: none;
+
+      padding-bottom: 3rem;
+      margin: auto;
+    }
+
+    .offers__text--full {
+      display: none;
+    }
+
+    .offers__text--short {
+      display: block;
+      width: 100%;
+    }
+  }
+}
 .offers__text-heading {
-  color: $color-secondary;
+  color: whitesmoke;
   font-weight: 500;
   font-size: 2rem;
   margin: auto;
@@ -78,7 +101,8 @@ $-half-pixel-width: math.div(1rem, 32);
     display: block;
     width: 100%;
     height: 0.25rem;
-    background-color: $color-secondary-light;
+    background-color: antiquewhite;
+    box-shadow: #1a3b44,5rem;
     margin-bottom: 0.5rem;
 
     @media (max-width: $breakpoint-sm) {
@@ -89,22 +113,39 @@ $-half-pixel-width: math.div(1rem, 32);
 
   @media (max-width: 391px) {
     font-size: 1.4rem;
-    
+
     width: 100%;
   }
 }
+.offers__text {
+  color: whitesmoke;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin: 0px auto;
+
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 1rem;
+    width: 39rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+  }
+}
+
 
 // Kontainer für Kards
 .offers__container {
-
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0px auto;
-
 
   border-radius: 1.618rem;
 
@@ -113,13 +154,13 @@ $-half-pixel-width: math.div(1rem, 32);
     padding-bottom: 2rem;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 381px) {
     display: none; //// Standartkontaner soll ausgeblendet werden
   }
 }
 
 .offers__card {
-  $-width: math.div(100%, 3);
+  $-width: math.div(100%, 3.1);
 
   width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
 

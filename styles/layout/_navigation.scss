@@ -7,7 +7,7 @@
   align-items: center; // Vertikale Zentrierung
   position: absolute;
 
-   // Menu 
+  // Menu
   ul {
     list-style: none; // Keine Aufzählung
     display: flex; // Elemente horizontal anordnen
@@ -17,7 +17,12 @@
     .navigation__list-item {
       list-style-type: none;
       display: block;
-      float: inline-start;
+
+      @supports (float: inline-start) {
+        .element {
+          float: inline-start;
+        }
+      }
 
       &--mobile-hidden {
         @media (max-width: $breakpoint-sm) {
@@ -35,15 +40,18 @@
         color: white;
         text-decoration: none;
         padding: 0.5rem 0.25rem 0.25rem 0.25rem;
-      
+        font-size: 1.1rem;
         margin-left: 2rem;
         margin-right: 2rem;
         display: block;
         text-shadow: 0 0 0.5rem black;
         z-index: 110;
         position: relative;
+
+
+        
         &:hover {
-          border-bottom: 0.15rem solid $color-primary;
+          border-bottom: 0.15rem solid antiquewhite;
         }
       }
     }
@@ -55,21 +63,12 @@
     padding-right: 0;
 
     &:hover {
-      border-bottom: none;
       color: rgb(200, 200, 200);
+      width: auto;
     }
   }
 
-  &--logo {
-    margin-top: 0.9rem;
-    padding-left: 0;
-    margin-left: 0;
-
-    &:hover {
-      border-bottom: none;
-      color: rgb(200, 200, 200);
-    }
-  }
+  
 }
 
 .fixed {
@@ -80,9 +79,9 @@
   position: fixed; /* Fixierung der Navigation */
   z-index: 100; /* Hohe Priorität in der Schichtreihenfolge */
 
-    @media (max-width: $breakpoint-sm) {
-          display: none;
-        }
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
 
   ul {
     margin: 0;
@@ -112,17 +111,17 @@
       /* Weitere Verzögerungen nach Bedarf hinzufügen */
 
       .navigation__list-item-link {
-        color: rgb(86, 212, 244); /* Textfarbe */
         text-decoration: none; /* Kein Unterstrich */
         display: block; /* Block-Layout für die Links */
         padding: 0.5rem;
         text-shadow: 0 0 0.5rem black;
-         margin-top: 3rem;
+        margin-top: 3rem;
 
         border-bottom: 0.15rem solid transparent;
 
         &:hover {
-          border-bottom: 0.15rem solid $color-primary; /* Hover-Effekt */
+          border-bottom: 0.15rem solid antiquewhite; /* Hover-Effekt */
+          max-width: 0px auto;
         }
       }
     }

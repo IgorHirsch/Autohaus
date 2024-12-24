@@ -7,17 +7,20 @@
 html {
   font-size: 100%;
   font-family: "Century Gothic", sans-serif;
-  background-image: linear-gradient(
-    to bottom,
-    #2d3b53,
-    #26485d,
-    #215463,
-    #286064,
-    #386b62
-  );
 
   input,
   select {
     font-family: inherit;
+  }
+
+  .background {
+    background-image: linear-gradient(
+      to top,
+      #2d4654,
+      #2a3e4a,
+      #273641,
+      #242e37,
+      #20272e
+    );
   }
 }
