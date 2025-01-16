@@ -1,0 +1,375 @@
+@use "sass:color";
+@use "sass:math";
+
+@use "../../abstracts" as *;
+
+$-offers-card-border-width: math.div(1rem, 16);
+$-offers-card-border-color: rgba(0, 0, 0, 0.038);
+$-offers-card-margin: 0.66rem;
+$-half-pixel-width: math.div(1rem, 32);
+
+.bestand {
+  position: relative;
+  padding: 3rem 0;
+}
+
+/*///////////////////////////////////////////////////////////Tame the wild*/
+
+// %offers__before-and-after {
+//   top: 7rem;
+//   left: 0;
+//   right: 0;
+//   position: absolute;
+//   content: "Tame the wild";
+//   text-transform: uppercase;
+//   color: rgb(37, 74, 81);
+//   font-size: min(calc(100vw / 1), 7rem);
+//   font-weight: bold;
+//   text-shadow: 0 0 1px white;
+//   text-align: center;
+//   z-index: 0;
+//   overflow: hidden;
+//   white-space: nowrap;
+
+//   @media (max-width: $breakpoint-sm) {
+//     font-size: min(calc(100vw / 1), 3rem);
+//     top: 5rem;
+//     }
+// }
+
+// @mixin -offers__before-and-after-stroke($color) {
+//   @supports (-webkit-text-stroke: 2px #{$color}) or (text-stroke: 2px #{$color}) {
+//     -webkit-text-stroke: 2px #{$color};
+//     text-stroke: 2px #{$color};
+//     text-shadow: none;
+//   }
+// }
+
+// .offers::before {
+//   @extend %offers__before-and-after;
+
+//   @include -offers__before-and-after-stroke(rgba(255, 255, 255, 0.2));
+// }
+
+// .offers::after {
+//   @extend %offers__before-and-after;
+
+//   @include -offers__before-and-after-stroke(transparent);
+// }
+/*/////////////////////////////////////////////////////////////Tame the wild*/
+
+.bestand__column-text {
+  float: top;
+  border-radius: 1.618rem;
+  max-width: 90%;
+  margin: 0px auto;
+
+  @media (max-width: 1440) {
+    width: 95%;
+  }
+
+  @media (max-width: 391px) {
+    width: 100%;
+
+    /* Beispiel für $breakpoint-sm */
+    .offers__column-text {
+      float: none;
+
+      padding-bottom: 3rem;
+      margin: auto;
+    }
+
+    .offers__text--full {
+      display: none;
+    }
+
+    .offers__text--short {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.bestand__text-heading {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: auto;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: antiquewhite;
+    box-shadow: #1a3b44, 5rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      background-color: rgb(42, 131, 158);
+    }
+  }
+
+  @media (max-width: 391px) {
+    font-size: 1.4rem;
+
+    width: 100%;
+  }
+}
+.offers__text {
+  color: whitesmoke;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin: 0px auto;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 1rem;
+    width: 39rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+  }
+}
+
+// Kontainer für Kards
+.bestand__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+
+  border-radius: 1rem;
+
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 391px) {
+    display: none; //// Standartkontaner soll ausgeblendet werden
+  }
+}
+
+.bestand__card {
+  $-width: math.div(100%, 3);
+
+  width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
+
+  margin: ($-offers-card-margin ) $-offers-card-margin 0 $-offers-card-margin;
+  padding: 0 0 1rem 0;
+  margin: 2rem;
+  border-left: $-offers-card-border-width;
+  border-right: $-offers-card-border-width;
+  border-top: $-offers-card-border-width;
+
+  // Abgerundete Ecken hinzufügen
+  border-radius: 1rem; // Passt die Rundung der Ecken an
+  overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
+
+  background-color: #1a3b44;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
+  position: relative;
+  &:hover {
+    box-shadow: 9px 9px 17px rgba(0, 0, 0, 0.5),
+      -9px -9px 17px rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    $-width-md: (100% * 0.5);
+    width: calc(#{$-width-md} - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+  @media (max-width: 391px) {
+    margin-top: 1rem;
+  }
+}
+
+// Linie unten
+// .offers__card::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   bottom: 0;
+//   left: -$-offers-card-border-width;
+//   right: -$-offers-card-border-width;
+//   height: 0.75rem;
+//   background-color: $color-primary;
+//   border-left: $-offers-card-border-width solid
+//     color.scale($color-primary, $saturation: -50%, $lightness: 25%);
+//   border-right: $-offers-card-border-width solid
+//     color.scale($color-primary, $saturation: -50%, $lightness: 25%);
+
+//   @media (max-width: $breakpoint-sm) {
+//   }
+// }
+
+.bestand__image-container {
+  position: relative;
+  background-color: whitesmoke;
+  margin-top: -$-offers-card-border-width;
+  margin-right: -$-offers-card-border-width;
+  margin-left: -$-offers-card-border-width;
+}
+
+.bestand__image-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-top: $-offers-card-border-width solid $-offers-card-border-color;
+  border-right: $-offers-card-border-width solid $-offers-card-border-color;
+  border-left: $-offers-card-border-width solid $-offers-card-border-color;
+}
+
+.bestand__image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+
+  background-image: linear-gradient(
+    -$slope-incline,
+    #1a3b44 49.7%,
+    transparent 50.3%
+  );
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @media (max-width: $breakpoint-sm) {
+    height: 5rem;
+  }
+}
+
+.bestand__image {
+  width: 100%;
+  filter: grayscale(10%);
+}
+
+.bestand__content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.bestand__content-heading {
+  color: whitesmoke;
+  font-size: 1.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bestand__content-subheading {
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.bestand__content-info {
+  margin-top: 0.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.204);
+  // untere strich
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.204);
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    transparent calc(50% - #{$-half-pixel-width}),
+    rgba(255, 255, 255, 0.204) calc(50% - #{$-half-pixel-width}),
+    rgba(255, 255, 255, 0.204) calc(50% + #{$-half-pixel-width}),
+    transparent calc(50% + #{$-half-pixel-width})
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 75%;
+  background-position: center center;
+  font-size: 1rem;
+}
+
+%offers__content-info-column {
+  flex: 1 1 50%;
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.bestand__content-info-duration {
+  @extend %offers__content-info-column;
+}
+
+.bestand__content-info-level {
+  @extend %offers__content-info-column;
+}
+
+.bestand__content-info-duration-text {
+  padding-left: 0.33rem;
+}
+
+.bestand__content-price-container {
+  padding-top: 0.75rem;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+.bestand__content-price {
+  display: block;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 0.9em;
+}
+
+.bestand__card-hover {
+  position: absolute;
+  top: -$-offers-card-border-width;
+  left: -$-offers-card-border-width;
+  right: -$-offers-card-border-width;
+  bottom: -$-offers-card-border-width;
+  z-index: 2;
+
+  background-color: $color-primary;
+
+  // Die Linie in der mitte
+  // background-image: linear-gradient(
+  //     90deg,
+  //     transparent calc(50% - #{$-half-pixel-width}),
+  //     white calc(50% - #{$-half-pixel-width}),
+  //     white calc(50% + #{$-half-pixel-width}),
+  //     transparent calc(50% + #{$-half-pixel-width})
+  //   ),
+  //   linear-gradient(
+  //     135deg,
+  //     $color-primary 0%,
+  //     color.scale($color-primary, $lightness: -20%) 100%
+  //   );
+  ///////////////////////////////////////////////////////
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center center;
+  background-size: 100% calc(50% - 4rem), 100% 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   gap: 10px;  
+
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  .bestand__card:hover & {
+    opacity: 1;
+  }
+}
+
+

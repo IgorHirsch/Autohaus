@@ -5,8 +5,6 @@
   overflow: hidden;
   background-size: cover;
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
-  background-image: url("../images/modal/cupraHome3.jpg");
-  padding: 5%;
 
   @media (max-width: 391px) {
     background-image: url("../images/modal/cuprahome4.jpg");
@@ -23,40 +21,56 @@
   height: 200vw; /* Die Höhe des Elements */
 
   background-image: linear-gradient(
-    rgba(30, 94, 96, 0),
-    rgba(24, 109, 113, 0),
-    rgba(28, 90, 101, 0),
-    rgba(34, 72, 85, 0),
-    rgba(35, 55, 66, 0),
-    rgba(32, 39, 46, 1)
+    to right,
+    rgba(32, 45, 53, 1),
+    rgba(32, 45, 53, 1),
+    rgba(32, 45, 53, 0.95),
+    rgba(32, 45, 53, 0.9),
+    rgba(32, 45, 53, 0.8),
+    rgba(32, 45, 53, 0.7),
+    rgba(32, 45, 53, 0.6),
+    rgba(32, 45, 53, 0.5),
+    rgba(32, 45, 53, 0.4),
+    rgba(32, 45, 53, 0.3),
+    rgba(32, 45, 53, 0.2),
+    rgba(32, 45, 53, 0.1),
+    rgba(32, 45, 53, 0) /* Entspricht #202d35 */
   );
+
   background-repeat: no-repeat;
   background-position: center center; /* Der Verlauf startet in der Mitte */
   background-size: cover; /* Der Verlauf wird auf das gesamte Element angewendet */
 }
 
 .header__container {
-  height: 50rem;
+  height: 55rem;
+  max-width: 90%;
+  border-radius: 2rem;
 
-  margin: 0px auto;
-  
+  margin: 20px auto;
+  margin-top: 7rem;
+  padding-top: 20rem;
+
+  background-size: cover;
+  background-image: url("../images/modal/cupraHome5.webp");
+
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
+
   @media (max-width: 391px) {
     height: 100%;
   }
 }
 
-
-
 // Drive Dionamic
 .header__heading-main {
-
   white-space: nowrap;
-  font-size: 5rem;
+  font-size: 6rem;
   text-align: center;
   color: rgb(255, 255, 255);
   border-radius: 1.618rem;
   text-transform: uppercase;
-  z-index: 100000;
+  z-index: 1;
 
   animation-name: header__heading-main-font-weight;
   animation-delay: 0.75s;
@@ -88,20 +102,16 @@
 }
 
 .header__heading-sub {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.25rem;
-  color: rgb(70, 104, 109);
-
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 0 0.4rem black;
+  color: #7e4e4e;
   position: relative;
-  z-index: 1000;
-  background-color: antiquewhite;
+  z-index: 1;
 
   margin: 0px auto;
-  margin-top: 4rem;
-  width: 75%;
+  margin-left: -1rem;
+  margin-top: -12rem;
+  width: 50%;
 
   @media (max-width: 391px) {
     font-size: 0.7rem;
@@ -109,4 +119,76 @@
     text-align: left;
     background-color: transparent;
   }
+}
+
+.header__heading-subline {
+  display: block;
+
+  font-size: 2.5rem; /* Optional: Adjust the size for the subline */
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 391px) {
+  .header__heading-sub {
+    font-size: 0.7rem;
+    margin-top: 15rem;
+    text-align: left;
+    background-color: transparent;
+  }
+  .header__heading-subline {
+    font-size: 0.5rem; /* Adjust for smaller screens */
+    margin-top: 0.3rem;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #665547; /* Hauptfarbe */
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+
+  margin-top: 18rem;
+  margin-left: -1rem;
+}
+
+.cta-button::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(-100%);
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cta-button:hover {
+  background-color: #8b8984; /* Dunklere Farbe beim Hover */
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.2);
 }

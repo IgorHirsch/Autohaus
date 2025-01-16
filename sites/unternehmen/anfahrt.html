@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anfahrt & Öffnungszeiten - Auto Emotion</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="content">
+        <h1>Anfahrt & Öffnungszeiten</h1>
+        <p>
+          Finden Sie uns leicht und erfahren Sie mehr über unsere
+          Öffnungszeiten!
+        </p>
+      </div>
+    </section>
+
+    <section class="anfahrt">
+      <div class="content">
+        <h2>Unsere Anfahrt</h2>
+        <p>So erreichen Sie uns:</p>
+
+        <div class="map-container">
+          <!-- Google Map eingebettet (hier eine Beispiel-URL) -->
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?q=Auto%20Emotion,%20Sprendlinger%20Landstra%C3%9Fe%20630%2C%20Offenbach%20am%20Main%2C%20Germany&key=DEIN_GOOGLE_MAPS_API_KEY"
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          >
+          </iframe>
+        </div>
+
+        <p>Adresse: Sprendlinger Landstraße, 63073 Offenbach am Main</p>
+      </div>
+    </section>
+
+    <section class="oeffnungszeiten">
+      <div class="content">
+        <h2>Unsere Öffnungszeiten</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Öffnungszeiten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Montag</td>
+              <td>08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td>Dienstag</td>
+              <td>08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td>Mittwoch</td>
+              <td>08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td>Donnerstag</td>
+              <td>08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td>Freitag</td>
+              <td>08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td>Samstag</td>
+              <td>09:00 - 14:00</td>
+            </tr>
+            <tr>
+              <td>Sonntag</td>
+              <td>Geschlossen</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=DEIN_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</html>

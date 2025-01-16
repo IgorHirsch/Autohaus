@@ -1,0 +1,17 @@
+.aktuelles {
+  margin: 0 auto;
+  display: flex; /* Aktiviert das Flexbox-Layout */
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+  min-height: 100vh; /* Stellt sicher, dass es die gesamte Bildschirmhöhe einnimmt */
+  gap: 2rem; /* Abstand zwischen den Items */
+}
+
+.news-item {
+  background-color: #202d35;
+  text-align: center; /* Zentriert Text-Inhalte innerhalb */
+}
+
+.instagram-media {
+  width: 30%;
+}
