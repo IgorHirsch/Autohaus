@@ -7,6 +7,20 @@ function bookingModalFixClose() {
       setTimeout(function () {
         window.scrollTo({ top: scrollY, left: scrollX });
       }, 1);
+      // Modal ausblenden
+      document.getElementById("booking-modal")?.classList.remove("is-active");
+    });
+  }
+
+  // Kontakt-Link suchen und Modal anzeigen
+  const kontaktLink = Array.from(document.querySelectorAll("a")).find(
+    (a) => a.textContent.trim().toLowerCase() === "kontakt"
+  );
+  const modal = document.getElementById("booking-modal");
+  if (kontaktLink && modal) {
+    kontaktLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.classList.add("is-active");
     });
   }
 }

@@ -1,0 +1,314 @@
+@use "../../abstracts" as *;
+
+$-services-background-color: $color-secondary-dark;
+
+$-services-icon-size: 3rem;
+$-services-animation-duration: 0.25s;
+
+.services {
+  position: relative;
+  padding: 3rem 0;
+
+  @media (max-width: 391px) {
+    padding-top: 2rem;
+  }
+}
+
+.services__container {
+  @include make-container();
+
+  & {
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 391px) {
+    max-width: 99%;
+    padding-top: 0rem;
+    margin: 0 auto;
+    z-index: 1;
+  }
+}
+
+.services__heading {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: antiquewhite;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      background-color: #5f632c;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1.4rem;
+  }
+}
+
+.services__column-text {
+  float: top;
+  padding-top: 1rem;
+  border-radius: 1.618rem;
+  margin: 0px auto;
+  max-width: 90%;
+
+  @media (max-width: 1440) {
+    width: 95%;
+  }
+
+  @media (max-width: 391px) {
+    width: 100%;
+
+    .services__column-text {
+      float: none;
+      padding-bottom: 3rem;
+      margin: auto;
+    }
+
+    .services__text--full {
+      display: none;
+    }
+
+    .services__text--short {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.services__column-text {
+  float: top;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 1.618rem;
+  margin: 0px auto;
+  max-width: 90%;
+
+  @media (max-width: 1440) {
+    width: 95%;
+  }
+
+  @media (max-width: 391px) {
+    width: 100%;
+
+    .services__column-text {
+      float: none;
+      padding-bottom: 3rem;
+      margin: auto;
+    }
+
+    .services__column-text--full {
+      display: none;
+    }
+
+    .services__column-text--short {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.services__text {
+  display: flex;
+  flex-wrap: wrap;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  margin: 0px auto;
+  margin-bottom: 1rem;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 1rem;
+    width: 39rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+  }
+}
+
+$-offers-card-margin: 0.66rem;
+
+// Konteiner für kards
+.services__cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1rem;
+  margin: 0px auto;
+  max-width: 96%;
+  padding-bottom: 2rem;
+
+  @media (max-width: 391px) {
+    display: none;
+  }
+}
+
+.services__card {
+  flex: 0 0 (71rem * 0.3);
+  position: relative;
+  margin: 1.1rem;
+  height: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 2rem;
+  transform: scale(1);
+  transition: transform $-services-animation-duration ease-in-out,
+    box-shadow $-services-animation-duration ease-in-out,
+    z-index $-services-animation-duration linear;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    transition: transform $-services-animation-duration ease-in-out,
+      box-shadow $-services-animation-duration ease-in-out, z-index 0s linear;
+    box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.5),
+      -10px -10px 18px rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    $-width-md: (100% * 0.5);
+    width: calc(#{$-width-md} - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: 391px) {
+    margin: 0px auto;
+    height: 30rem;
+    margin-top: 3rem;
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 1rem black;
+      transition: transform $-services-animation-duration ease-in-out,
+        box-shadow $-services-animation-duration ease-in-out, z-index 0s linear;
+      z-index: 1000;
+    }
+  }
+}
+
+.services__card-icon-background {
+  background-color: $color-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $-services-icon-size;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  transform: translate(calc(-125% + #{$-services-icon-size}), 0);
+  // Keine Animation für transform/height!
+  transition: transform 0s, height 0s,
+    filter $-services-animation-duration ease-in-out 0.1s;
+
+  .services__card:hover & {
+    transform: translate(0, 0);
+    height: 100%;
+  }
+  filter: blur(5px);
+
+  &:hover {
+    filter: blur(40px);
+  }
+}
+
+.services__card-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(100%);
+}
+
+.services__card-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(0, 0);
+  transition: transform $-services-animation-duration ease-in-out;
+
+  .services__card:hover & {
+    transform: translate(calc(50% - #{$-services-icon-size * 0.5}), 0);
+  }
+}
+
+.services__card-icon {
+  width: $-services-icon-size;
+  color: white;
+  display: block;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+}
+
+.services__card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  padding: 3rem 1rem 0 1rem;
+  text-shadow: 0 0 0.125rem black;
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 20%
+  );
+  transform: translate(0, calc(100% - 7.25rem));
+  transition: transform $-services-animation-duration ease-in-out;
+
+  .services__card:hover & {
+    transform: translate(0, 0);
+  }
+}
+
+.services__card-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.services__card-location {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+}
+
+.services__card-location-icon {
+  font-size: 1.25rem;
+}
+
+.services__card-location-text {
+  line-height: 1.9rem;
+  padding-left: 0.15rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.services__card-desc {
+  font-size: 0.8rem;
+  padding: 0.9rem 0;
+  background-image: linear-gradient(90deg, $color-primary 60%, transparent 60%);
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 100% 0.125rem;
+}

@@ -5,6 +5,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: 0% 100%; /* Beispiel: Bild 10% nach oben verschieben */
+  height: 70rem;
 
   @media (max-width: 391px) {
     background-image: url("../images/modal/cuprahome4.jpg");
@@ -20,23 +21,6 @@
   bottom: 0;
   height: 200vw; /* Die Höhe des Elements */
 
-  background-image: linear-gradient(
-    to right,
-    rgba(32, 45, 53, 1),
-    rgba(32, 45, 53, 1),
-    rgba(32, 45, 53, 0.95),
-    rgba(32, 45, 53, 0.9),
-    rgba(32, 45, 53, 0.8),
-    rgba(32, 45, 53, 0.7),
-    rgba(32, 45, 53, 0.6),
-    rgba(32, 45, 53, 0.5),
-    rgba(32, 45, 53, 0.4),
-    rgba(32, 45, 53, 0.3),
-    rgba(32, 45, 53, 0.2),
-    rgba(32, 45, 53, 0.1),
-    rgba(32, 45, 53, 0) /* Entspricht #202d35 */
-  );
-
   background-repeat: no-repeat;
   background-position: center center; /* Der Verlauf startet in der Mitte */
   background-size: cover; /* Der Verlauf wird auf das gesamte Element angewendet */
@@ -44,7 +28,7 @@
 
 .header__container {
   height: 55rem;
-  max-width: 90%;
+  max-width: 80%;
   border-radius: 2rem;
 
   margin: 20px auto;
@@ -52,7 +36,8 @@
   padding-top: 20rem;
 
   background-size: cover;
-  background-image: url("../images/modal/cupraHome5.webp");
+  background-image: url("../images/motivation/Home.jpeg");
+  background-position: center;
 
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
     -8px -8px 16px rgba(255, 255, 255, 0.1);
@@ -149,7 +134,7 @@
   font-weight: bold;
   text-decoration: none;
   color: white;
-  background-color: #665547; /* Hauptfarbe */
+  background-color: #44271b; /* Hauptfarbe */
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -157,8 +142,8 @@
   overflow: hidden;
   z-index: 10;
 
-  margin-top: 18rem;
-  margin-left: -1rem;
+  margin-top: 47rem;
+  margin-left: 40rem;
 }
 
 .cta-button::before {

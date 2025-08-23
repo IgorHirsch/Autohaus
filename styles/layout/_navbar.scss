@@ -1,11 +1,8 @@
-
-
-nav{
+nav {
   position: fixed;
   z-index: 99;
   width: 100%;
   background: #061a23;
-  
 }
 .marke-icon {
   margin-top: 1.5rem;
@@ -13,8 +10,7 @@ nav{
   margin-right: 10px; /* Abstand zum Text */
 }
 
-
-nav .wrapper{
+nav .wrapper {
   position: relative;
   max-width: 100%;
   padding: 0px 30px;
@@ -25,19 +21,19 @@ nav .wrapper{
   align-items: center;
   justify-content: space-between;
 }
-.wrapper .logo a{
+.wrapper .logo a {
   color: #ffffff;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
 }
-.wrapper .nav-links{
+.wrapper .nav-links {
   display: inline-flex;
 }
-.nav-links li{
+.nav-links li {
   list-style: none;
 }
-.nav-links li a{
+.nav-links li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 18px;
@@ -46,13 +42,13 @@ nav .wrapper{
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-.nav-links li a:hover{
+.nav-links li a:hover {
   background: #a5adb6;
 }
-.nav-links .mobile-item{
+.nav-links .mobile-item {
   display: none;
 }
-.nav-links .drop-menu{
+.nav-links .drop-menu {
   position: absolute;
   background: #1b3844;
   width: 300px;
@@ -62,23 +58,22 @@ nav .wrapper{
   visibility: hidden;
 
   border-radius: 0 0 1rem 1rem;
-  
 }
 .nav-links li:hover .drop-menu,
-.nav-links li:hover .mega-box{
+.nav-links li:hover .mega-box {
   transition: all 0.3s ease;
   top: 70px;
   opacity: 1;
   visibility: visible;
 }
-.drop-menu li a{
+.drop-menu li a {
   width: 100%;
   display: block;
   padding: 0 0 0 15px;
   font-weight: 400;
   border-radius: 0px;
 }
-.mega-box{
+.mega-box {
   position: absolute;
   left: 0;
   width: 100%;
@@ -86,64 +81,65 @@ nav .wrapper{
   top: 85px;
   opacity: 0;
   visibility: hidden;
+  z-index: 1000;
 }
-.mega-box .content{
-
+.mega-box .content {
   background: #1b3844;
   padding: 25px 20px;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
 }
-.mega-box .content .row{
+.mega-box .content .row {
   width: calc(25% - 30px);
   line-height: 45px;
 }
-.content .row img{
+.content .row img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
 }
-.content .row header{
+.content .row header {
   color: #f2f2f2;
   font-size: 20px;
   font-weight: 500;
 }
-.content .row .mega-links{
+.content .row .mega-links {
   margin-left: -40px;
   border-left: 1px solid rgba(250, 156, 156, 0.09);
 }
-.row .mega-links li{
+.row .mega-links li {
   padding: 0 20px;
 }
-.row .mega-links li a{
+.row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
   color: #d9d9d9;
   font-size: 17px;
   display: block;
 }
-.row .mega-links li a:hover{
+.row .mega-links li a:hover {
   color: #f2f2f2;
 }
-.wrapper .btn{
+.wrapper .btn {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
   display: none;
 }
-.wrapper .btn.close-btn{
+.wrapper .btn.close-btn {
   position: absolute;
   right: 30px;
   top: 10px;
 }
 
 @media screen and (max-width: 970px) {
-  .wrapper .btn{
+  .wrapper .btn {
     display: block;
   }
-  .wrapper .nav-links{
+  .wrapper .nav-links {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -155,7 +151,7 @@ nav .wrapper{
     padding: 50px 10px;
     line-height: 50px;
     overflow-y: auto;
-    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
   }
   /* custom scroll bar */
@@ -166,26 +162,26 @@ nav .wrapper{
     background: #242526;
   }
   ::-webkit-scrollbar-thumb {
-    background: #3A3B3C;
+    background: #3a3b3c;
   }
-  #menu-btn:checked ~ .nav-links{
+  #menu-btn:checked ~ .nav-links {
     left: 0%;
   }
-  #menu-btn:checked ~ .btn.menu-btn{
+  #menu-btn:checked ~ .btn.menu-btn {
     display: none;
   }
-  #close-btn:checked ~ .btn.menu-btn{
+  #close-btn:checked ~ .btn.menu-btn {
     display: block;
   }
-  .nav-links li{
+  .nav-links li {
     margin: 15px 10px;
   }
-  .nav-links li a{
+  .nav-links li a {
     padding: 0 20px;
     display: block;
     font-size: 20px;
   }
-  .nav-links .drop-menu{
+  .nav-links .drop-menu {
     position: static;
     opacity: 1;
     top: 65px;
@@ -198,13 +194,13 @@ nav .wrapper{
     transition: all 0.3s ease;
   }
   #showDrop:checked ~ .drop-menu,
-  #showMega:checked ~ .mega-box{
+  #showMega:checked ~ .mega-box {
     max-height: 100%;
   }
-  .nav-links .desktop-item{
+  .nav-links .desktop-item {
     display: none;
   }
-  .nav-links .mobile-item{
+  .nav-links .mobile-item {
     display: block;
     color: #f2f2f2;
     font-size: 20px;
@@ -214,17 +210,17 @@ nav .wrapper{
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  .nav-links .mobile-item:hover{
-    background: #3A3B3C;
+  .nav-links .mobile-item:hover {
+    background: #3a3b3c;
   }
-  .drop-menu li{
+  .drop-menu li {
     margin: 0;
   }
-  .drop-menu li a{
+  .drop-menu li a {
     border-radius: 5px;
     font-size: 18px;
   }
-  .mega-box{
+  .mega-box {
     position: static;
     top: 65px;
     opacity: 1;
@@ -234,36 +230,36 @@ nav .wrapper{
     overflow: hidden;
     transition: all 0.3s ease;
   }
-  .mega-box .content{
+  .mega-box .content {
     box-shadow: none;
     flex-direction: column;
     padding: 20px 20px 0 20px;
   }
-  .mega-box .content .row{
+  .mega-box .content .row {
     width: 100%;
     margin-bottom: 15px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   .mega-box .content .row:nth-child(1),
-  .mega-box .content .row:nth-child(2){
+  .mega-box .content .row:nth-child(2) {
     border-top: 0px;
   }
-  .content .row .mega-links{
+  .content .row .mega-links {
     border-left: 0px;
     padding-left: 15px;
   }
-  .row .mega-links li{
+  .row .mega-links li {
     margin: 0;
   }
-  .content .row header{
+  .content .row header {
     font-size: 19px;
   }
 }
-nav input{
+nav input {
   display: none;
 }
 
-.body-text{
+.body-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -272,14 +268,12 @@ nav input{
   text-align: center;
   padding: 0 30px;
 }
-.body-text div{
+.body-text div {
   font-size: 45px;
   font-weight: 600;
 }
 
-
-
-// 
+//
 #dynamic-logo {
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
@@ -288,4 +282,3 @@ nav input{
 #dynamic-logo.hidden {
   opacity: 0;
 }
-

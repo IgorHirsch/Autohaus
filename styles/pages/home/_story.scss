@@ -12,7 +12,9 @@
 
 .story__container {
   @include make-container();
-  margin: 0px auto;
+  & {
+    margin: 0px auto;
+  }
 }
 
 .story__heading {

@@ -92,9 +92,9 @@ $-half-pixel-width: math.div(1rem, 32);
 .bestand__text-heading {
   color: whitesmoke;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.1rem; // vorher 2rem
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem; // vorher 1rem
 
   &::before {
     content: "";
@@ -119,7 +119,7 @@ $-half-pixel-width: math.div(1rem, 32);
 }
 .offers__text {
   color: whitesmoke;
-  font-size: 1.1rem;
+  font-size: 0.85rem; // vorher 1.1rem
   text-align: justify;
   margin: 0px auto;
 
@@ -156,19 +156,19 @@ $-half-pixel-width: math.div(1rem, 32);
 }
 
 .bestand__card {
-  $-width: math.div(100%, 3);
+  $-width: math.div(
+    100%,
+    3.7
+  ); // vorher 3.3, jetzt 3.7 für noch schmalere Karten
 
   width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
-
-  margin: ($-offers-card-margin ) $-offers-card-margin 0 $-offers-card-margin;
-  padding: 0 0 1rem 0;
-  margin: 2rem;
-  border-left: $-offers-card-border-width;
-  border-right: $-offers-card-border-width;
-  border-top: $-offers-card-border-width;
+  margin: 0.8rem; // vorher 1.2rem
+  padding: 0 0 0.5rem 0; // weniger Padding unten
+  border-radius: 0.5rem; // noch weniger Rundung
+  font-size: 0.9rem; // noch kleiner
 
   // Abgerundete Ecken hinzufügen
-  border-radius: 1rem; // Passt die Rundung der Ecken an
+  border-radius: 0.7rem; // weniger Rundung
   overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
 
   background-color: #1a3b44;
@@ -181,12 +181,12 @@ $-half-pixel-width: math.div(1rem, 32);
   }
 
   @media (max-width: $breakpoint-md) {
-    $-width-md: (100% * 0.5);
+    $-width-md: (100% * 0.38); // vorher 0.44
     width: calc(#{$-width-md} - #{($-offers-card-margin * 2 + 0.001rem)});
   }
 
   @media (max-width: $breakpoint-sm) {
-    width: calc(100% - #{($-offers-card-margin * 2 + 0.001rem)});
+    width: calc(98% - #{($-offers-card-margin * 2 + 0.001rem)});
   }
   @media (max-width: 391px) {
     margin-top: 1rem;
@@ -266,7 +266,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .bestand__content-heading {
   color: whitesmoke;
-  font-size: 1.75rem;
+  font-size: 0.95rem; // vorher 1.1rem
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -275,7 +275,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .bestand__content-subheading {
   color: whitesmoke;
-  font-size: 1rem;
+  font-size: 0.75rem; // vorher 1rem
 }
 
 .bestand__content-info {
@@ -294,7 +294,7 @@ $-half-pixel-width: math.div(1rem, 32);
   background-repeat: no-repeat;
   background-size: 100% 75%;
   background-position: center center;
-  font-size: 1rem;
+  font-size: 0.75rem; // vorher 1rem
 }
 
 %offers__content-info-column {
@@ -327,7 +327,7 @@ $-half-pixel-width: math.div(1rem, 32);
   display: block;
   color: whitesmoke;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1rem; // vorher 2rem
   line-height: 0.9em;
 }
 
@@ -363,7 +363,7 @@ $-half-pixel-width: math.div(1rem, 32);
   display: flex;
   justify-content: center;
   align-items: center;
-   gap: 10px;  
+  gap: 10px;
 
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
@@ -371,5 +371,3 @@ $-half-pixel-width: math.div(1rem, 32);
     opacity: 1;
   }
 }
-
-

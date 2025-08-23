@@ -19,19 +19,19 @@ padding: 3rem 0;
 }
 
 .tours__container {
-
-
   @include make-container();
-  flex-wrap: wrap;
-  border-radius: 1rem;
-  margin: 0px auto;
 
-  
+  // Opt-in zur neuen CSS-Nesting-Semantik (fix für mixed-decls)
+  & {
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
   @media (max-width: 391px) {
     max-width: 99%;
-
     padding-top: 0rem;
-    margin: 0px auto;
+    margin: 0 auto;
     z-index: 1;
   }
 }
@@ -187,10 +187,10 @@ $-offers-card-margin: 0.66rem;
 }
 
 .tours__card {
-  flex: 0 0 (71rem * 0.2);
+  flex: 0 0 (71rem * 0.30);
   position: relative;
   margin: 0.9rem;
-  height: 20rem;
+  height: 30rem;
 
   // Abgerundete Ecken hinzufügen
   border-radius: 0.5rem; // Passt die Rundung der Ecken an
@@ -201,7 +201,6 @@ $-offers-card-margin: 0.66rem;
   transition: transform $-tours-animation-duration ease-in-out,
     box-shadow $-tours-animation-duration ease-in-out,
     z-index $-tours-animation-duration linear;
-  z-index: 0;
 
   box-shadow: 
   8px  8px 16px rgba(0, 0, 0, 0.5),
@@ -215,7 +214,7 @@ $-offers-card-margin: 0.66rem;
   10px  10px 18px rgba(0, 0, 0, 0.5),
  -10px -10px 18px rgba(255, 255, 255, 0.1);
 
-    z-index: 1000;
+    
   }
 
   @media (max-width: $breakpoint-md) {
@@ -255,13 +254,22 @@ $-offers-card-margin: 0.66rem;
   height: $-tours-icon-size;
   box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 
-  transform: translate(calc(-100% + #{$-tours-icon-size}), 0);
+  transform: translate(calc(-125% + #{$-tours-icon-size}), 0);
 
   transition: transform $-tours-animation-duration ease-in-out;
+
+
+
 
   .tours__card:hover & {
     transform: translate(0, 0);
     height: 100%;
+  }
+  filter: blur(0);
+  transition: filter $-tours-animation-duration ease-in-out;
+
+  &:hover {
+    filter: blur(20px); // Passe den Wert nach Wunsch an
   }
 }
 
@@ -271,7 +279,7 @@ $-offers-card-margin: 0.66rem;
   top: 0;
   left: 0;
 
-  filter: brightness(80%);
+  filter: brightness(100%);
 }
 
 .tours__card-icon-container {
