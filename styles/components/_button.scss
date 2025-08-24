@@ -41,6 +41,7 @@
   color: white;
   background-color: $color-primary;
   border: 0.125rem solid $color-primary;
+  
 
   &:hover {
     color: white;
@@ -53,6 +54,7 @@
 .button--slim {
   padding-left: 2rem;
   padding-right: 2rem;
+  z-index: 15;
 }
 
 // button für Modalfenster

@@ -1,13 +1,10 @@
 function bookingModalFixClose() {
-  const elements = document.querySelectorAll(".booking-modal__close");
-  for (const element of elements) {
+  // Kontakt-Modal schließen
+  const kontaktCloses = document.querySelectorAll(
+    "#booking-modal .booking-modal__close"
+  );
+  for (const element of kontaktCloses) {
     element.addEventListener("click", function () {
-      const scrollY = window.scrollY;
-      const scrollX = window.scrollX;
-      setTimeout(function () {
-        window.scrollTo({ top: scrollY, left: scrollX });
-      }, 1);
-      // Modal ausblenden
       document.getElementById("booking-modal")?.classList.remove("is-active");
     });
   }
@@ -16,13 +13,33 @@ function bookingModalFixClose() {
   const kontaktLink = Array.from(document.querySelectorAll("a")).find(
     (a) => a.textContent.trim().toLowerCase() === "kontakt"
   );
-  const modal = document.getElementById("booking-modal");
-  if (kontaktLink && modal) {
+  const kontaktModal = document.getElementById("booking-modal");
+  if (kontaktLink && kontaktModal) {
     kontaktLink.addEventListener("click", function (e) {
       e.preventDefault();
-      modal.classList.add("is-active");
+      kontaktModal.classList.add("is-active");
     });
   }
+
+  // Probefahrt-Modal öffnen
+  document.querySelectorAll(".open-probefahrt-modal").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("probefahrt-modal")?.classList.add("is-active");
+    });
+  });
+
+  // Probefahrt-Modal schließen
+  document
+    .querySelectorAll("#probefahrt-modal .booking-modal__close")
+    .forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document
+          .getElementById("probefahrt-modal")
+          ?.classList.remove("is-active");
+      });
+    });
 }
 
 if (

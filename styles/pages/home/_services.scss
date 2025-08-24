@@ -157,10 +157,12 @@ $-offers-card-margin: 0.66rem;
   }
 }
 
+
+// Einzelne Card
 .services__card {
   flex: 0 0 (71rem * 0.3);
   position: relative;
-  margin: 1.1rem;
+  margin: 2.5rem;
   height: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;

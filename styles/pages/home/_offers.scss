@@ -160,7 +160,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
   width: calc(#{$-width} - #{($-offers-card-margin * 2 + 0.002rem)});
 
-  margin: ($-offers-card-margin ) $-offers-card-margin 0 $-offers-card-margin;
+  margin: ($-offers-card-margin) $-offers-card-margin 0 $-offers-card-margin;
   padding: 0 0 1rem 0;
   margin: 2rem;
   border-left: $-offers-card-border-width;
@@ -329,6 +329,9 @@ $-half-pixel-width: math.div(1rem, 32);
   line-height: 0.9em;
 }
 
+
+
+//Rückseite
 .offers__card-hover {
   position: absolute;
   top: -$-offers-card-border-width;
@@ -368,4 +371,5 @@ $-half-pixel-width: math.div(1rem, 32);
   .offers__card:hover & {
     opacity: 1;
   }
+
 }

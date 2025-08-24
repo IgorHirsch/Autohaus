@@ -1025,6 +1025,7 @@ nav input {
 .button--slim {
   padding-left: 2rem;
   padding-right: 2rem;
+  z-index: 15;
 }
 
 .button--form {
@@ -2403,7 +2404,7 @@ nav input {
 .services__card {
   flex: 0 0 21.3rem;
   position: relative;
-  margin: 1.1rem;
+  margin: 2.5rem;
   height: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;

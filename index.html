@@ -16,12 +16,14 @@
   <link rel="stylesheet" href="~/styles/main.css" asp-append-version="true" />
 </head>
 
+
+
 <body>
   <input type="checkbox" class="sidenav__opened" id="sidenav__opened" autocomplete="off" />
 
 
 
-  <!--MegaMenu-->
+  <!--                                                   MegaMenu-->
   <nav>
     <div class="wrapper">
       <div class="logo-container">
@@ -123,26 +125,8 @@
       <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
   </nav>
-  <!--MegaMenu-->
 
-
-
-  <header class="header">
-    <label class="bar" for="sidenav__opened">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </label>
-
-
-    <div class="header__container">
-      <h1 class="header__heading-main"></h1>
-      <p class="header__heading-sub"></p>
-
-      <a href="#" class="cta-button">Jetzt Probefahrt buchen</a>
-    </div>
-  </header>
-
+  <!--                                                   Handy Menu -->
   <section class="sidenav">
     <label for="sidenav__opened" class="sidenav__background"></label>
     <div class="sidenav__container">
@@ -164,6 +148,7 @@
     </div>
   </section>
 
+  <!--                                                   Kontakt Formular -->
   <section class="booking-modal" id="booking-modal">
     <div class="booking-modal__content">
       <a class="booking-modal__close" href="#">x</a>
@@ -239,56 +224,25 @@
       </form>
     </div>
   </section>
-  <!--                                                                                                Motivation -->
-  <section class="motivation">
-    <div class="container">
-      <div class="motivation__column-text">
-        <h2 class="motivation__text-heading">
-          Die Straße gehört dir. Wir geben dir das Auto dazu.
-        </h2>
-        <p class="motivation__text motivation__text--full">
-          Ein Autohaus ist mehr als ein Ort für den Fahrzeugkauf – es ist ein
-          Erlebnis.
-        </p>
 
-      </div>
+  <!--                                                   Probefahrt buchen -->
 
-      <!-- Images -->
-      <div class="motivation__images-card">
-        <img class="motivation__image motivation__image--first" src="images/motivation/cupra1.webp" alt="" />
-        <img class="motivation__image motivation__image--second" src="images/motivation/cupra4.jpg" alt="" />
-        <img class="motivation__image motivation__image--third" src="images/motivation/cupra2.webp" alt="" />
-      </div>
+  <!--                                                   Header-->
+  <!-- <header class="header">
+    <label class="bar" for="sidenav__opened">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </label>
 
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="motivation__image motivation__image--first" src="images/motivation/cupra4.jpg" alt="Bild 1" />
-          </div>
-          <div class="swiper-slide">
-            <img class="motivation__image motivation__image--second" src="images/motivation/cupra5.jpg" alt="Bild 2" />
-          </div>
-          <div class="swiper-slide">
-            <img class="motivation__image motivation__image--third" src="images/motivation/cupra6.jpg" alt="Bild 3" />
-          </div>
-          <div class="swiper-slide">
-            <img class="motivation__image motivation__image--third" src="images/motivation/cupra1.webp" alt="Bild 3" />
-          </div>
-          <div class="swiper-slide">
-            <img class="motivation__image motivation__image--third" src="images/motivation/cupra2.webp" alt="Bild 3" />
-          </div>
-        </div>
+    <div class="header__container">
+      <h1 class="header__heading-main"></h1>
+      <p class="header__heading-sub"></p>
 
-        <!-- Optional Pagination (optional) -->
-        <div class="swiper-pagination"></div>
-
-        <!-- Optional Navigation (optional) -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+      <a href="#" class="cta-button">Jetzt Probefahrt buchen</a>
     </div>
-  </section>
-  <!--                                                                                                Unsere  Top Angebote -->
+  </header> -->
+  <!--                                                   Angebote -->
   <section class="offers">
     <div class="container">
       <div class="offers__column-text">
@@ -493,201 +447,204 @@
   </section>
 
 
-<section class="services">
-  <div class="services__container">
-    <div class="services__column-text">
-      <h2 class="services__heading">Unsere Serviceleistungen</h2>
-    </div>
-    <div class="services__cards">
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/Neue.jpg" alt="" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Neu und Gebrauchtwagenverkauf</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Neuwagen und Gebrauchtwagen – Ihre Fahrt in die Zukunft beginnt bei uns!
-          </p>
-        </div>
+
+
+  <!--                                                     Leistungen -->
+  <section class="services">
+    <div class="services__container">
+      <div class="services__column-text">
+        <h2 class="services__heading">Unsere Serviceleistungen</h2>
       </div>
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/mietwagen.jpg" alt="" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Ersatzwagen / Mietwagen</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Bleiben Sie mobil, auch wenn Ihr Auto in der Werkstatt ist. Mit unserem Ersatz- und Mietwagenservice stellen
-            wir sicher, dass Sie jederzeit flexibel unterwegs bleiben. Ob kurzer Werkstattaufenthalt oder längere
-            Reparatur – wir bieten Ihnen moderne Fahrzeuge zu fairen Konditionen, damit Ihr Alltag ohne Unterbrechung
-            weiterläuft.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/werkstatt.jpg" alt="Werkstatt" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Werkstatt Leistungen</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Ihr Fahrzeug in besten Händen – mit unserem Werkstattservice für Inspektionen, Reparaturen und Wartung
-            sorgen wir für maximale Sicherheit und Fahrspaß. Schnelligkeit, Kompetenz und Qualität für jedes Auto.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/holundbring.jpeg" alt="Hol und Bringservice" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Hol und Bringservice</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Unser Hol- und Bringservice ermöglicht es Ihnen, Ihr Fahrzeug bequem von Zuhause oder dem Arbeitsplatz
-            abholen und nach der Wartung oder Reparatur wieder zurückbringen zu lassen.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/Leasing.jpg" alt="Leasing" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Leasingangebote</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Flexibel und smart – mit unserem Leasingangebot fahren Sie immer das neueste Modell, ohne sich langfristig
-            zu binden. Günstige Raten, maßgeschneiderte Laufzeiten und exzellenter Service.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <img class="services__card-img" src="images/services/zubehoer.jpg" alt="Zubehör" />
-        <div class="services__card-icon-background"></div>
-        <div class="services__card-icon-container"></div>
-        <div class="services__card-content">
-          <h5 class="services__card-heading">Zubehör</h5>
-          <p class="services__card-location">
-            <span class="services__card-location-icon"></span>
-            <span class="services__card-location-text">Offenbach am Main, DE</span>
-          </p>
-          <p class="services__card-desc">
-            Verleihen Sie Ihrem Fahrzeug das gewisse Extra – mit unserem umfangreichen Zubehörsortiment für Komfort,
-            Sicherheit und Stil. Alles, was Ihr Auto braucht, um noch besser zu werden.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="services__card">
-            <img class="services__card-img" src="images/services/Neue.jpg" alt="Photographer" />
-            <div class="services__card-icon-background"></div>
-            <div class="services__card-icon-container"></div>
-            <div class="services__card-content">
-              <h5 class="services__card-heading">Neu und Gebrauchtwagenverkauf</h5>
-              <p class="services__card-location">
-                <span class="services__card-location-icon"></span>
-                <span class="services__card-location-text">Offenbach am Main, DE</span>
-              </p>
-              <p class="services__card-desc">
-                Neuwagen und Gebrauchtwagen – Ihre Fahrt in die Zukunft beginnt bei uns!
-              </p>
-            </div>
+      <div class="services__cards">
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/Neue.jpg" alt="" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Neu und Gebrauchtwagenverkauf</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Neuwagen und Gebrauchtwagen – Ihre Fahrt in die Zukunft beginnt bei uns!
+            </p>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="services__card">
-            <img class="services__card-img" src="images/services/werkstatt.jpg" alt="Werkstatt" />
-            <div class="services__card-icon-background"></div>
-            <div class="services__card-icon-container">
-              <svg class="services__card-icon" viewBox="0 0 512 512">
-                <use href="images/svg/icons.svg#icon-services-1"></use>
-              </svg>
-            </div>
-            <div class="services__card-content">
-              <h5 class="services__card-heading">Werkstatt Leistungen</h5>
-              <p class="services__card-location">
-                <span class="services__card-location-icon"></span>
-                <span class="services__card-location-text">Offenbach am Main, DE</span>
-              </p>
-              <p class="services__card-desc">
-                Ihr Fahrzeug in besten Händen – mit unserem Werkstattservice für Inspektionen, Reparaturen und Wartung
-                sorgen wir für maximale Sicherheit und Fahrspaß. Schnelligkeit, Kompetenz und Qualität für jedes Auto.
-              </p>
-            </div>
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/mietwagen.jpg" alt="" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Ersatzwagen / Mietwagen</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Bleiben Sie mobil, auch wenn Ihr Auto in der Werkstatt ist. Mit unserem Ersatz- und Mietwagenservice
+              stellen
+              wir sicher, dass Sie jederzeit flexibel unterwegs bleiben. Ob kurzer Werkstattaufenthalt oder längere
+              Reparatur – wir bieten Ihnen moderne Fahrzeuge zu fairen Konditionen, damit Ihr Alltag ohne Unterbrechung
+              weiterläuft.
+            </p>
           </div>
+        </div>
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/werkstatt.jpg" alt="Werkstatt" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Werkstatt Leistungen</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Ihr Fahrzeug in besten Händen – mit unserem Werkstattservice für Inspektionen, Reparaturen und Wartung
+              sorgen wir für maximale Sicherheit und Fahrspaß. Schnelligkeit, Kompetenz und Qualität für jedes Auto.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/holundbring.jpeg" alt="Hol und Bringservice" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Hol und Bringservice</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Unser Hol- und Bringservice ermöglicht es Ihnen, Ihr Fahrzeug bequem von Zuhause oder dem Arbeitsplatz
+              abholen und nach der Wartung oder Reparatur wieder zurückbringen zu lassen.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/Leasing.jpg" alt="Leasing" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Leasingangebote</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Flexibel und smart – mit unserem Leasingangebot fahren Sie immer das neueste Modell, ohne sich langfristig
+              zu binden. Günstige Raten, maßgeschneiderte Laufzeiten und exzellenter Service.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img class="services__card-img" src="images/services/zubehoer.jpg" alt="Zubehör" />
+          <div class="services__card-icon-background"></div>
+          <div class="services__card-icon-container"></div>
+          <div class="services__card-content">
+            <h5 class="services__card-heading">Zubehör</h5>
+            <p class="services__card-location">
+              <span class="services__card-location-icon"></span>
+              <span class="services__card-location-text">Offenbach am Main, DE</span>
+            </p>
+            <p class="services__card-desc">
+              Verleihen Sie Ihrem Fahrzeug das gewisse Extra – mit unserem umfangreichen Zubehörsortiment für Komfort,
+              Sicherheit und Stil. Alles, was Ihr Auto braucht, um noch besser zu werden.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="services__card">
-              <img class="services__card-img" src="images/services/holundbring.jpeg" alt="Hol und Bringservice" />
+              <img class="services__card-img" src="images/services/Neue.jpg" alt="Photographer" />
               <div class="services__card-icon-background"></div>
               <div class="services__card-icon-container"></div>
               <div class="services__card-content">
-                <h5 class="services__card-heading">Hol und Bringservice</h5>
+                <h5 class="services__card-heading">Neu und Gebrauchtwagenverkauf</h5>
                 <p class="services__card-location">
                   <span class="services__card-location-icon"></span>
                   <span class="services__card-location-text">Offenbach am Main, DE</span>
                 </p>
                 <p class="services__card-desc">
-                  Unser Hol- und Bringservice ermöglicht es Ihnen, Ihr Fahrzeug bequem von Zuhause oder dem Arbeitsplatz
-                  abholen und nach der Wartung oder Reparatur wieder zurückbringen zu lassen.
+                  Neuwagen und Gebrauchtwagen – Ihre Fahrt in die Zukunft beginnt bei uns!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="services__card">
+              <img class="services__card-img" src="images/services/werkstatt.jpg" alt="Werkstatt" />
+              <div class="services__card-icon-background"></div>
+              <div class="services__card-icon-container">
+                <svg class="services__card-icon" viewBox="0 0 512 512">
+                  <use href="images/svg/icons.svg#icon-services-1"></use>
+                </svg>
+              </div>
+              <div class="services__card-content">
+                <h5 class="services__card-heading">Werkstatt Leistungen</h5>
+                <p class="services__card-location">
+                  <span class="services__card-location-icon"></span>
+                  <span class="services__card-location-text">Offenbach am Main, DE</span>
+                </p>
+                <p class="services__card-desc">
+                  Ihr Fahrzeug in besten Händen – mit unserem Werkstattservice für Inspektionen, Reparaturen und Wartung
+                  sorgen wir für maximale Sicherheit und Fahrspaß. Schnelligkeit, Kompetenz und Qualität für jedes Auto.
                 </p>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="services__card">
-                <img class="services__card-img" src="images/services/Leasing.jpg" alt="Leasing" />
+                <img class="services__card-img" src="images/services/holundbring.jpeg" alt="Hol und Bringservice" />
                 <div class="services__card-icon-background"></div>
                 <div class="services__card-icon-container"></div>
                 <div class="services__card-content">
-                  <h5 class="services__card-heading">Leasingangebote</h5>
+                  <h5 class="services__card-heading">Hol und Bringservice</h5>
                   <p class="services__card-location">
                     <span class="services__card-location-icon"></span>
                     <span class="services__card-location-text">Offenbach am Main, DE</span>
                   </p>
                   <p class="services__card-desc">
-                    Flexibel und smart – mit unserem Leasingangebot fahren Sie immer das neueste Modell, ohne sich
-                    langfristig zu binden. Günstige Raten, maßgeschneiderte Laufzeiten und exzellenter Service.
+                    Unser Hol- und Bringservice ermöglicht es Ihnen, Ihr Fahrzeug bequem von Zuhause oder dem
+                    Arbeitsplatz
+                    abholen und nach der Wartung oder Reparatur wieder zurückbringen zu lassen.
                   </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services__card">
+                  <img class="services__card-img" src="images/services/Leasing.jpg" alt="Leasing" />
+                  <div class="services__card-icon-background"></div>
+                  <div class="services__card-icon-container"></div>
+                  <div class="services__card-content">
+                    <h5 class="services__card-heading">Leasingangebote</h5>
+                    <p class="services__card-location">
+                      <span class="services__card-location-icon"></span>
+                      <span class="services__card-location-text">Offenbach am Main, DE</span>
+                    </p>
+                    <p class="services__card-desc">
+                      Flexibel und smart – mit unserem Leasingangebot fahren Sie immer das neueste Modell, ohne sich
+                      langfristig zu binden. Günstige Raten, maßgeschneiderte Laufzeiten und exzellenter Service.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Optional Pagination (optional) -->
+          <div class="swiper-pagination"></div>
+          <!-- Optional Navigation (optional) -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <!-- Optional Pagination (optional) -->
-        <div class="swiper-pagination"></div>
-        <!-- Optional Navigation (optional) -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
     </div>
-  </div>
-</section>
-  
- 
+  </section>
 
 
-
+  <!--                                                     Team -->
   <section class="home-team container">
     <div class="home-team__container">
       <h3 class="home-team__heading">Unser Team</h3>
@@ -760,9 +717,54 @@
       </div>
     </div>
   </section>
+  <!--                                                   Galerie -->
+  <section class="motivation">
+    <div class="container">
+      <div class="motivation__column-text">
+        <h2 class="motivation__text-heading">
+          Galerie - Einblicke in unsere Welt
+        </h2>
 
 
+      </div>
 
+      <!-- Images -->
+      <div class="motivation__images-card">
+        <img class="motivation__image motivation__image--first" src="images/motivation/cupra1.webp" alt="" />
+        <img class="motivation__image motivation__image--second" src="images/motivation/cupra4.jpg" alt="" />
+        <img class="motivation__image motivation__image--third" src="images/motivation/cupra2.webp" alt="" />
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="motivation__image motivation__image--first" src="images/motivation/cupra4.jpg" alt="Bild 1" />
+          </div>
+          <div class="swiper-slide">
+            <img class="motivation__image motivation__image--second" src="images/motivation/cupra5.jpg" alt="Bild 2" />
+          </div>
+          <div class="swiper-slide">
+            <img class="motivation__image motivation__image--third" src="images/motivation/cupra6.jpg" alt="Bild 3" />
+          </div>
+          <div class="swiper-slide">
+            <img class="motivation__image motivation__image--third" src="images/motivation/cupra1.webp" alt="Bild 3" />
+          </div>
+          <div class="swiper-slide">
+            <img class="motivation__image motivation__image--third" src="images/motivation/cupra2.webp" alt="Bild 3" />
+          </div>
+        </div>
+
+        <!-- Optional Pagination (optional) -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Optional Navigation (optional) -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--                                                     Story -->
   <section class="story">
     <div class="story__container">
       <h3 class="story__heading">Unsere Geschichte</h3>
@@ -778,8 +780,7 @@
     </div>
   </section>
 
-
-  <!--                                                                                                Footer -->
+  <!--                                                   Footer -->
   <section class="footer">
     <div class="footer__container">
       <div class="footer__text-column">
@@ -838,6 +839,7 @@
   <script src="scripts/offerscarousel.js"></script>
   <script src="scripts/servicecarousel.js"></script>
   <script src="scripts/modal.js" async></script>
+  <script src="scripts/modalProbefahrt.js"></script>
   <script src="scripts/marken.js" async></script>
 </body>
 
