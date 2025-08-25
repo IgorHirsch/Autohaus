@@ -672,7 +672,12 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background: #061a23;
+  background: rgba(26, 59, 68, 0.82);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.08);
+  border-radius: 0 0 -1rem -1rem;
+  transition: all 0.5s ease;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .marke-icon {
@@ -689,15 +694,23 @@ nav .wrapper {
   line-height: 70px;
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
+.wrapper .logo {
+  flex: 1 1 auto;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper .logo a {
-  color: #ffffff;
-  font-size: 30px;
+  color: whitesmoke;
+  font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
 .wrapper .nav-links {
@@ -709,7 +722,7 @@ nav .wrapper {
 }
 
 .nav-links li a {
-  color: #f2f2f2;
+  color: #447785;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -719,7 +732,9 @@ nav .wrapper {
 }
 
 .nav-links li a:hover {
-  background: #a5adb6;
+  background: rgba(33, 61, 69, 0.65);
+  color: #fff;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4), inset -2px -2px 6px rgba(255, 255, 255, 0.05);
 }
 
 .nav-links .mobile-item {
@@ -728,7 +743,9 @@ nav .wrapper {
 
 .nav-links .drop-menu {
   position: absolute;
-  background: #1b3844;
+  background: rgba(26, 59, 68, 0.82);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 -1rem -1rem;
   width: 300px;
   line-height: 45px;
   top: 85px;
@@ -757,21 +774,22 @@ nav .wrapper {
   position: absolute;
   left: 0;
   width: 100%;
-  padding: 0 30px;
   top: 85px;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 888;
+  background: rgba(26, 59, 68, 0.95);
+  border-radius: 0 0 1rem 1rem;
 }
 
 .mega-box .content {
-  background: #1b3844;
   padding: 25px 20px;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
+  box-shadow: 24px 48px 48px -16px rgba(0, 0, 0, 0.38), -24px 48px 48px -16px rgba(0, 0, 0, 0.38), 0 32px 64px -16px rgba(0, 0, 0, 0.22);
+  z-index: 500;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .mega-box .content .row {
@@ -780,14 +798,21 @@ nav .wrapper {
 }
 
 .content .row img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  width: 450px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  background: #fff;
+  border: 1px solid rgba(26, 59, 68, 0.82);
+  display: block;
+  margin-bottom: auto;
+  box-shadow: 12px 12px 32px rgba(0, 0, 0, 0.55), -8px -8px 24px rgba(255, 255, 255, 0.18), 0 1.5px 0 rgba(255, 255, 255, 0.08) inset;
+  z-index: 6000;
 }
 
 .content .row header {
-  color: #f2f2f2;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 500;
 }
@@ -804,7 +829,7 @@ nav .wrapper {
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #d9d9d9;
+  color: #447785;
   font-size: 17px;
   display: block;
 }
@@ -972,6 +997,22 @@ nav input {
 
 #dynamic-logo.hidden {
   opacity: 0;
+}
+
+.blur-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.blur-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .icon {
@@ -2461,7 +2502,7 @@ nav input {
   height: 100%;
 }
 .services__card-icon-background:hover {
-  filter: blur(40px);
+  filter: blur(7px);
 }
 
 .services__card-img {
@@ -2869,11 +2910,6 @@ p {
   line-height: 1.8;
 }
 
-@media (min-width: 768px) {
-  .content {
-    padding: 0 40px;
-  }
-}
 .aktuelles {
   margin: 0 auto;
   display: flex; /* Aktiviert das Flexbox-Layout */
