@@ -108,8 +108,10 @@ nav .wrapper {
 .mega-box .content {
   padding: 25px 20px;
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+   gap: 4rem; // Abstand zwischen Bild und Row
   width: 100%;
-  justify-content: space-between;
   box-shadow: 24px 48px 48px -16px rgba(0, 0, 0, 0.38),
     // unten rechts, -16px spread verhindert oben
     -24px 48px 48px -16px rgba(0, 0, 0, 0.38),

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probefahrt buchen | Drive Dynamik</title>
+    <link href="../../styles/main.css" rel="stylesheet" />
+    <link href="../../styles/pages/probefahrt.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="probefahrt">
+        <div class="probefahrt__container">
+            <h1 class="probefahrt__heading">Probefahrt buchen</h1>
+            <form class="probefahrt__form" id="probefahrtForm">
+                <div class="probefahrt__form-row">
+                    <label for="name">Ihr Name*</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="probefahrt__form-row">
+                    <label for="email">E-Mail*</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="probefahrt__form-row">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="probefahrt__form-row">
+                    <label for="car">Fahrzeugwunsch*</label>
+                    <input type="text" id="car" name="car" placeholder="z.B. Cupra Formentor" required />
+                </div>
+                <div class="probefahrt__form-row">
+                    <label for="date">Wunschtermin*</label>
+                    <input type="date" id="date" name="date" required />
+                    <input type="time" id="time" name="time" required />
+                </div>
+                <div class="probefahrt__form-row">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="button button--primary">Probefahrt anfragen</button>
+            </form>
+            <div class="probefahrt__confirmation" id="confirmation" style="display:none;">
+                <h3>Ihre Probefahrt wurde gespeichert!</h3>
+            </div>
+            <div class="probefahrt__bookings">
+                <h2>Ihre gespeicherten Probefahrt-Termine</h2>
+                <ul id="bookingList"></ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Probefahrt speichern und anzeigen (Local Storage)
+        const form = document.getElementById('probefahrtForm');
+        const confirmation = document.getElementById('confirmation');
+        const bookingList = document.getElementById('bookingList');
+
+        function renderBookings() {
+            const bookings = JSON.parse(localStorage.getItem('probefahrten') || '[]');
+            bookingList.innerHTML = '';
+            bookings.forEach(b => {
+                const li = document.createElement('li');
+                li.textContent = `${b.date} ${b.time} – ${b.car} (${b.name}, ${b.email})`;
+                bookingList.appendChild(li);
+            });
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const booking = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                car: form.car.value,
+                date: form.date.value,
+                time: form.time.value,
+                message: form.message.value
+            };
+            const bookings = JSON.parse(localStorage.getItem('probefahrten') || '[]');
+            bookings.push(booking);
+            localStorage.setItem('probefahrten', JSON.stringify(bookings));
+            confirmation.style.display = 'block';
+            form.reset();
+            renderBookings();
+            setTimeout(() => confirmation.style.display = 'none', 3000);
+        });
+
+        renderBookings();
+    </script>
+</body>
+
+</html>

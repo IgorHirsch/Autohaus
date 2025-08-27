@@ -1,0 +1,167 @@
+@use "../../abstracts" as *;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+.aktuelles-futuristic {
+  background-color: #202D35;
+  padding: 0;
+  margin: 0;
+  color: #eee;
+  font-family: "Orbitron", monospace, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.futuristic-container {
+  max-width: 1000rem;
+  margin: 5rem auto;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 0, 0, 0.15),
+      rgba(255, 0, 0, 0.15) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+    transform: rotate(-7deg);
+  }
+
+  &::after {
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+    transform: rotate(6deg);
+    opacity: 0.3;
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.display-4 {
+  font-size: 3.8rem;
+  color: #ff0033; /* Weiß als Grundfarbe */
+  text-shadow: 
+    0 0 5px red,
+    0 0 5px lime,
+    0 0 5px blue;
+  margin-bottom: 2rem;
+  animation: rgb-glitch 1.2s infinite;
+}
+
+@keyframes rgb-glitch {
+  0%, 100% {
+    text-shadow: 
+      0 0 4px red,
+      0 0 4px lime,
+      0 0 4px blue;
+    transform: translate(0, 0);
+  }
+  20% {
+    text-shadow: 
+      2px 0 4px red,
+      -2px 0 4px lime,
+      1px 1px 4px blue;
+    transform: translate(-1px, 0);
+  }
+  40% {
+    text-shadow: 
+      -2px -1px 4px red,
+      2px 1px 4px lime,
+      -1px -2px 4px blue;
+    transform: translate(1px, -1px);
+  }
+  60% {
+    text-shadow: 
+      1px 2px 4px red,
+      -1px -2px 4px lime,
+      2px -1px 4px blue;
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    text-shadow: 
+      -1px 1px 4px red,
+      1px -1px 4px lime,
+      -2px 1px 4px blue;
+    transform: translate(1px, 0);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ff0033;
+  border: 3px solid #ff0033;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 1.5rem 0;
+  border-radius: 15px;
+  box-shadow: inset 4px 4px 7px #0c0c0c, inset -4px -4px 7px #2b2b2b,
+    0 0 20px #ff0033;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: #ff0033;
+    color: #0b0b0b;
+    border-color: #fff;
+    box-shadow: 0 0 30px #fff, 0 0 15px #ff0000, inset 2px 2px 5px #b30000;
+    text-shadow: 0 0 6px #fff;
+  }
+}
+
+.text-success {
+  font-size: 1.5rem;
+  background: #e71c44;
+  color: #0b0b0b;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-left: 12px solid white;
+  border-radius: 12px;
+  transform: skewX(-12deg);
+  box-shadow: 6px 6px 10px #0a0a0a, -6px -6px 10px #2c2c2c;
+  font-weight: 900;
+  margin-top: 1.7rem;
+}
+
+.aktuelles-futuristic p {
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff4444;
+}
+
+.aktuelles-futuristic a {
+  color: #ff0000;
+  text-decoration: underline;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.aktuelles-futuristic a:hover {
+  background: #fff;
+  color: #0b0b0b;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}

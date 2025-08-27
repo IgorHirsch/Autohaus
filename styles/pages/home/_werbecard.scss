@@ -1,0 +1,196 @@
+$-werbecard-border-color: rgba(255, 0, 0, 0.13);
+$-werbecard-border-width: 0.0625rem;
+$-werbecard-margin: 0.66rem;
+$-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
+
+@use "sass:color";
+@use "sass:math";
+@use "../../abstracts" as *;
+
+.werbecard {
+  $-width: math.div(100%, 3.5);
+
+  width: calc(#{$-width} - #{($-werbecard-margin * 2 + 0.002rem)});
+  margin: 2rem;
+  padding: 0 0 1rem 0;
+  border-left: $-werbecard-border-width solid $-werbecard-border-color;
+  border-right: $-werbecard-border-width solid $-werbecard-border-color;
+  border-top: $-werbecard-border-width solid $-werbecard-border-color;
+  border-bottom: $-werbecard-border-width solid $-werbecard-border-color;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background-color: #553b49;
+  box-shadow: 0 0 24px 0 #ff0033;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 32px 0 #ff0033;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    $-width-md: (100% * 0.5);
+    width: calc(#{$-width-md} - #{($-werbecard-margin * 2 + 0.001rem)});
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: calc(100% - #{($-werbecard-margin * 2 + 0.001rem)});
+  }
+  @media (max-width: 391px) {
+    margin-top: 1rem;
+  }
+}
+
+.werbecard__image-container {
+  position: relative;
+  background-color: #ff0033;
+  margin-top: -$-werbecard-border-width;
+  margin-right: -$-werbecard-border-width;
+  margin-left: -$-werbecard-border-width;
+}
+
+.werbecard__image-container::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-top: $-werbecard-border-width solid $-werbecard-border-color;
+  border-right: $-werbecard-border-width solid $-werbecard-border-color;
+  border-left: $-werbecard-border-width solid $-werbecard-border-color;
+}
+
+.werbecard__image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+
+  background-image: linear-gradient(
+    -$slope-incline,
+    #553b49 49.7%,
+    transparent 50.3%
+  );
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @media (max-width: $breakpoint-sm) {
+    height: 5rem;
+  }
+}
+
+.werbecard__image {
+  width: 100%;
+  filter: grayscale(10%);
+}
+
+.werbecard__content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #553b49;
+}
+
+.werbecard__content-heading {
+  color: #a4364c;
+  font-size: 1.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+}
+
+.werbecard__content-subheading {
+  color: #a4364c;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #553b49;
+}
+
+.werbecard__content-info {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.204);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.204);
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    transparent calc(50% - #{$-half-pixel-width}),
+    rgba(255, 255, 255, 0.204) calc(50% - #{$-half-pixel-width}),
+    rgba(255, 255, 255, 0.204) calc(50% + #{$-half-pixel-width}),
+    transparent calc(50% + #{$-half-pixel-width})
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 75%;
+  background-position: center center;
+}
+
+%werbecard__content-info-column {
+  flex: 1 1 50%;
+  color: #ff0000;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.werbecard__content-info-duration {
+  @extend %werbecard__content-info-column;
+}
+
+.werbecard__content-info-level {
+  @extend %werbecard__content-info-column;
+}
+
+.werbecard__content-info-duration-text {
+  padding-left: 0.33rem;
+  color: #ff0033;
+  font-weight: 700;
+}
+
+.werbecard__content-price-container {
+  padding-top: 0.75rem;
+  font-size: 1rem;
+  color: #a4364c;
+}
+
+.werbecard__content-price {
+  display: block;
+  color: #ff0033;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 0.9em;
+  letter-spacing: 1px;
+}
+
+// Rückseite
+.werbecard__card-hover {
+  position: absolute;
+  top: -$-werbecard-border-width;
+  left: -$-werbecard-border-width;
+  right: -$-werbecard-border-width;
+  bottom: -$-werbecard-border-width;
+  z-index: 2;
+
+  background-color: #533e49;
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center center;
+  background-size: 100% calc(50% - 4rem), 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  .werbecard:hover & {
+    opacity: 1;
+  }
+}
