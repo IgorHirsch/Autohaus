@@ -1102,6 +1102,23 @@ nav input {
   color: #fff;
 }
 
+.werbung-contact-button {
+  padding: 0.75rem 1rem;
+  background-color: #C91B66;
+  color: #fff;
+  font-weight: bold;
+  text-transform: none;
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 12px #ff00f2;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.werbung-contact-button:hover {
+  background-color: #db2ca5;
+  color: #fff;
+  box-shadow: 0 0 20px #db2ca5;
+}
+
 .form__horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -3088,7 +3105,7 @@ nav input {
   right: -0.0625rem;
   bottom: -0.0625rem;
   z-index: 2;
-  background-color: #533e49;
+  background-color: #C91B66;
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
