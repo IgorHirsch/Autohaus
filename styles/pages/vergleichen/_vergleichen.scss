@@ -9,6 +9,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .vergleichen {
   position: relative;
+  top: 10rem;
   padding: 3rem 0;
   background: #202d35;
   min-height: 100vh;
@@ -18,7 +19,6 @@ $-half-pixel-width: math.div(1rem, 32);
 .vergleichen__container {
   max-width: 68%;
   margin: 0 auto;
-  margin-top: 4rem;
   padding: 2rem;
   border-radius: 1.618rem;
   background: #202d35;

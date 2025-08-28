@@ -90,7 +90,7 @@ $-half-pixel-width: math.div(1rem, 32);
   }
 }
 .offers__text-heading {
-  color: whitesmoke;
+  color: #447785;
   font-weight: 500;
   font-size: 2rem;
   margin: auto;
@@ -101,7 +101,7 @@ $-half-pixel-width: math.div(1rem, 32);
     display: block;
     width: 100%;
     height: 0.25rem;
-    background-color: antiquewhite;
+    background-color: #447785;
     box-shadow: #1a3b44, 5rem;
     margin-bottom: 0.5rem;
 
@@ -329,8 +329,6 @@ $-half-pixel-width: math.div(1rem, 32);
   line-height: 0.9em;
 }
 
-
-
 //Rückseite
 .offers__card-hover {
   position: absolute;
@@ -340,7 +338,7 @@ $-half-pixel-width: math.div(1rem, 32);
   bottom: -$-offers-card-border-width;
   z-index: 2;
 
-  background-color: $color-primary;
+  background-color: #1a3b44;
 
   // Die Linie in der mitte
   // background-image: linear-gradient(
@@ -371,5 +369,4 @@ $-half-pixel-width: math.div(1rem, 32);
   .offers__card:hover & {
     opacity: 1;
   }
-
 }

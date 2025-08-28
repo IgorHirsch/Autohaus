@@ -35,11 +35,17 @@ nav .wrapper {
   align-items: center;
 }
 .wrapper .logo a {
-  color: whitesmoke;
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: "Orbitron", "Arial", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #00ffdd;
+  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  display: inline-block;
+  transform: skewX(-8deg); // leicht schräg
+  text-shadow: 0 2px 12px #ff0033a0, 0 0 2px #fff;
+  transition: color 0.2s;
 }
 .wrapper .nav-links {
   display: inline-flex;
@@ -103,14 +109,13 @@ nav .wrapper {
   z-index: 888;
   background: rgba(26, 59, 68, 0.95);
   border-radius: 0 0 1rem 1rem;
-  
 }
 .mega-box .content {
   padding: 25px 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-   gap: 4rem; // Abstand zwischen Bild und Row
+  gap: 4rem; // Abstand zwischen Bild und Row
   width: 100%;
   box-shadow: 24px 48px 48px -16px rgba(0, 0, 0, 0.38),
     // unten rechts, -16px spread verhindert oben
@@ -135,7 +140,7 @@ nav .wrapper {
   object-fit: cover;
   border-radius: 0.5rem;
   background: #fff;
-    border: 1px solid rgba(26, 59, 68, 0.82);
+  border: 1px solid rgba(26, 59, 68, 0.82);
   display: block;
   margin-bottom: auto;
   // Neomorphischer Schatten: kräftig und sichtbar auf dunklem Grund
@@ -145,7 +150,6 @@ nav .wrapper {
     // heller Lichtschein oben links
     0 1.5px 0 rgba(255, 255, 255, 0.08) inset; // leichter innerer Lichtschein
   z-index: 6000;
-  
 }
 .content .row header {
   color: #ffffff;

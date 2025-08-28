@@ -1,7 +1,14 @@
 $-werbecard-border-color: rgba(255, 0, 0, 0.13);
 $-werbecard-border-width: 0.0625rem;
 $-werbecard-margin: 0.66rem;
-$-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
+$-half-pixel-width: 0.03125rem;
+
+$-werbecard-bg: #3a2632;
+$-werbecard-accent: #ff0033;
+$-werbecard-accent-light: #ff4444;
+$-werbecard-heading: #ff0033;
+$-werbecard-subheading: #ff4444;
+$-werbecard-text: #f5f5f5;
 
 @use "sass:color";
 @use "sass:math";
@@ -13,20 +20,17 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
   width: calc(#{$-width} - #{($-werbecard-margin * 2 + 0.002rem)});
   margin: 2rem;
   padding: 0 0 1rem 0;
-  border-left: $-werbecard-border-width solid $-werbecard-border-color;
-  border-right: $-werbecard-border-width solid $-werbecard-border-color;
-  border-top: $-werbecard-border-width solid $-werbecard-border-color;
-  border-bottom: $-werbecard-border-width solid $-werbecard-border-color;
-
+  border: $-werbecard-border-width solid $-werbecard-border-color;
   border-radius: 1rem;
   overflow: hidden;
 
-  background-color: #553b49;
-  box-shadow: 0 0 24px 0 #ff0033;
+  background-color: $-werbecard-bg;
+  box-shadow: 0 0 24px 0 $-werbecard-accent;
   position: relative;
+  color: $-werbecard-text;
 
   &:hover {
-    box-shadow: 0 0 32px 0 #ff0033;
+    box-shadow: 0 0 32px 0 $-werbecard-accent;
   }
 
   @media (max-width: $breakpoint-md) {
@@ -44,7 +48,7 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 
 .werbecard__image-container {
   position: relative;
-  background-color: #ff0033;
+  background-color: $-werbecard-accent;
   margin-top: -$-werbecard-border-width;
   margin-right: -$-werbecard-border-width;
   margin-left: -$-werbecard-border-width;
@@ -52,7 +56,6 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 
 .werbecard__image-container::before {
   content: "";
-
   position: absolute;
   bottom: 0;
   left: 0;
@@ -71,10 +74,9 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
   left: 0;
   right: 0;
   height: 4rem;
-
   background-image: linear-gradient(
     -$slope-incline,
-    #553b49 49.7%,
+    $-werbecard-bg 49.7%,
     transparent 50.3%
   );
   background-repeat: no-repeat;
@@ -93,11 +95,11 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 .werbecard__content {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: #553b49;
+  background-color: $-werbecard-bg;
 }
 
 .werbecard__content-heading {
-  color: #a4364c;
+  color: $-werbecard-heading;
   font-size: 1.75rem;
   font-weight: 700;
   white-space: nowrap;
@@ -107,11 +109,11 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 }
 
 .werbecard__content-subheading {
-  color: #a4364c;
+  color: $-werbecard-subheading;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background-color: #553b49;
+  background-color: $-werbecard-bg;
 }
 
 .werbecard__content-info {
@@ -133,7 +135,7 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 
 %werbecard__content-info-column {
   flex: 1 1 50%;
-  color: #ff0000;
+  color: $-werbecard-accent;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -149,19 +151,19 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
 
 .werbecard__content-info-duration-text {
   padding-left: 0.33rem;
-  color: #ff0033;
+  color: $-werbecard-accent;
   font-weight: 700;
 }
 
 .werbecard__content-price-container {
   padding-top: 0.75rem;
   font-size: 1rem;
-  color: #a4364c;
+  color: $-werbecard-subheading;
 }
 
 .werbecard__content-price {
   display: block;
-  color: #ff0033;
+  color: $-werbecard-accent;
   font-weight: 700;
   font-size: 2rem;
   line-height: 0.9em;
@@ -177,7 +179,7 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
   bottom: -$-werbecard-border-width;
   z-index: 2;
 
-  background-color: #C91B66; 
+
 
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
@@ -192,5 +194,6 @@ $-half-pixel-width: 0.03125rem; // <--- HIER ergänzen!
   transition: opacity 0.25s ease-in-out;
   .werbecard:hover & {
     opacity: 1;
+    background-color: #3a2632;
   }
 }

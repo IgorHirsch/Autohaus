@@ -708,11 +708,17 @@ nav .wrapper {
 }
 
 .wrapper .logo a {
-  color: whitesmoke;
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: "Orbitron", "Arial", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #00ffdd;
+  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  display: inline-block;
+  transform: skewX(-8deg);
+  text-shadow: 0 2px 12px rgba(255, 0, 51, 0.6274509804), 0 0 2px #fff;
+  transition: color 0.2s;
 }
 
 .wrapper .nav-links {
@@ -1029,7 +1035,6 @@ nav input {
 
 .button {
   display: inline-block;
-  border: 0.125rem solid currentColor;
   border-radius: 1rem;
   color: rgb(52, 75, 86);
   text-decoration: none;
@@ -1090,8 +1095,6 @@ nav input {
 
 .contact-button {
   padding: 0.75rem 1rem;
-  border: 0.125rem solid #1a3b44;
-  border-radius: 1rem;
   background-color: #ffd700;
   color: #1a3b44;
   font-weight: bold;
@@ -1104,20 +1107,10 @@ nav input {
 }
 
 .werbung-contact-button {
-  padding: 0.75rem 1rem;
-  background-color: #C91B66;
-  color: #fff;
-  font-weight: bold;
-  text-transform: none;
-  border: none;
-  border-radius: 0.7rem;
-  box-shadow: 0 0 12px #ff00f2;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-color: #3a2632;
 }
 .werbung-contact-button:hover {
-  background-color: #db2ca5;
-  color: #fff;
-  box-shadow: 0 0 20px #db2ca5;
+  background-color: #3a2632;
 }
 
 .form__horizontal {
@@ -1856,7 +1849,7 @@ nav input {
 }
 
 .offers__text-heading {
-  color: whitesmoke;
+  color: #447785;
   font-weight: 500;
   font-size: 2rem;
   margin: auto;
@@ -1867,7 +1860,7 @@ nav input {
   display: block;
   width: 100%;
   height: 0.25rem;
-  background-color: antiquewhite;
+  background-color: #447785;
   box-shadow: #1a3b44, 5rem;
   margin-bottom: 0.5rem;
 }
@@ -2060,7 +2053,7 @@ nav input {
   right: -0.0625rem;
   bottom: -0.0625rem;
   z-index: 2;
-  background-color: rgb(52, 75, 86);
+  background-color: #1a3b44;
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
@@ -2900,7 +2893,7 @@ nav input {
     transform: translate(1px, 0);
   }
 }
-.btn {
+.futuristic-btn {
   display: inline-block;
   background: #1a1a1a;
   color: #ff0033;
@@ -2915,7 +2908,7 @@ nav input {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-.btn:hover {
+.futuristic-btn:hover {
   background: #ff0033;
   color: #0b0b0b;
   border-color: #fff;
@@ -2935,6 +2928,7 @@ nav input {
   box-shadow: 6px 6px 10px #0a0a0a, -6px -6px 10px #2c2c2c;
   font-weight: 900;
   margin-top: 1.7rem;
+  margin-left: 2rem;
 }
 
 .aktuelles-futuristic p {
@@ -2948,14 +2942,15 @@ nav input {
   color: #ff0000;
   text-decoration: underline;
   font-weight: 800;
-  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  background: #fff;
 }
 
 .aktuelles-futuristic a:hover {
   background: #fff;
   color: #0b0b0b;
   text-decoration: none;
-  padding: 0.2rem 0.5rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
 }
 
@@ -2963,15 +2958,13 @@ nav input {
   width: calc(28.5714285714% - 1.322rem);
   margin: 2rem;
   padding: 0 0 1rem 0;
-  border-left: 0.0625rem solid rgba(255, 0, 0, 0.13);
-  border-right: 0.0625rem solid rgba(255, 0, 0, 0.13);
-  border-top: 0.0625rem solid rgba(255, 0, 0, 0.13);
-  border-bottom: 0.0625rem solid rgba(255, 0, 0, 0.13);
+  border: 0.0625rem solid rgba(255, 0, 0, 0.13);
   border-radius: 1rem;
   overflow: hidden;
-  background-color: #553b49;
+  background-color: #3a2632;
   box-shadow: 0 0 24px 0 #ff0033;
   position: relative;
+  color: #f5f5f5;
 }
 .werbecard:hover {
   box-shadow: 0 0 32px 0 #ff0033;
@@ -3020,7 +3013,7 @@ nav input {
   left: 0;
   right: 0;
   height: 4rem;
-  background-image: linear-gradient(-5.7391704773deg, #553b49 49.7%, transparent 50.3%);
+  background-image: linear-gradient(-5.7391704773deg, #3a2632 49.7%, transparent 50.3%);
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
@@ -3038,11 +3031,11 @@ nav input {
 .werbecard__content {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: #553b49;
+  background-color: #3a2632;
 }
 
 .werbecard__content-heading {
-  color: #a4364c;
+  color: #ff0033;
   font-size: 1.75rem;
   font-weight: 700;
   white-space: nowrap;
@@ -3052,11 +3045,11 @@ nav input {
 }
 
 .werbecard__content-subheading {
-  color: #a4364c;
+  color: #ff4444;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background-color: #553b49;
+  background-color: #3a2632;
 }
 
 .werbecard__content-info {
@@ -3072,7 +3065,7 @@ nav input {
 
 .werbecard__content-info-level, .werbecard__content-info-duration {
   flex: 1 1 50%;
-  color: #ff0000;
+  color: #ff0033;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3087,7 +3080,7 @@ nav input {
 .werbecard__content-price-container {
   padding-top: 0.75rem;
   font-size: 1rem;
-  color: #a4364c;
+  color: #ff4444;
 }
 
 .werbecard__content-price {
@@ -3106,7 +3099,6 @@ nav input {
   right: -0.0625rem;
   bottom: -0.0625rem;
   z-index: 2;
-  background-color: #C91B66;
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
@@ -3119,6 +3111,7 @@ nav input {
 }
 .werbecard:hover .werbecard__card-hover {
   opacity: 1;
+  background-color: #3a2632;
 }
 
 .bestand {
@@ -3722,18 +3715,6 @@ p {
   margin-bottom: 0.7rem;
   flex-wrap: wrap;
 }
-.fzgdetails__actions .button {
-  background: rgb(52, 75, 86);
-  color: whitesmoke;
-  border-radius: 0.7rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
-}
-.fzgdetails__actions .button:hover {
-  box-shadow: 0 4px 16px rgb(52, 75, 86);
-  background: #345a62;
-  color: rgb(52, 75, 86);
-}
 
 .fzgdetails__keyfacts {
   display: flex;
@@ -3960,6 +3941,7 @@ p {
 }
 .vergleichen {
   position: relative;
+  top: 10rem;
   padding: 3rem 0;
   background: #202d35;
   min-height: 100vh;
@@ -3968,7 +3950,6 @@ p {
 .vergleichen__container {
   max-width: 68%;
   margin: 0 auto;
-  margin-top: 4rem;
   padding: 2rem;
   border-radius: 1.618rem;
   background: #202d35;

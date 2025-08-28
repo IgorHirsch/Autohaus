@@ -104,19 +104,7 @@ $-half-pixel-width: math.div(1rem, 32);
   gap: 0.7rem;
   margin-bottom: 0.7rem;
   flex-wrap: wrap;
-  .button {
-    background: $color-primary;
-    color: whitesmoke;
-    border-radius: 0.7rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.2s, background 0.2s, color 0.2s;
-
-    &:hover {
-      box-shadow: 0 4px 16px $color-primary;
-      background: $color-secondary;
-      color: $color-primary;
-    }
-  }
+  
 }
 
 .fzgdetails__keyfacts {

@@ -105,7 +105,7 @@
   }
 }
 
-.btn {
+.futuristic-btn {
   display: inline-block;
   background: #1a1a1a;
   color: #ff0033;
@@ -142,6 +142,7 @@
   box-shadow: 6px 6px 10px #0a0a0a, -6px -6px 10px #2c2c2c;
   font-weight: 900;
   margin-top: 1.7rem;
+  margin-left: 2rem;
 }
 
 .aktuelles-futuristic p {
@@ -155,13 +156,15 @@
   color: #ff0000;
   text-decoration: underline;
   font-weight: 800;
-  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  background: #fff;
 }
 
 .aktuelles-futuristic a:hover {
   background: #fff;
   color: #0b0b0b;
   text-decoration: none;
-  padding: 0.2rem 0.5rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
+  
 }

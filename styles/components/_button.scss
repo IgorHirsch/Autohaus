@@ -3,7 +3,6 @@
 
 .button {
   display: inline-block;
-  border: 0.125rem solid currentColor;
   border-radius: 1rem;
   color: $color-primary;
   text-decoration: none;
@@ -73,8 +72,6 @@
 
 .contact-button {
   padding: 0.75rem 1rem;
-  border: 0.125rem solid #1a3b44;
-  border-radius: 1rem;
   background-color: #ffd700;
   color: #1a3b44;
   font-weight: bold;
@@ -89,19 +86,10 @@
 
 
 .werbung-contact-button {
-  padding: 0.75rem 1rem;
-  background-color: #C91B66;
-  color: #fff;
-  font-weight: bold;
-  text-transform: none;
-  border: none;
-  border-radius: 0.7rem;
-  box-shadow: 0 0 12px #ff00f2;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  
+  border-color:  #3a2632;
 
   &:hover {
-    background-color: #db2ca5;
-    color: #fff;
-    box-shadow: 0 0 20px #db2ca5;
+    background-color: #3a2632;
   }
 }
