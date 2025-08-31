@@ -683,12 +683,13 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background: rgb(22, 22, 29);
+  background: rgba(22, 22, 29, 0.95);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.08);
   border-radius: 0 0 -1rem -1rem;
   transition: all 0.5s ease;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #345a62;
 }
 
 .marke-icon {
@@ -726,7 +727,7 @@ nav .wrapper {
   display: inline-block;
   transform: skewX(-8deg);
   transition: color 0.2s;
-  color: #d4d6ed;
+  color: #bacce0;
 }
 
 .wrapper .nav-links {
@@ -738,7 +739,7 @@ nav .wrapper {
 }
 
 .nav-links li a {
-  color: #d4d6ed;
+  color: #bacce0;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -748,8 +749,8 @@ nav .wrapper {
 }
 
 .nav-links li a:hover {
-  background: rgba(22, 22, 29, 0.9);
-  color: #fff;
+  background: rgba(22, 22, 29, 0.95);
+  color: rgb(52, 75, 86);
   box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4), inset -2px -2px 6px rgba(255, 255, 255, 0.05);
 }
 
@@ -759,7 +760,7 @@ nav .wrapper {
 
 .nav-links .drop-menu {
   position: absolute;
-  background: rgb(22, 22, 29);
+  background: rgba(22, 22, 29, 0.95);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 -1rem -1rem;
   width: 300px;
@@ -794,9 +795,12 @@ nav .wrapper {
   opacity: 0;
   visibility: hidden;
   z-index: 888;
-  background: rgb(22, 22, 29);
+  background: rgba(22, 22, 29, 0.95);
   border-radius: 0 0 1rem 1rem;
-  color: #d4d6ed;
+  color: rgb(52, 75, 86);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #345a62;
 }
 
 .mega-box .content {
@@ -822,7 +826,6 @@ nav .wrapper {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.5rem;
-  background: #fff;
   border: rgb(22, 22, 29);
   display: block;
   margin-bottom: auto;
@@ -848,17 +851,17 @@ nav .wrapper {
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #d4d6ed;
+  color: #345a62;
   font-size: 17px;
   display: block;
 }
 
 .row .mega-links li a:hover {
-  color: #f2f2f2;
+  color: rgb(52, 75, 86);
 }
 
 .wrapper .btn {
-  color: #fff;
+  color: #345a62;
   font-size: 20px;
   cursor: pointer;
   display: none;
@@ -1284,7 +1287,7 @@ nav input {
 }
 
 .motivation__text-heading {
-  color: whitesmoke;
+  color: #bacce0;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -1293,7 +1296,7 @@ nav input {
   display: block;
   width: 100%;
   height: 0.25rem;
-  background-color: antiquewhite;
+  background-color: #345a62;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 1280px) {
@@ -1763,7 +1766,7 @@ nav input {
 }
 
 .story__heading {
-  color: whitesmoke;
+  color: #bacce0;
   font-size: 2rem;
   max-width: 90%;
   margin: 0px auto;
@@ -1774,7 +1777,7 @@ nav input {
   display: block;
   width: 100%;
   height: 0.25rem;
-  background-color: antiquewhite;
+  background-color: #345a62;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 48em) {
@@ -1796,8 +1799,7 @@ nav input {
 .story__desc {
   margin: 0px auto;
   text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
-  background-color: #1d363f;
-  color: #345a62;
+  color: #bacce0;
   font-size: 1.1rem;
 }
 @media (max-width: 1280px) {
@@ -1817,6 +1819,31 @@ nav input {
     float: none;
     padding-bottom: 3rem;
     font-size: 0.8rem;
+  }
+}
+
+.story__text--short {
+  background: rgba(22, 22, 29, 0.55);
+  color: #bacce0;
+  border-radius: 1.1rem;
+  padding: 1.5rem 2.2rem;
+  margin: 1.5rem auto;
+  max-width: 1300px;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18), 0 1.5px 16px 0 rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .story__text--short {
+    padding: 1rem 0.7rem;
+    font-size: 1rem;
   }
 }
 
@@ -1875,7 +1902,7 @@ nav input {
 }
 
 .offers__text-heading {
-  color: #447785;
+  color: #bacce0;
   font-weight: 500;
   font-size: 2rem;
   margin: auto;
@@ -2077,7 +2104,7 @@ nav input {
   right: -0.0625rem;
   bottom: -0.0625rem;
   z-index: 2;
-  background-color: rgba(22, 22, 29, 0.9);
+  background-color: rgba(22, 22, 29, 0.95);
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
@@ -2263,7 +2290,7 @@ nav input {
   }
 }
 .home-team__heading {
-  color: whitesmoke;
+  color: #bacce0;
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -2276,7 +2303,7 @@ nav input {
   display: block;
   width: 100%;
   height: 0.25rem;
-  background-color: antiquewhite;
+  background-color: #345a62;
   box-shadow: #1a3b44 0 0 5rem;
   margin-bottom: 0.5rem;
 }
@@ -2423,7 +2450,7 @@ nav input {
 }
 
 .services__heading {
-  color: whitesmoke;
+  color: #bacce0;
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -2433,7 +2460,7 @@ nav input {
   display: block;
   width: 100%;
   height: 0.25rem;
-  background-color: antiquewhite;
+  background-color: #345a62;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 48em) {
@@ -2512,7 +2539,7 @@ nav input {
 .services__text {
   display: flex;
   flex-wrap: wrap;
-  color: whitesmoke;
+  color: #bacce0;
   font-size: 1.1rem;
   margin: 0px auto;
   margin-bottom: 1rem;
@@ -2635,7 +2662,7 @@ nav input {
   left: 0;
   right: 0;
   bottom: 0;
-  color: white;
+  color: #bacce0;
   padding: 3rem 1rem 0 1rem;
   text-shadow: 0 0 0.125rem black;
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);

@@ -109,7 +109,7 @@ $-half-pixel-width: math.div(1rem, 32);
   }
 }
 .offers__text-heading {
-  color: #447785;
+  color: $color-text;
   font-weight: 500;
   font-size: 2rem;
   margin: auto;

@@ -53,7 +53,7 @@ $-services-animation-duration: 0.25s;
 }
 
 .services__heading {
-  color: whitesmoke;
+  color: $color-text;
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -63,7 +63,7 @@ $-services-animation-duration: 0.25s;
     display: block;
     width: 100%;
     height: 0.25rem;
-    background-color: antiquewhite;
+    background-color: $color-secondary;
     margin-bottom: 0.5rem;
 
     @media (max-width: $breakpoint-sm) {
@@ -142,7 +142,7 @@ $-services-animation-duration: 0.25s;
 .services__text {
   display: flex;
   flex-wrap: wrap;
-  color: whitesmoke;
+  color: $color-text;
   font-size: 1.1rem;
   margin: 0px auto;
   margin-bottom: 1rem;
@@ -278,7 +278,7 @@ $-offers-card-margin: 0.66rem;
   left: 0;
   right: 0;
   bottom: 0;
-  color: white;
+  color: $color-text;
   padding: 3rem 1rem 0 1rem;
   text-shadow: 0 0 0.125rem black;
   background-image: linear-gradient(

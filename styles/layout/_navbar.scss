@@ -3,13 +3,14 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background: $color-eigengrau;
+  background: $color-eigengrau-transparent;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   border-radius: 0 0 -1rem -1rem;
   transition: all 0.5s ease;
-  -webkit-backdrop-filter: blur(30px); // Für Safari
-  backdrop-filter: blur(30px); // Blur-Effekt
+  -webkit-backdrop-filter: blur(50px); // Für Safari
+  backdrop-filter: blur(50px); // Blur-Effekt
+  color: $color-secondary;
 }
 
 .marke-icon {
@@ -64,7 +65,7 @@ nav .wrapper {
 }
 .nav-links li a:hover {
  background: $color-eigengrau-transparent; // halbtransparentes Dunkelblau
-  color: #fff;
+  color: $color-primary;
   box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4),
     inset -2px -2px 6px rgba(255, 255, 255, 0.05);
 }
@@ -73,7 +74,7 @@ nav .wrapper {
 }
 .nav-links .drop-menu {
   position: absolute;
-  background: $color-eigengrau; // halbtransparent wie offers__card
+  background: $color-eigengrau-transparent; // halbtransparent wie offers__card
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 -1rem -1rem;
   width: 300px;
@@ -107,9 +108,12 @@ nav .wrapper {
   opacity: 0;
   visibility: hidden;
   z-index: 888;
-  background: $color-eigengrau; // halbtransparent wie offers__card
+  background: $color-eigengrau-transparent; // halbtransparent wie offers__card
   border-radius: 0 0 1rem 1rem;
-  color: $color-text;
+  color: $color-primary;
+  -webkit-backdrop-filter: blur(50px); // Für Safari
+  backdrop-filter: blur(50px); // Blur-Effekt
+  color: $color-secondary;
 }
 .mega-box .content {
   padding: 25px 20px;
@@ -130,6 +134,7 @@ nav .wrapper {
       ); // direkt unten, -16px spread verhindert oben
   z-index: 500;
   border-radius: 0 0 1rem 1rem;
+  
 }
 .mega-box .content .row {
   width: calc(25% - 30px);
@@ -140,7 +145,6 @@ nav .wrapper {
   height: 350px;
   object-fit: cover;
   border-radius: 0.5rem;
-  background: #fff;
   border: $color-eigengrau;
   display: block;
   margin-bottom: auto;
@@ -167,15 +171,15 @@ nav .wrapper {
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: $color-text;
+  color: $color-secondary;
   font-size: 17px;
   display: block;
 }
 .row .mega-links li a:hover {
-  color: #f2f2f2;
+  color: $color-primary;
 }
 .wrapper .btn {
-  color: #fff;
+  color: $color-secondary;
   font-size: 20px;
   cursor: pointer;
   display: none;

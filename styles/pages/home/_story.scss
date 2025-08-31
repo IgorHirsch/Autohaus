@@ -18,11 +18,10 @@
 }
 
 .story__heading {
-  color: whitesmoke;
+  color: $color-text;
   font-size: 2rem;
   max-width: 90%;
   margin: 0px auto;
-
 
   margin-bottom: 1rem;
   &::before {
@@ -30,7 +29,7 @@
     display: block;
     width: 100%;
     height: 0.25rem;
-    background-color: antiquewhite;
+    background-color: $color-secondary;
     margin-bottom: 0.5rem;
   }
 
@@ -54,8 +53,7 @@
   margin: 0px auto;
   text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
 
-  background-color: #1d363f;
-  color: $color-secondary;
+  color: $color-text;
   font-size: 1.1rem;
 
   @media (max-width: $breakpoint-lg) {
@@ -72,5 +70,30 @@
     float: none;
     padding-bottom: 3rem;
     font-size: 0.8rem;
+  }
+}
+
+.story__text--short {
+  background: rgba(22, 22, 29, 0.55); // halbtransparentes Eigengrau
+  color: $color-text;
+  border-radius: 1.1rem;
+  padding: 1.5rem 2.2rem;
+  margin: 1.5rem auto;
+  max-width: 1300px;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18),
+    0 1.5px 16px 0 rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 600px) {
+    padding: 1rem 0.7rem;
+    font-size: 1rem;
   }
 }
