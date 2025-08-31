@@ -2921,8 +2921,8 @@ nav input {
 .glass-futuristic::before {
   content: "";
   position: absolute;
-  top: 200px;
-  left: 510px;
+  top: 120px;
+  left: 610px;
   width: 1100px;
   height: 700px;
   background: linear-gradient(120deg, #ff8c00 50%, #f095c3 40%, #9287df 100%);
@@ -2978,12 +2978,12 @@ nav input {
 .futuristic-container .futuristic-logo {
   height: 64px;
   width: auto;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5333333333));
+  filter: none;
   background: transparent;
   transition: transform 0.2s;
 }
 .futuristic-container .futuristic-logo:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 .futuristic-container .futuristic-image {
   width: 100%;
@@ -2992,7 +2992,7 @@ nav input {
      object-fit: cover;
 }
 .futuristic-container .futuristic-logo[alt*=SEAT] {
-  filter: brightness(0) saturate(100%) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5333333333));
+  filter: brightness(0) saturate(100%);
 }
 
 @media (max-width: 900px) {

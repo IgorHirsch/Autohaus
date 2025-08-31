@@ -4,8 +4,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 200px;
-    left: 510px;
+    top: 120px;
+    left: 610px;
     width: 1100px;
     height: 700px;
     background: linear-gradient(120deg, #ff8c00 50%, #f095c3 40%, #9287df 100%);
@@ -64,12 +64,12 @@
   .futuristic-logo {
     height: 64px; // vorher 48px oder 36px
     width: auto;
-    filter: drop-shadow(0 2px 8px #0008);
+    filter: none; // entfernt den Schatten
     background: transparent;
     transition: transform 0.2s;
 
     &:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
   }
 
@@ -77,11 +77,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
   }
 
   .futuristic-logo[alt*="SEAT"] {
-    filter: brightness(0) saturate(100%) drop-shadow(0 2px 8px #0008);
+    filter: brightness(0) saturate(100%) ;
   }
 }
 
