@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 @font-face {
   font-family: "Century Gothic";
   font-style: normal;
@@ -2919,129 +2918,110 @@ nav input {
   font-size: 1.1rem;
 }
 
+.glass-futuristic::before {
+  content: "";
+  position: absolute;
+  top: 200px;
+  left: 510px;
+  width: 1100px;
+  height: 700px;
+  background: linear-gradient(120deg, #ff8c00 50%, #f095c3 40%, #9287df 100%);
+  clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
+  opacity: 0.6;
+  filter: blur(150px);
+  z-index: 0;
+}
+
 .aktuelles-futuristic {
-  background-color: #202D35;
   padding: 0;
   margin: 0;
-  color: #eee;
-  font-family: "Orbitron", monospace, Arial, sans-serif;
   overflow-x: hidden;
 }
 
 .futuristic-container {
-  max-width: 1000rem;
+  width: 100vw;
+  max-width: 100vw;
   margin: 5rem auto;
-  text-align: center;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(20px);
-}
-.futuristic-container::before, .futuristic-container::after {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 100%;
-  top: -25%;
-  left: -25%;
-  z-index: 0;
-  pointer-events: none;
-}
-.futuristic-container::before {
-  background: repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 12px, transparent 12px, transparent 24px);
-  transform: rotate(-7deg);
-}
-.futuristic-container::after {
-  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 8px, transparent 8px, transparent 16px);
-  transform: rotate(6deg);
-  opacity: 0.3;
-}
-.futuristic-container * {
+  padding: 0;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
+  text-align: center;
+  overflow: visible;
+}
+.futuristic-container .futuristic-image-wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: hidden;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  background: #181f23;
+}
+.futuristic-container .futuristic-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  z-index: 2;
+  position: relative;
+  background: none;
+}
+.futuristic-container .futuristic-logo {
+  height: 64px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5333333333));
+  background: transparent;
+  transition: transform 0.2s;
+}
+.futuristic-container .futuristic-logo:hover {
+  transform: scale(1.08);
+}
+.futuristic-container .futuristic-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.futuristic-container .futuristic-logo[alt*=SEAT] {
+  filter: brightness(0) saturate(100%) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5333333333));
 }
 
-@keyframes rgb-glitch {
-  0%, 100% {
-    text-shadow: 0 0 4px red, 0 0 4px lime, 0 0 4px blue;
-    transform: translate(0, 0);
+@media (max-width: 900px) {
+  .futuristic-container .futuristic-image-wrapper {
+    height: 32vh;
+    max-height: 32vh;
   }
-  20% {
-    text-shadow: 2px 0 4px red, -2px 0 4px lime, 1px 1px 4px blue;
-    transform: translate(-1px, 0);
+  .futuristic-container .futuristic-image-wrapper .futuristic-logos {
+    top: 1.2rem;
+    gap: 1.2rem;
   }
-  40% {
-    text-shadow: -2px -1px 4px red, 2px 1px 4px lime, -1px -2px 4px blue;
-    transform: translate(1px, -1px);
-  }
-  60% {
-    text-shadow: 1px 2px 4px red, -1px -2px 4px lime, 2px -1px 4px blue;
-    transform: translate(-1px, 1px);
-  }
-  80% {
-    text-shadow: -1px 1px 4px red, 1px -1px 4px lime, -2px 1px 4px blue;
-    transform: translate(1px, 0);
+  .futuristic-container .futuristic-logo {
+    height: 48px;
   }
 }
-.futuristic-btn {
-  display: inline-block;
-  background: #1a1a1a;
-  color: #ff0033;
-  border: 3px solid #ff0033;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 3px;
-  margin: 1.5rem 0;
-  border-radius: 15px;
-  box-shadow: inset 4px 4px 7px #0c0c0c, inset -4px -4px 7px #2b2b2b, 0 0 20px #ff0033;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .futuristic-container .futuristic-image-wrapper {
+    height: 22vh;
+    max-height: 22vh;
+    border-radius: 0.7rem;
+  }
+  .futuristic-container .futuristic-image-wrapper .futuristic-logos {
+    top: 0.5rem;
+    gap: 0.7rem;
+  }
+  .futuristic-container .futuristic-logo {
+    height: 36px;
+  }
 }
-.futuristic-btn:hover {
-  background: #ff0033;
-  color: #0b0b0b;
-  border-color: #fff;
-  box-shadow: 0 0 30px #fff, 0 0 15px #ff0000, inset 2px 2px 5px #b30000;
-  text-shadow: 0 0 6px #fff;
-}
-
-.text-success {
-  font-size: 1.5rem;
-  background: #e71c44;
-  color: #0b0b0b;
-  padding: 1rem 2rem;
-  display: inline-block;
-  border-left: 12px solid white;
-  border-radius: 12px;
-  transform: skewX(-12deg);
-  box-shadow: 6px 6px 10px #0a0a0a, -6px -6px 10px #2c2c2c;
-  font-weight: 900;
-  margin-top: 1.7rem;
-  margin-left: 2rem;
-}
-
-.aktuelles-futuristic p {
-  margin-top: 2.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #ff4444;
-}
-
-.aktuelles-futuristic a {
-  color: #ff0000;
-  text-decoration: underline;
-  font-weight: 800;
-  padding: 0.5rem 1rem;
-  background: #fff;
-}
-
-.aktuelles-futuristic a:hover {
-  background: #fff;
-  color: #0b0b0b;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-}
-
 .werbecard {
   width: calc(28.5714285714% - 1.322rem);
   margin: 2rem;
