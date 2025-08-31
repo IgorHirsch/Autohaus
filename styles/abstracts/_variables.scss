@@ -1,6 +1,16 @@
 @use "sass:color";
 @use "sass:math";
 
+$color-eigengrau: rgba(22, 22, 29);
+
+$color-eigengrau-transparent: rgba(22, 22, 29, 0.9);
+
+$color-eigengrau-transparent-light: rgba(22, 22, 29, 0.9);
+
+$color-eigengrau-light: rgba(87, 87, 116, 0.1);
+
+$color-text: #d4d6ed;
+
 $color-primary: rgb(52, 75, 86) !default;
 $color-secondary: #345a62 !default;
 

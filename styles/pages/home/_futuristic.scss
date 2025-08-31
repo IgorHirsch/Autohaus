@@ -15,6 +15,9 @@
   margin: 5rem auto;
   text-align: center;
 
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
+
   &::before,
   &::after {
     content: "";
@@ -56,16 +59,7 @@
   }
 }
 
-.display-4 {
-  font-size: 3.8rem;
-  color: #ff0033; /* Weiß als Grundfarbe */
-  text-shadow: 
-    0 0 5px red,
-    0 0 5px lime,
-    0 0 5px blue;
-  margin-bottom: 2rem;
-  animation: rgb-glitch 1.2s infinite;
-}
+
 
 @keyframes rgb-glitch {
   0%, 100% {

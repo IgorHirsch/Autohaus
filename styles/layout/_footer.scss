@@ -4,11 +4,11 @@
 .footer {
   background-image: linear-gradient(
     to right bottom,
-    #416f76,
-    #3e626c,
-    #3c5661,
-    #394a55,
-    #353f48
+    rgba(22, 22, 29, 0.95),
+    rgba(22, 22, 29, 0.85),
+    rgba(22, 22, 29, 0.7),
+    rgba(22, 22, 29, 0.5),
+    rgba(22, 22, 29, 0.3)
   );
   padding: 3rem 0 0.5rem 0;
 
@@ -95,7 +95,7 @@
   top: 0.25rem;
 
   white-space: nowrap;
-  background-color: color.scale($color-secondary, $lightness: 40%);
+  background-color: color.scale($color-eigengrau, $lightness: 10%);
   text-decoration: none;
   color: white;
   padding: 1rem 2rem;
@@ -117,7 +117,7 @@
     background-image: linear-gradient(
       -45deg,
       transparent 2.82rem,
-      $color-secondary 2.82rem
+      $color-eigengrau 2.82rem
     );
     background-position: right center;
     background-repeat: no-repeat;
@@ -182,10 +182,17 @@
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   white-space: nowrap;
-  transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, background 0.25s, box-shadow 0.25s,
+    backdrop-filter 0.25s;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(22, 22, 29, 0.35); // halbtransparentes Eigengrau
+    box-shadow: 0 4px 24px 0 rgba(255, 255, 255, 0.1),
+      0 1.5px 8px 0 rgba(0, 0, 0, 0.13);
+    -webkit-backdrop-filter: blur(8px); // Safari Support
+    backdrop-filter: blur(8px);
+    border-radius: 1em;
   }
 
   @media (max-width: $breakpoint-xs) {

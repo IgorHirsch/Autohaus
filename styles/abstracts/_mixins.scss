@@ -12,15 +12,10 @@
   max-width: 68%;
   margin: 3rem auto;
   border-radius: 1.618rem;
-
   padding: 1.618rem;
-   background-color:  #202d35;
-
-
-
-  box-shadow: 
-  8px  8px 16px rgba(0, 0, 0, 0.5),/* Dunkler äußerer Schatten */ 
- -8px -8px 16px rgba(255, 255, 255, 0.1); /* Heller äußerer Schatten */
+  background-color: $color-eigengrau;
+  z-index: 10;
+  
 
   @include clearfix;
 

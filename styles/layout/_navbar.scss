@@ -1,14 +1,15 @@
+@use "../abstracts/variables" as *;
 nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background: rgba(26, 59, 68, 0.82); // halbtransparent wie offers__card
+  background: $color-eigengrau;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   border-radius: 0 0 -1rem -1rem;
   transition: all 0.5s ease;
-  -webkit-backdrop-filter: blur(20px); // Für Safari
-  backdrop-filter: blur(20px); // Blur-Effekt
+  -webkit-backdrop-filter: blur(30px); // Für Safari
+  backdrop-filter: blur(30px); // Blur-Effekt
 }
 
 .marke-icon {
@@ -39,13 +40,12 @@ nav .wrapper {
   font-size: 2.1rem;
   font-weight: 900;
   letter-spacing: 0.15em;
-  color: #00ffdd;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transform: skewX(-8deg); // leicht schräg
-  text-shadow: 0 2px 12px #ff0033a0, 0 0 2px #fff;
+  transform: skewX(-8deg);
   transition: color 0.2s;
+  color: $color-text;
 }
 .wrapper .nav-links {
   display: inline-flex;
@@ -54,7 +54,7 @@ nav .wrapper {
   list-style: none;
 }
 .nav-links li a {
-  color: #447785;
+  color: $color-text;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -63,7 +63,7 @@ nav .wrapper {
   transition: all 0.3s ease;
 }
 .nav-links li a:hover {
-  background: rgba(33, 61, 69, 0.65); // halbtransparentes Dunkelblau
+ background: $color-eigengrau-transparent; // halbtransparentes Dunkelblau
   color: #fff;
   box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4),
     inset -2px -2px 6px rgba(255, 255, 255, 0.05);
@@ -73,7 +73,7 @@ nav .wrapper {
 }
 .nav-links .drop-menu {
   position: absolute;
-  background: rgba(26, 59, 68, 0.82); // halbtransparent wie offers__card
+  background: $color-eigengrau; // halbtransparent wie offers__card
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 -1rem -1rem;
   width: 300px;
@@ -107,8 +107,9 @@ nav .wrapper {
   opacity: 0;
   visibility: hidden;
   z-index: 888;
-  background: rgba(26, 59, 68, 0.95);
+  background: $color-eigengrau; // halbtransparent wie offers__card
   border-radius: 0 0 1rem 1rem;
+  color: $color-text;
 }
 .mega-box .content {
   padding: 25px 20px;
@@ -140,7 +141,7 @@ nav .wrapper {
   object-fit: cover;
   border-radius: 0.5rem;
   background: #fff;
-  border: 1px solid rgba(26, 59, 68, 0.82);
+  border: $color-eigengrau;
   display: block;
   margin-bottom: auto;
   // Neomorphischer Schatten: kräftig und sichtbar auf dunklem Grund
@@ -166,7 +167,7 @@ nav .wrapper {
 .row .mega-links li a {
   padding: 0px;
   padding: 0 20px;
-  color: #447785;
+  color: $color-text;
   font-size: 17px;
   display: block;
 }

@@ -9,15 +9,32 @@ $-team-card-margin: 0.66rem;
 .home-team {
   position: relative;
   padding: 3rem 0;
-  background: #16232a;
-}
 
+  @media (max-width: 391px) {
+    padding-top: 2rem;
+  }
+}
+.glass-team {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 600px;
+    left: 900px;
+    width: 320px;
+    height: 420px;
+   background: linear-gradient(120deg, #ff973c 50%, #efe150 40%, #6a5acd 100%);
+    clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
+    opacity: 0.4;
+    filter: blur(150px);
+  }
+}
 .home-team__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90%;
+  max-width: 70%;
   margin: 0 auto;
+  @include make-container();
 }
 
 .home-team__heading {
@@ -49,7 +66,7 @@ $-team-card-margin: 0.66rem;
 }
 
 .home-team__card {
-  background-color: #1a3b44;
+  background-color: $color-eigengrau;
   border-radius: 1rem;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
     -8px -8px 16px rgba(255, 255, 255, 0.1);

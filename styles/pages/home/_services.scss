@@ -2,12 +2,33 @@
 
 $-services-background-color: $color-secondary-dark;
 
-$-services-icon-size: 3rem;
+$-services-icon-size: 0rem;
 $-services-animation-duration: 0.25s;
+
+
+.glass-services {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 800px;
+    left: 1550px;
+    width: 320px;
+    height: 420px;
+   background: linear-gradient(120deg, #ffa73c 50%, #efe150 40%, #6a5acd 100%);
+    clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
+    opacity: 0.4;
+    filter: blur(150px);
+  }
+}
+
+
 
 .services {
   position: relative;
   padding: 3rem 0;
+  z-index: 10;
+
+
 
   @media (max-width: 391px) {
     padding-top: 2rem;
@@ -157,7 +178,6 @@ $-offers-card-margin: 0.66rem;
   }
 }
 
-
 // Einzelne Card
 .services__card {
   flex: 0 0 (71rem * 0.3);
@@ -208,26 +228,20 @@ $-offers-card-margin: 0.66rem;
 }
 
 .services__card-icon-background {
-  background-color: $color-primary;
+  background-color: $color-eigengrau-transparent-light;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: $-services-icon-size;
+  height: 100%; // immer vollflächig
   box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
-  transform: translate(calc(-125% + #{$-services-icon-size}), 0);
-  // Keine Animation für transform/height!
-  transition: transform 0s, height 0s,
-    filter $-services-animation-duration ease-in-out 0.1s;
+  filter: blur(3px);
+  transition: filter 0.3s; // nur Blur animieren
+
+  // Kein transform, keine height-Animation mehr!
 
   .services__card:hover & {
-    transform: translate(0, 0);
-    height: 100%;
-  }
-  filter: blur(5px);
-
-  &:hover {
-    filter: blur(7px);
+    filter: blur(10px); // Blur wird beim Hover stärker
   }
 }
 
@@ -309,7 +323,11 @@ $-offers-card-margin: 0.66rem;
 .services__card-desc {
   font-size: 0.8rem;
   padding: 0.9rem 0;
-  background-image: linear-gradient(90deg, $color-primary 60%, transparent 60%);
+  background-image: linear-gradient(
+    90deg,
+    $color-eigengrau 60%,
+    transparent 60%
+  );
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: 100% 0.125rem;

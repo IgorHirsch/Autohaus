@@ -11,8 +11,27 @@ $-half-pixel-width: math.div(1rem, 32);
 .offers {
   position: relative;
   padding: 3rem 0;
+
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  z-index: 10;
 }
 
+.glass-offers {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 300px;
+    left: 110px;
+    width: 320px;
+    height: 420px;
+    background: linear-gradient(120deg, #ff8c00 50%, #ff0080 40%, #6a5acd 100%);
+    clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
+    opacity: 0.6;
+    filter: blur(150px);
+    z-index: 0;
+  }
+}
 /*///////////////////////////////////////////////////////////Tame the wild*/
 
 // %offers__before-and-after {
@@ -107,7 +126,6 @@ $-half-pixel-width: math.div(1rem, 32);
 
     @media (max-width: $breakpoint-sm) {
       width: 100%;
-      background-color: rgb(42, 131, 158);
     }
   }
 
@@ -118,7 +136,7 @@ $-half-pixel-width: math.div(1rem, 32);
   }
 }
 .offers__text {
-  color: whitesmoke;
+  color: $color-eigengrau-transparent-light;
   font-size: 1.1rem;
   text-align: justify;
   margin: 0px auto;
@@ -171,7 +189,7 @@ $-half-pixel-width: math.div(1rem, 32);
   border-radius: 1rem; // Passt die Rundung der Ecken an
   overflow: hidden; // Schneidet Inhalte ab, die über die abgerundeten Ecken hinausgehen
 
-  background-color: #1a3b44;
+  background-color: $color-eigengrau;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5),
     -8px -8px 16px rgba(255, 255, 255, 0.1);
   position: relative;
@@ -214,7 +232,6 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .offers__image-container {
   position: relative;
-  background-color: $color-primary;
   margin-top: -$-offers-card-border-width;
   margin-right: -$-offers-card-border-width;
   margin-left: -$-offers-card-border-width;
@@ -243,7 +260,7 @@ $-half-pixel-width: math.div(1rem, 32);
 
   background-image: linear-gradient(
     -$slope-incline,
-    #1a3b44 49.7%,
+    $color-eigengrau 49.7%,
     transparent 50.3%
   );
   background-repeat: no-repeat;
@@ -338,7 +355,7 @@ $-half-pixel-width: math.div(1rem, 32);
   bottom: -$-offers-card-border-width;
   z-index: 2;
 
-  background-color: #1a3b44;
+  background-color: $color-eigengrau-transparent;
 
   // Die Linie in der mitte
   // background-image: linear-gradient(
