@@ -174,30 +174,3 @@ $-image-margin: 0.66rem;
   }
 }
 
-// Swiper
-.swiper-container {
-  display: none;
-  position: relative;
-  width: auto;
-
-  overflow: hidden;
-  border-radius: 1rem;
-  text-align: center;
-  padding-bottom: 2.5rem;
-
-  @media (max-width: 391px) {
-    display: flex;
-  }
-}
-
-.swiper-button-next {
-  color: $color-secondary-light !important;
-}
-
-.swiper-button-prev {
-  color: $color-secondary-light !important;
-}
-
-.swiper-pagination {
-  color: $color-secondary-light !important;
-}
