@@ -35,8 +35,10 @@ html body {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .container::after {
   display: block;
@@ -1407,8 +1409,10 @@ nav input {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .tours__container::after {
   display: block;
@@ -1718,8 +1722,10 @@ nav input {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .story__container::after {
   display: block;
@@ -1822,11 +1828,12 @@ nav input {
 .offers {
   position: relative;
   padding: 3rem 0;
-  -webkit-backdrop-filter: blur(80px);
-  backdrop-filter: blur(80px);
   z-index: 10;
 }
 
+.glass-offers {
+  position: relative;
+}
 .glass-offers::before {
   content: "";
   position: absolute;
@@ -1834,13 +1841,46 @@ nav input {
   left: 110px;
   width: 320px;
   height: 420px;
-  background: linear-gradient(120deg, #ff8c00 50%, #ff0080 40%, #6a5acd 100%);
+  background: linear-gradient(120deg, #02fdba 50%, #ff0080 40%, #6a5acd 100%);
   clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
   opacity: 0.6;
   filter: blur(150px);
   z-index: 0;
+  animation: glass-offers-move 50s linear infinite;
 }
 
+@keyframes glass-offers-move {
+  0% {
+    left: 110px;
+    top: 300px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  20% {
+    left: 150px;
+    top: 500px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  40% {
+    left: 500px;
+    top: 100px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  60% {
+    left: 50px;
+    top: 50px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  80% {
+    left: 110px;
+    top: 320px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  100% {
+    left: 110px;
+    top: 300px;
+    transform: scale(1.04) rotate(0deg);
+  }
+}
 /*///////////////////////////////////////////////////////////Tame the wild*/
 /*/////////////////////////////////////////////////////////////Tame the wild*/
 .offers__column-text {
@@ -2246,8 +2286,10 @@ nav input {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .home-team__container::after {
   display: block;
@@ -2392,8 +2434,10 @@ nav input {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .services__container::after {
   display: block;
@@ -3571,8 +3615,10 @@ p {
   margin: 3rem auto;
   border-radius: 1.618rem;
   padding: 1.618rem;
-  background-color: rgb(22, 22, 29);
-  z-index: 10;
+  background-color: rgba(22, 22, 29, 0.5);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  z-index: 1;
 }
 .gallery__container::after {
   display: block;

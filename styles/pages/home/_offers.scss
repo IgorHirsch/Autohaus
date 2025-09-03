@@ -12,12 +12,12 @@ $-half-pixel-width: math.div(1rem, 32);
   position: relative;
   padding: 3rem 0;
 
-  -webkit-backdrop-filter: blur(80px);
-  backdrop-filter: blur(80px);
   z-index: 10;
 }
 
 .glass-offers {
+  position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -25,13 +25,48 @@ $-half-pixel-width: math.div(1rem, 32);
     left: 110px;
     width: 320px;
     height: 420px;
-    background: linear-gradient(120deg, #ff8c00 50%, #ff0080 40%, #6a5acd 100%);
+    background: linear-gradient(120deg, #02fdba 50%, #ff0080 40%, #6a5acd 100%);
     clip-path: polygon(0 0, 100% 10, 100% 100%, 20 90%);
     opacity: 0.6;
     filter: blur(150px);
     z-index: 0;
+    animation: glass-offers-move 50s linear infinite;
   }
 }
+
+@keyframes glass-offers-move {
+  0% {
+    left: 110px;
+    top: 300px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  20% {
+    left: 150px;
+    top: 500px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  40% {
+    left: 500px;
+    top: 100px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  60% {
+    left: 50px;
+    top: 50px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  80% {
+    left: 110px;
+    top: 320px;
+    transform: scale(1.04) rotate(0deg);
+  }
+  100% {
+    left: 110px;
+    top: 300px;
+    transform: scale(1.04) rotate(0deg);
+  }
+}
+
 /*///////////////////////////////////////////////////////////Tame the wild*/
 
 // %offers__before-and-after {
