@@ -1,0 +1,27 @@
+{
+  "name": "openai-chatbot",
+  "version": "1.0.0",
+  "description": "A chatbot application using OpenAI API.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "openai": "^5.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [
+    "chatbot",
+    "openai",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
