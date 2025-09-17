@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Autohaus Chatbot</title>
+
+    <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+    <div id="chatbot-container">
+        <div id="chatbot-header" class="chatbot-header">Autohaus Chatbot</div>
+        <div id="chatbot-messages"> Ich beantworte Fragen zu Fahrzeugen, Service, Probefahrt und Kontakt.
+            Was möchten Sie wissen?</div>
+        <form id="chatbot-input" onsubmit="event.preventDefault(); sendMessage();">
+            <input type="text" id="user-input" placeholder="Ihre Nachricht..." autocomplete="off" />
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+    <script>
+        const messages = document.getElementById('chatbot-messages');
+
+        function appendMessage(text, cls) {
+            const el = document.createElement('div');
+            el.className = 'chatbot-msg ' + cls;
+            el.innerHTML = text.replace(/\n/g, '<br>');
+            messages.appendChild(el);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendMessage(text, 'user');
+
+            // Disable input while waiting
+            const submitBtn = document.querySelector('#chatbot-input button[type="submit"]');
+            submitBtn.disabled = true;
+            input.disabled = true;
+
+            try {
+                const res = await fetch('http://localhost:3001/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                const data = await res.json();
+                appendMessage(data.reply || 'Fehler bei der Antwort.', 'bot');
+            } catch (err) {
+                appendMessage('Chatbot ist gerade nicht erreichbar.', 'bot');
+            } finally {
+                submitBtn.disabled = false;
+                input.disabled = false;
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        // optional: focus input when iframe loads
+        window.addEventListener('load', () => {
+            const input = document.getElementById('user-input');
+            if (input) input.focus();
+        });
+    </script>
+</body>
